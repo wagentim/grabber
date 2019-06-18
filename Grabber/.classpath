@@ -1,33 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/Common"/>
-	<classpathentry kind="lib" path="/Common/libs/commons-cli-1.2.jar"/>
-	<classpathentry kind="lib" path="/Common/libs/httpcore-4.4.11.jar" sourcepath="D:/Downloads/httpcomponents-core-4.4.11-src/httpcomponents-core-4.4.11">
-		<attributes>
-			<attribute name="source_encoding" value="UTF-8"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/Common/libs/httpcore-nio-4.4.11.jar"/>
+	<classpathentry kind="lib" path="libs/commons-codec-1.11.jar"/>
+	<classpathentry kind="lib" path="libs/commons-io-2.6.jar"/>
+	<classpathentry kind="lib" path="libs/commons-lang3-3.9.jar"/>
+	<classpathentry kind="lib" path="libs/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="libs/commons-net-3.6.jar"/>
+	<classpathentry kind="lib" path="libs/commons-text-1.6.jar"/>
+	<classpathentry kind="lib" path="libs/htmlunit-2.35.0.jar"/>
+	<classpathentry kind="lib" path="libs/htmlunit-core-js-2.35.0.jar"/>
+	<classpathentry kind="lib" path="libs/htmlunit-cssparser-1.4.0.jar"/>
+	<classpathentry kind="lib" path="libs/httpclient-4.5.8.jar"/>
+	<classpathentry kind="lib" path="libs/httpcore-4.4.11.jar"/>
+	<classpathentry kind="lib" path="libs/httpmime-4.5.8.jar"/>
+	<classpathentry kind="lib" path="libs/jetty-client-9.4.16.v20190411.jar"/>
+	<classpathentry kind="lib" path="libs/jetty-http-9.4.16.v20190411.jar"/>
+	<classpathentry kind="lib" path="libs/jetty-io-9.4.16.v20190411.jar"/>
+	<classpathentry kind="lib" path="libs/jetty-util-9.4.16.v20190411.jar"/>
+	<classpathentry kind="lib" path="libs/jetty-xml-9.4.16.v20190411.jar"/>
+	<classpathentry kind="lib" path="libs/neko-htmlunit-2.35.0.jar"/>
+	<classpathentry kind="lib" path="libs/serializer-2.7.2.jar"/>
+	<classpathentry kind="lib" path="libs/websocket-api-9.4.16.v20190411.jar"/>
+	<classpathentry kind="lib" path="libs/websocket-client-9.4.16.v20190411.jar"/>
+	<classpathentry kind="lib" path="libs/websocket-common-9.4.16.v20190411.jar"/>
+	<classpathentry kind="lib" path="libs/xalan-2.7.2.jar"/>
+	<classpathentry kind="lib" path="libs/xercesImpl-2.12.0.jar"/>
+	<classpathentry kind="lib" path="libs/xml-apis-1.4.01.jar"/>
 	<classpathentry kind="lib" path="/Common/libs/slf4j-api-1.7.26-sources.jar"/>
 	<classpathentry kind="lib" path="/Common/libs/slf4j-api-1.7.26.jar"/>
 	<classpathentry kind="lib" path="/Common/libs/slf4j-simple-1.7.26-sources.jar"/>
 	<classpathentry kind="lib" path="/Common/libs/slf4j-simple-1.7.26.jar"/>
-	<classpathentry kind="lib" path="/Common/libs/commons-codec-1.11.jar"/>
-	<classpathentry kind="lib" path="/Common/libs/commons-logging-1.2.jar"/>
-	<classpathentry kind="lib" path="/Common/libs/fluent-hc-4.5.8.jar"/>
-	<classpathentry kind="lib" path="/Common/libs/httpclient-4.5.8.jar"/>
-	<classpathentry kind="lib" path="/Common/libs/httpclient-cache-4.5.8.jar"/>
-	<classpathentry kind="lib" path="/Common/libs/httpclient-osgi-4.5.8.jar"/>
-	<classpathentry kind="lib" path="/Common/libs/httpclient-win-4.5.8.jar"/>
-	<classpathentry kind="lib" path="/Common/libs/httpcore-ab-4.4.11.jar"/>
-	<classpathentry kind="lib" path="/Common/libs/httpcore-osgi-4.4.11.jar"/>
-	<classpathentry kind="lib" path="/Common/libs/httpmime-4.5.8.jar"/>
-	<classpathentry kind="lib" path="/Common/libs/jna-4.5.2.jar"/>
-	<classpathentry kind="lib" path="/Common/libs/jna-platform-4.5.2.jar"/>
-	<classpathentry kind="lib" path="/Common/libs/junit-platform-commons-1.4.2.jar"/>
-	<classpathentry kind="lib" path="/Common/libs/netty-all-4.1.36.Final-sources.jar"/>
-	<classpathentry kind="lib" path="/Common/libs/netty-all-4.1.36.Final.jar" sourcepath="/Common/libs/netty-all-4.1.36.Final-sources.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
