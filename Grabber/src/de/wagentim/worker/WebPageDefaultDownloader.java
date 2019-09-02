@@ -1,4 +1,4 @@
-package de.wagentim.threads;
+package de.wagentim.worker;
 
 import java.io.BufferedReader;
 import java.io.IOException;

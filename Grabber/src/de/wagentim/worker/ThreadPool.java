@@ -1,4 +1,4 @@
-package de.wagentim.threads;
+package de.wagentim.worker;
 
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;

@@ -26,9 +26,9 @@ import org.slf4j.LoggerFactory;
 
 import de.wagentim.utils.DownloadFile;
 import de.wagentim.common.Validator;
-import de.wagentim.threads.DefaultDownloadConfig;
-import de.wagentim.threads.DownloadThread;
 import de.wagentim.utils.Converter;
+import de.wagentim.worker.DefaultDownloadConfig;
+import de.wagentim.worker.DownloadThread;
 
 public class DownloadService {
 	

@@ -3,8 +3,8 @@ package de.wagentim.sites;
 import org.apache.http.HttpHost;
 
 import de.wagentim.common.IConstants;
-import de.wagentim.threads.IDownloadConfig;
 import de.wagentim.utils.HttpScheme;
+import de.wagentim.worker.IDownloadConfig;
 
 public class DouBan implements IDownloadConfig
 {
