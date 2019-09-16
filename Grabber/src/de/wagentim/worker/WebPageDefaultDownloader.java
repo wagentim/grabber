@@ -22,7 +22,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import de.wagentim.common.IConstants;
-import de.wagentim.sites.DouBan;
 
 /**
  * Standard HTTP Download. Without any special handling. Only support Get Method.
@@ -32,16 +31,14 @@ import de.wagentim.sites.DouBan;
  */
 public class WebPageDefaultDownloader implements Runnable
 {
-	private final IDownloadConfig config;
 	private final CloseableHttpClient client;
 	private final HttpClientContext context = HttpClientContext.create();
 	private static final Logger logger = LoggerFactory.getLogger(WebPageDefaultDownloader.class);
 	
 	private CloseableHttpResponse response = null;
 	
-	public WebPageDefaultDownloader(final IDownloadConfig config)
+	public WebPageDefaultDownloader()
 	{
-		this.config = config;
 		client = HttpClients.createDefault();
 	}
 
@@ -128,9 +125,6 @@ public class WebPageDefaultDownloader implements Runnable
 		try
 		{
 			return new URIBuilder()
-					.setScheme(config.getScheme().toString())
-					.setHost(config.getHost().getHostName())
-					.setPath(config.getPath())
 					.build();
 		}
 		catch (URISyntaxException e)
@@ -143,7 +137,7 @@ public class WebPageDefaultDownloader implements Runnable
 	
 	public static void main(String[] args)
 	{
-		WebPageDefaultDownloader dd = new WebPageDefaultDownloader(new DouBan());
+		WebPageDefaultDownloader dd = new WebPageDefaultDownloader();
 		
 		dd.run();
 	}
