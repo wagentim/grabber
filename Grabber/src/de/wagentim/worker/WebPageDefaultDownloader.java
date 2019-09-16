@@ -34,6 +34,7 @@ public class WebPageDefaultDownloader implements Runnable
 	private final CloseableHttpClient client;
 	private final HttpClientContext context = HttpClientContext.create();
 	private static final Logger logger = LoggerFactory.getLogger(WebPageDefaultDownloader.class);
+	private String currentLink = IConstants.EMPTY_STRING;
 	
 	private CloseableHttpResponse response = null;
 	
@@ -41,15 +42,28 @@ public class WebPageDefaultDownloader implements Runnable
 	{
 		client = HttpClients.createDefault();
 	}
+	
+	public String getCurrentLink()
+	{
+		return currentLink;
+	}
+
+
+
+	public void setCurrentLink(String currentLink)
+	{
+		this.currentLink = currentLink;
+	}
+
+
 
 	@Override
 	public void run()
 	{
-		URI uri = getURI();
 		
-		logger.info("URI Info: {}", uri.toString());
+		logger.info("URI Info: {}", currentLink);
 		
-		HttpGet httpget = new HttpGet(uri);
+		HttpGet httpget = new HttpGet(currentLink);
 		try
 		{
 			response = client.execute(httpget, context);
@@ -118,27 +132,5 @@ public class WebPageDefaultDownloader implements Runnable
 		{
 			logger.error("Get Reponse Code: {}", response.getStatusLine().getStatusCode());
 		}
-	}
-
-	private URI getURI()
-	{
-		try
-		{
-			return new URIBuilder()
-					.build();
-		}
-		catch (URISyntaxException e)
-		{
-			e.printStackTrace();
-			
-			return null;
-		}
-	}
-	
-	public static void main(String[] args)
-	{
-		WebPageDefaultDownloader dd = new WebPageDefaultDownloader();
-		
-		dd.run();
 	}
 }
