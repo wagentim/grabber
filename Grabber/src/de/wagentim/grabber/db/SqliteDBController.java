@@ -20,9 +20,9 @@ public class SqliteDBController
 		sb = new StringBuffer();
 	}
 
-	public boolean createProductTable()
+	public boolean createTable(String tableName)
 	{
-		String state = "CREATE TABLE product (prod_id INTEGER PRIMARY KEY AUTOINCREMENT, prod_content TEXT NOT NULL);";
+		String state = "CREATE TABLE " + tableName + " (prod_id INTEGER PRIMARY KEY, prod_content TEXT NOT NULL);";
 		
 		handler.openDB(ISQLConstants.SQLITE_JDBC, ISQLConstants.SQLITE_CONNECTION);
 		
@@ -42,12 +42,12 @@ public class SqliteDBController
 		return false;
 	}
 	
-	public boolean insertNewProduct(String content)
+	public boolean insertNewProduct(String table, int id, String content)
 	{
 		sb.delete(0, sb.length());
 		
-		sb.append("INSERT INTO product (").append("'prod_content') ")
-			.append("VALUES ('").append(content).append("');");
+		sb.append("INSERT INTO " + table + " (").append("'prod_id', 'prod_content') ")
+			.append("VALUES ('").append(id).append("', '").append(content).append("');");
 		
 		System.out.println(sb.toString());
 		
@@ -69,10 +69,10 @@ public class SqliteDBController
 		return false;
 	}
 	
-	public Map<Integer, Product> getAllProducts()
+	public Map<Integer, Product> getAllProducts(String table)
 	{
 		sb.delete(0, sb.length());
-		sb.append("SELECT * FROM product");
+		sb.append("SELECT * FROM ").append(table);
 		
 		handler.openDB(ISQLConstants.SQLITE_JDBC, ISQLConstants.SQLITE_CONNECTION);
 		

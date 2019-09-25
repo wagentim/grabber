@@ -6,15 +6,15 @@ public class DBTest
 	{
 		SqliteDBController c = new SqliteDBController();
 		
-//		boolean i = c.createProductTable();
-//		
+//		boolean i = c.createTable("test");
+		
 //		System.out.println(i);
-//		
+		
 //		i = c.createItemTable();
 //		
 //		System.out.println(i);
 		
-		c.insertNewProduct("Hello World");
+//		c.insertNewProduct("test", 123, "Hello World");
 //		c.insertNewItem(IDManager.INSTANCE().getRandomInteger(), IDManager.INSTANCE().getRandomInteger(), "Hello", "World");
 		
 //		Iterator<Record> iterator = c.getAllRecords().values().iterator();
@@ -32,9 +32,9 @@ public class DBTest
 //		}
 		
 //		c.updateRecordName(654, "wo");
-		System.out.println(c.getAllProducts().keySet().size());
+		System.out.println(c.getAllProducts("test").keySet().size());
 		
-		for(Product s : c.getAllProducts().values())
+		for(Product s : c.getAllProducts("test").values())
 		{
 			System.out.println(s.getProduct());
 		}

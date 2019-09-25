@@ -4,8 +4,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.net.URI;
-import java.net.URISyntaxException;
 import java.nio.charset.Charset;
 
 import org.apache.http.HttpEntity;
@@ -14,7 +12,6 @@ import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.protocol.HttpClientContext;
-import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.entity.ContentType;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
@@ -35,12 +32,14 @@ public class WebPageDefaultDownloader implements Runnable
 	private final HttpClientContext context = HttpClientContext.create();
 	private static final Logger logger = LoggerFactory.getLogger(WebPageDefaultDownloader.class);
 	private String currentLink = IConstants.EMPTY_STRING;
+	private StringBuilder sb;
 	
 	private CloseableHttpResponse response = null;
 	
 	public WebPageDefaultDownloader()
 	{
 		client = HttpClients.createDefault();
+		sb = new StringBuilder();
 	}
 	
 	public String getCurrentLink()
@@ -55,11 +54,15 @@ public class WebPageDefaultDownloader implements Runnable
 		this.currentLink = currentLink;
 	}
 
-
+	public String getContent()
+	{
+		return sb.toString();
+	}
 
 	@Override
 	public void run()
 	{
+		sb.delete(0, sb.length());
 		
 		logger.info("URI Info: {}", currentLink);
 		
@@ -102,7 +105,8 @@ public class WebPageDefaultDownloader implements Runnable
 					
 					while( (line = br.readLine()) != null )
 					{
-						System.out.println(line);
+						sb.append(line);
+						sb.append(System.lineSeparator());
 					}
 				}
 				finally
