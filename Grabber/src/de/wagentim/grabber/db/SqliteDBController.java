@@ -69,7 +69,7 @@ public class SqliteDBController
 		return false;
 	}
 	
-	public Map<Integer, Product> getAllProducts(String table)
+	public Map<Integer, ProductDB> getAllProducts(String table)
 	{
 		sb.delete(0, sb.length());
 		sb.append("SELECT * FROM ").append(table);
@@ -78,17 +78,17 @@ public class SqliteDBController
 		
 		try
 		{
-			List<Product> products = handler.executeQuery(sb.toString(), new ProductExtractor());
+			List<ProductDB> products = handler.executeQuery(sb.toString(), new ProductExtractor());
 			
 			if( !products.isEmpty() )
 			{
-				Map<Integer, Product> result = new HashMap<Integer, Product>();
+				Map<Integer, ProductDB> result = new HashMap<Integer, ProductDB>();
 				
-				Iterator<Product> it = products.iterator();
+				Iterator<ProductDB> it = products.iterator();
 				
 				while(it.hasNext())
 				{
-					Product r = it.next();
+					ProductDB r = it.next();
 					result.put(r.getId(), r);
 				}
 				
@@ -108,7 +108,7 @@ public class SqliteDBController
 		return Collections.emptyMap();
 	}
 	
-	public boolean updateProduct(int id, Product newValue)
+	public boolean updateProduct(int id, ProductDB newValue)
 	{
 		sb.delete(0, sb.length());
 		

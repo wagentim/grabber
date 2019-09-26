@@ -1,7 +1,6 @@
 package de.wagentim.task.webtask;
 
 import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -12,8 +11,8 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import de.wagentim.grabber.core.AbstractTask;
 import de.wagentim.utils.Utils;
-import de.wagentim.worker.AbstractTask;
 
 public class YachaoTask extends AbstractTask
 {
@@ -99,6 +98,12 @@ public class YachaoTask extends AbstractTask
 	{
 		YachaoTask task = new YachaoTask();
 		task.run();
+	}
+
+	@Override
+	protected String getDBTableName()
+	{
+		return "yachao";
 	}
 
 }

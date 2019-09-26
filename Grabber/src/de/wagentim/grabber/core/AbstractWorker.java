@@ -1,4 +1,4 @@
-package de.wagentim.worker;
+package de.wagentim.grabber.core;
 
 import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedQueue;

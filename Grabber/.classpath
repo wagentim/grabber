@@ -33,5 +33,7 @@
 	<classpathentry kind="lib" path="/Common/libs/slf4j-simple-1.7.26.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="/Common/libs/jsoup-1.12.1.jar"/>
+	<classpathentry kind="lib" path="/Common/libs/gson-2.8.5-sources.jar"/>
+	<classpathentry kind="lib" path="/Common/libs/gson-2.8.5.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

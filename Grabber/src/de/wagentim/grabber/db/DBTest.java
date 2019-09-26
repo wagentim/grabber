@@ -34,7 +34,7 @@ public class DBTest
 //		c.updateRecordName(654, "wo");
 		System.out.println(c.getAllProducts("test").keySet().size());
 		
-		for(Product s : c.getAllProducts("test").values())
+		for(ProductDB s : c.getAllProducts("test").values())
 		{
 			System.out.println(s.getProduct());
 		}

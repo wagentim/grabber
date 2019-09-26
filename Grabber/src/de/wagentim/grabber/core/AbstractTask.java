@@ -1,4 +1,4 @@
-package de.wagentim.worker;
+package de.wagentim.grabber.core;
 
 import de.wagentim.common.IConstants;
 
@@ -30,5 +30,7 @@ public abstract class AbstractTask implements ITask
 	{
 		this.parser = parser;
 	}
+	
+	protected abstract String getDBTableName();
 	
 }

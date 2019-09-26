@@ -1,7 +1,7 @@
 package de.wagentim.test;
 
-import de.wagentim.worker.DefaultTask;
-import de.wagentim.worker.DefaultWorker;
+import de.wagentim.grabber.core.DefaultTask;
+import de.wagentim.grabber.core.DefaultWorker;
 
 public class Test
 {

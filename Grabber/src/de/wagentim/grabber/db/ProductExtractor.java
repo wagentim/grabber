@@ -8,21 +8,21 @@ import java.util.List;
 
 import de.wagentim.common.db.IResultSetExtractor;
 
-public class ProductExtractor implements IResultSetExtractor<List<Product>>
+public class ProductExtractor implements IResultSetExtractor<List<ProductDB>>
 {
 
 	@Override
-	public List<Product> extractData(ResultSet rs)
+	public List<ProductDB> extractData(ResultSet rs)
 	{
 		if( null != rs )
 		{
-			List<Product> result = new ArrayList<Product>();
+			List<ProductDB> result = new ArrayList<ProductDB>();
 			
 			try
 			{
 				while(rs.next())
 				{
-					Product product = new Product(rs.getInt(ISQLConstants.PRODUCT_ID), rs.getString(ISQLConstants.PRODUCT_CONTENT));
+					ProductDB product = new ProductDB(rs.getInt(ISQLConstants.PRODUCT_ID), rs.getString(ISQLConstants.PRODUCT_CONTENT));
 					result.add(product);
 				}
 				
