@@ -8,16 +8,19 @@ import java.util.List;
 import java.util.Map;
 
 import de.wagentim.common.db.SqliteDBHandler;
+import de.wagentim.utils.Converter;
 
 public class SqliteDBController
 {
 	private final SqliteDBHandler handler;
 	private final StringBuffer sb;
+	private final Converter converter;
 	
 	public SqliteDBController()
 	{
 		handler = new SqliteDBHandler();
 		sb = new StringBuffer();
+		converter = new Converter();
 	}
 
 	public boolean createTable(String tableName)
@@ -42,14 +45,16 @@ public class SqliteDBController
 		return false;
 	}
 	
-	public boolean insertNewProduct(String table, int id, String content)
+	public boolean insertNewProduct(String table, int id, Product product)
 	{
 		sb.delete(0, sb.length());
 		
-		sb.append("INSERT INTO " + table + " (").append("'prod_id', 'prod_content') ")
-			.append("VALUES ('").append(id).append("', '").append(content).append("');");
+		String pContent = converter.toJson(product);
 		
-		System.out.println(sb.toString());
+		sb.append("INSERT INTO " + table + " (").append("'prod_id', 'prod_content') ")
+			.append("VALUES ('").append(id).append("', '").append(pContent).append("');");
+		
+//		System.out.println(sb.toString());
 		
 		handler.openDB(ISQLConstants.SQLITE_JDBC, ISQLConstants.SQLITE_CONNECTION);
 		
@@ -69,7 +74,7 @@ public class SqliteDBController
 		return false;
 	}
 	
-	public Map<Integer, ProductDB> getAllProducts(String table)
+	public Map<Integer, Product> getAllProducts(String table)
 	{
 		sb.delete(0, sb.length());
 		sb.append("SELECT * FROM ").append(table);
@@ -82,14 +87,15 @@ public class SqliteDBController
 			
 			if( !products.isEmpty() )
 			{
-				Map<Integer, ProductDB> result = new HashMap<Integer, ProductDB>();
+				Map<Integer, Product> result = new HashMap<Integer, Product>();
 				
 				Iterator<ProductDB> it = products.iterator();
 				
 				while(it.hasNext())
 				{
 					ProductDB r = it.next();
-					result.put(r.getId(), r);
+					Product p = converter.fromJson(r.getProduct());
+					result.put(r.getId(), p);
 				}
 				
 				return result;
@@ -108,13 +114,13 @@ public class SqliteDBController
 		return Collections.emptyMap();
 	}
 	
-	public boolean updateProduct(int id, ProductDB newValue)
+	public boolean updateProduct(String table, int id, Product newValue)
 	{
 		sb.delete(0, sb.length());
 		
-		sb.append("UPDATE product SET prod_content = '").append(newValue.getProduct()).append("' WHERE prod_id = ").append(newValue.getId()).append(";");
+		sb.append("UPDATE ").append(table).append(" SET prod_content = '").append(converter.toJson(newValue)).append("' WHERE prod_id = ").append(newValue.getId()).append(";");
 		
-		System.out.println(sb.toString());
+//		System.out.println(sb.toString());
 		
 		handler.openDB(ISQLConstants.SQLITE_JDBC, ISQLConstants.SQLITE_CONNECTION);
 		

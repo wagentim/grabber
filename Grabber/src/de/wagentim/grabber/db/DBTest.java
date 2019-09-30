@@ -6,9 +6,9 @@ public class DBTest
 	{
 		SqliteDBController c = new SqliteDBController();
 		
-//		boolean i = c.createTable("test");
+		boolean i = c.createTable("yachao");
 		
-//		System.out.println(i);
+		System.out.println(i);
 		
 //		i = c.createItemTable();
 //		
@@ -32,11 +32,11 @@ public class DBTest
 //		}
 		
 //		c.updateRecordName(654, "wo");
-		System.out.println(c.getAllProducts("test").keySet().size());
-		
-		for(ProductDB s : c.getAllProducts("test").values())
-		{
-			System.out.println(s.getProduct());
-		}
+//		System.out.println(c.getAllProducts("test").keySet().size());
+//		
+//		for(ProductDB s : c.getAllProducts("test").values())
+//		{
+//			System.out.println(s.getProduct());
+//		}
 	}
 }

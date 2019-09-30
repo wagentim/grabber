@@ -1,6 +1,5 @@
 package de.wagentim.grabber.db;
 
-import java.util.Collections;
 import java.util.List;
 
 import de.wagentim.common.IConstants;
@@ -11,12 +10,22 @@ public class Product
 	private String name = IConstants.EMPTY_STRING;
 	private int amount = 0;
 	private String link = IConstants.EMPTY_STRING;
-	private String siteShort = IConstants.EMPTY_STRING;
-	private String siteLong = IConstants.EMPTY_STRING;
+	private String siteName = IConstants.EMPTY_STRING;
 	private String currentPrice = IConstants.EMPTY_STRING;
 	private String marketPrice = IConstants.EMPTY_STRING;
-	private List<PriceHistory> history = Collections.emptyList();
+	private String imageLink = IConstants.EMPTY_STRING;
+	private List<PriceHistory> history = null;
+	private boolean changed = false;
+	private String dbName = IConstants.EMPTY_STRING;
 	
+	public String getDbName()
+	{
+		return dbName;
+	}
+	public void setDbName(String dbName)
+	{
+		this.dbName = dbName;
+	}
 	public int getId()
 	{
 		return id;
@@ -31,6 +40,12 @@ public class Product
 	}
 	public void setName(String name)
 	{
+		if(!name.equals(getName()))
+		{
+			System.out.println("Name changed. " + getName() + " | " + name);
+			changed = true;
+		}
+		
 		this.name = name;
 	}
 	public int getAmount()
@@ -39,6 +54,12 @@ public class Product
 	}
 	public void setAmount(int amount)
 	{
+		if(amount != getAmount())
+		{
+			System.out.println("amount changed. " + getAmount() + " | " + amount);
+			changed = true;
+		}
+		
 		this.amount = amount;
 	}
 	public String getLink()
@@ -47,23 +68,27 @@ public class Product
 	}
 	public void setLink(String link)
 	{
+		if(!link.equals(getLink()))
+		{
+			System.out.println("link changed. " + getLink() + " | " + link);
+			changed = true;
+		}
+		
 		this.link = link;
 	}
 	public String getSiteShort()
 	{
-		return siteShort;
+		return siteName;
 	}
 	public void setSiteShort(String siteShort)
 	{
-		this.siteShort = siteShort;
-	}
-	public String getSiteLong()
-	{
-		return siteLong;
-	}
-	public void setSiteLong(String siteLong)
-	{
-		this.siteLong = siteLong;
+		if(!siteShort.equals(getSiteShort()))
+		{
+			System.out.println("siteShort changed. " + getSiteShort() + " | " + siteShort);
+			changed = true;
+		}
+		
+		this.siteName = siteShort;
 	}
 	public String getCurrentPrice()
 	{
@@ -71,6 +96,12 @@ public class Product
 	}
 	public void setCurrentPrice(String currentPrice)
 	{
+		if(!currentPrice.equals(getCurrentPrice()))
+		{
+			System.out.println("currentPrice changed. " + getCurrentPrice() + " | " + currentPrice);
+			changed = true;
+		}
+		
 		this.currentPrice = currentPrice;
 	}
 	public String getMarketPrice()
@@ -79,6 +110,12 @@ public class Product
 	}
 	public void setMarketPrice(String marketPrice)
 	{
+		if(!marketPrice.equals(getMarketPrice()))
+		{
+			System.out.println("marketPrice changed. " + getMarketPrice() + " | " + marketPrice);
+			changed = true;
+		}
+		
 		this.marketPrice = marketPrice;
 	}
 	public List<PriceHistory> getHistory()
@@ -89,7 +126,29 @@ public class Product
 	{
 		this.history = history;
 	}
+	public String imageLink()
+	{
+		return imageLink;
+	}
+	public void setImageLink(String imageLink)
+	{
+		if(!imageLink.equals(imageLink()))
+		{
+			System.out.println("imageLink changed. " + imageLink() + " | " + imageLink);
+			changed = true;
+		}
+		
+		this.imageLink = imageLink;
+	}
 	
+	public boolean isChanged()
+	{
+		return changed;
+	}
 	
+	public void setChanged(boolean changed)
+	{
+		this.changed = changed;
+	}
 	
 }
