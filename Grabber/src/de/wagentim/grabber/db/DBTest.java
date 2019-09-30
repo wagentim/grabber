@@ -6,7 +6,7 @@ public class DBTest
 	{
 		SqliteDBController c = new SqliteDBController();
 		
-		boolean i = c.createTable("yachao");
+		boolean i = c.createTable("yachaoonline");
 		
 		System.out.println(i);
 		

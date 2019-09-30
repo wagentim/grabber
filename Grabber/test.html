@@ -1,1329 +1,1406 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
  <head> 
-  <meta name="Generator" content="ECSHOP v2.7.1"> 
+  <meta name="Generator" content="ECSHOP v2.7.0"> 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
   <meta name="Keywords" content=""> 
   <meta name="Description" content=""> 
-  <title>泰国印度米_大米_主食粉面_德国亚超-德国网上亚洲食品超市-乡味肆意的亚超  调料-干货-主食-零食-冰鲜-厨具-柴米油盐酱醋茶 - 德国开元周游</title> 
-  <meta name="viewport" content="initial-scale=1, maximum-scale=1"> 
+  <title>亚超在线 - 欧洲 德国 亚超 在线 网购</title> 
   <link rel="shortcut icon" href="favicon.ico"> 
   <link rel="icon" href="animated_favicon.gif" type="image/gif"> 
-  <link href="themes/Yachao/style_new.css?2" rel="stylesheet" type="text/css"> 
-  <link rel="stylesheet" type="text/css" href="themes/Yachao/style/css/top_new.css?2"> 
+  <link href="themes/shopw/style.css" rel="stylesheet" type="text/css"> 
   <script type="text/javascript" src="js/common.js"></script>
-  <script type="text/javascript" src="js/global.js"></script>
   <script type="text/javascript" src="js/compare.js"></script>
-  <script type="text/javascript" src="themes/Yachao/js/action.js"></script> 
-  <script type="text/javascript" src="js/transport.js"></script>
-  <script type="text/javascript" src="js/utils.js"></script>
-  <script type="text/javascript" src="/themes/Yachao/style/js/jquery-1.8.1.min.js"></script> 
-  <script type="text/javascript" src="/js/jquery.json-2.2.js"></script> 
  </head> 
  <body> 
-  <link rel="stylesheet" type="text/css" href="themes/Yachao/style/css/style.css"> 
-  <script type="text/javascript" src="themes/Yachao/style/js/all.js"></script> 
+  <script type="text/javascript" src="themes/shopw/js/transport_mod.js"></script> 
+  <script type="text/javascript" src="themes/shopw/js/jquery-1.js"></script> 
+  <script type="text/javascript" src="themes/shopw/js/categorys.js"></script> 
+  <script type="text/javascript" src="themes/shopw/js/MSClass.js"></script> 
   <script type="text/javascript">
-var process_request = "正在处理您的请求...";
-var btn_buy = "购买";
-var is_cancel = "取消";
-var select_spe = "请选择商品属性";
+$(function(){
+    showSubCategory();
+    jQuery("#NewProduct").hover(function(){
+        if (Stag=="stop"){
+		   clearTimeout(timera);
+	   }
+    },function(){
+	   if (Stag=="stop"){
+	   }
+   })
+})
+function obj2str(o){
+    var r = [];
+    if(typeof o =="string") return "\""+o.replace(/([\'\"\\])/g,"\\$1").replace(/(\n)/g,"\\n").replace(/(\r)/g,"\\r").replace(/(\t)/g,"\\t")+"\"";
+    if(typeof o =="undefined") return "undefined";
+    if(typeof o == "object"){
+        if(o===null) return "null";
+        else if(!o.sort){
+            for(var i in o)
+                r.push("\""+i+"\""+":"+obj2str(o[i]))
+            r="{"+r.join()+"}"
+        }else{
+            for(var i =0;i<o.length;i++)
+                r.push(obj2str(o[i]))
+            r="["+r.join()+"]"
+        }
+        return r;
+    }
+    return o.toString();
+}
 </script> 
-  <div class="head"> 
-   <link rel="stylesheet" type="text/css" href="themes/Yachao/style/css/top_new.css?2"> 
-   <script type="text/javascript" src="themes/Yachao/style/js/top_new.js?21"></script> 
-   <div class="head_t"> 
-    <div class="w_bg"> 
-     <ul class="head_l"> 
-      <li class="tb home"><a href="/" title="">首页</a>　Hi，德国开元旗下-德国亚超欢迎您！　<a href="user.php?act=login">登录 </a>丨<a href="user.php?act=register">免费注册</a> </li> 
-     </ul> 
-     <ul class="head_r"> 
-      <li><a href="user.php" title="进入会员中心">我的亚超</a></li> 
-      <!--<li class="tb wl"><a href="/article-14.html">物流查询</a></li>--> 
-      <li class="tb gw"><a href="/flow.php">购物车</a> 0件<i></i></li> 
-      <!--<li class="tb shouji">手机版
-          <div class="caidan"><img src="" width="96" height="97" alt="德国亚超-德国网上亚洲食品超市-乡味肆意的亚超  调料-干货-主食-零食-冰鲜-厨具-柴米油盐酱醋茶"></div>
-        </li>--> 
-      <li class="tb weixin"> 
-       <div class="caidan">
-        <img src="/themes/Yachao/style/images/index/xinerweima_03.png?1" width="650" height="160" alt="德国亚超-德国网上亚洲食品超市-乡味肆意的亚超  调料-干货-主食-零食-冰鲜-厨具-柴米油盐酱醋茶">
-       </div> </li> 
-      <li class="tb sina"><a href="http://www.weibo.com/yachaode" target="_blank"></a> 
-       <div class="caidan">
-        <img src="\themes\Yachao\style\images\index\weibo.gif" title="德国亚超微博二维码" alt="德国亚超微博二维码" width="96" height="97">亚超微博二维码
-       </div> </li> 
-      <li class="kf">客户服务<i></i> 
-       <div class="caidan"> 
-        <a href="/article_cat.php?id=19">文章列表</a> 
-        <a href="/article.php?id=28" target="_blank">常见问题</a> 
-        <a href="article.php?id=189" target="_blank" rel="nofollow">售后服务</a> 
-        <!--<a href="#" target="_blank" rel="nofollow">在线客服</a>
-            <a href="http://list.qq.com/cgi-bin/qf_invite?id=8748a86561985cfd6379eabd38cb4a73955824d46a3d165f" target="_blank" rel="nofollow">新货订阅</a> --> 
-        <a href="mailto:info@yachao.de" title="info@yachao.de" alt="info@yachao.de">客服邮箱</a> 
-       </div> </li> 
-      <li class="tb d_map">网站导航<i></i> 
-       <div class="caidan"> 
-        <dl> 
-         <dt>
-          特色栏目
-         </dt> 
-         <dd> 
-          <!--<a target="_blank" href="http://www.outao.eu">海淘转运</a>--> 
-          <a target="_blank" href="http://www.joy.eu">JOY商城</a> 
-          <a target="_blank" href="http://www.kaiyuan.eu">欧洲旅游</a> 
-          <!--<a target="_blank" href="http://dhl.kaiyuan.eu">包裹单</a> -->
-         </dd> 
-        </dl> 
-        <dl> 
-         <dt>
-          企业服务
-         </dt> 
-         <dd> 
-          <div>
-           <a target="_blank" href="http://www.hipp.de/">Hipp官网</a>
-          </div> 
-          <div>
-           <a target="_blank" href="http://www.aptaforum.de/">Aptamil官网</a>
-          </div> 
-         </dd> 
-        </dl> 
-        <dl> 
-         <dt>
-          相关网站
-         </dt> 
-         <dd> 
-          <a target="_blank" href="http://www.kaiyuan.de">开元网</a> 
-          <a target="_blank" href="http://www.kaiyuan.eu">开元旅游</a> 
-          <!--<a target="_blank" href="http://www.outao.eu">欧淘网</a>--> 
-         </dd> 
-        </dl> 
-       </div> </li> 
-     </ul> 
-     <!-- <marquee behavior="alternate" style="color: #F00;">尊敬的用户：由于系统问题，近期下单收到影响，我们对您表达诚挚歉意，现特为您准备了满39减3欧优惠券（Discount折扣码：XT20190301），请及时保留折扣码，系统恢复后将不再提示此消息。</marquee>
-   --> 
+  <script type="text/javascript">
+var pagedate=new Date();
+var nowdate=pagedate.getYear()+"-"+pagedate.getMonth()+"-"+pagedate.getDate()+" "+pagedate.getHours();
+var process_request = "正在处理您的请求...";
+</script> 
+  <script type="text/javascript" src="js/utils.js"></script> 
+  <script type="text/javascript" src="themes/shopw/js/top.js"></script> 
+  <div id="lovexin14" style="right:5px;POSITION:absolute;TOP:50px; z-index: 9999;"></div> 
+  <div id="head"> 
+   <div class="h1"> 
+    <div class="span11"> 
+     <table width="100%" border="0">
+      <tbody>
+       <tr> 
+        <td> 
+         <div class="f_l f14 fc1">
+          欢迎来到 
+          <strong>亚超在线</strong> 欧洲的亚洲食品在线购物天堂
+         </div></td> 
+        <td> 
+         <form name="loginfo" method="post" action="./user.php?act=act_login">
+           用户名 或 邮件地址：
+          <input name="username" type="text" class="InputStr" size="12" maxlength="25" align="absmiddle"> 密 码：
+          <input name="password" type="password" class="InputStr" size="10" align="absmiddle"> 
+          <input name="back_act" value="/category.php" type="hidden"> 
+          <input type="checkbox" name="autologin" value="1">自动登录 
+          <input type="image" src="themes/shopw/images/green/bnt_log.gif" align="absmiddle"> 
+          <a href="user.php?act=register">新注册</a> 
+         </form> </td> 
+        <td align="right"> </td> 
+       </tr>
+      </tbody>
+     </table> 
     </div> 
    </div> 
-   <div class="header"> 
-    <div class="w_bg"> 
-     <div class="logo">
-      <a href="/"><img src="/themes/Yachao/style/images/index/logo.gif" style="margin-left: -3px;" alt="德国亚超-德国网上亚洲食品超市-乡味肆意的亚超  调料-干货-主食-零食-冰鲜-厨具-柴米油盐酱醋茶"></a>
-     </div> 
-     <!--<div class="t_zhuanti"><a href="about/quality/"><img src="themes/Yachao/style/images/index/index_06.png" alt="德国亚超-德国网上亚洲食品超市-乡味肆意的亚超  调料-干货-主食-零食-冰鲜-厨具-柴米油盐酱醋茶" ></a></div>原--> 
-     <div class="t_zhuanti"> 
-      <a href="/index.php?ad=94&amp;nomobi=1&amp;st=ad_all&amp;url=d3d3LnlhY2hhby5kZS9hcnRpY2xlLnBocD9pZD0yNTM="><img title="" alt="" class="ot_gg" src="data/afficheimg/20170103yrxotw.png" width="200" height="70"></a> 
-     </div> 
-     <div class="search"> 
-      <div class="xialx"> 
-       <div class="hot_search"> 
-        <h5><i></i>热门关键词</h5> 
-        <ul> 
-         <li><a href="search.php?keywords=茉莉香米" title="茉莉香米">茉莉香米</a></li> 
-         <li><a href="search.php?keywords=酱油" title="酱油">酱油</a></li> 
-         <li><a href="search.php?keywords=海底捞" title="海底捞">海底捞</a></li> 
-         <li><a href="search.php?keywords=老干妈" title="老干妈">老干妈</a></li> 
-        </ul> 
-        <div class="HackBox"></div> 
-       </div> 
-       <input type="hidden" value="" id="check_show"> 
-       <!--<div class="gongnengn">
-            <ul>
-			
-              <li><a href="/article-14.html"><i class="ix1"></i>物流查询</a></li>
-              
-			  <li><a href="#"><i class="ix2"></i>浏览记录</a></li>
-              <li><a href="#"><i class="ix3"></i>猜我喜欢</a></li>
-			  
-            </ul>
-            <div class="HackBox"></div>
-          </div>--> 
-       <div id="order_show_info" style="margin:10px auto; width:90%;color:#7a7a7a;line-height: 27px;display:none;"></div>
-       <span style="display:none" class="key_def">正在获取订单信息，请稍后...</span> 
+   <div class="h2" id="top_head_headline"> 
+    <div class="f_l logo" style="padding-top: 10px;"> 
+     <a href="./" name="top" title="购物,购物网,电视购物,网上购物"> <img src="themes/shopw/images/logo.gif" border="0" alt="购物,购物网,电视购物,网上购物"> </a> 
+    </div> 
+    <div class="f_r"> 
+     <table cellpadding="0" cellspacing="0"> 
+      <tbody>
+       <tr>
+        <td>
+         <table border="0" cellpadding="0" cellspacing="0">
+          <tbody>
+           <tr>
+            <td style="padding-right:10px;padding-top:5px;"> <a href="https://www.yachaoonline.com/article.php?id=180"><img src="/images/upload/image/20190901/20190901013036_51445.gif" width="500" height="90" border="0"> </a> </td> 
+            <td background="/themes/shopw/images/top_right.gif" width="190" valign="top" align="right"> 
+             <div style="padding:5px 0 0 0px;"> 
+              <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1426652695&amp;site=亚超在线&amp;menu=yes" target="_blank"><img src="http://wpa.qq.com/pa?p=1:1426652695:4" height="16" border="0"> <b style=" color:#E04D08"> QQ在线客服</b></a>
+              <br> 
+              <a target="_blank" href="http://settings.messenger.live.com/Conversation/IMMe.aspx?invitee=94b94e65fe6905fe@apps.messenger.live.com&amp;mkt=zh-cn"> <img style="border-style: none;" src="http://www.yachaoonline.com/images/upload/image/20160204/20160204084105_27043.jpg" width="16" height="16"><b style=" color:#E04D08"> MSN在线客服</b></a>
+              <br>
+              <b style=" color:#E04D08">咨询电话：040-38673727</b> 
+             </div> </td>
+           </tr>
+          </tbody>
+         </table></td>
+       </tr> 
+      </tbody>
+     </table> 
+    </div> 
+   </div> 
+   <div class="h3"> 
+    <ul class="nav_left f_l"> 
+     <li class="cur"> <a href="index.php">首页<span></span></a> </li> 
+     <li> <a href="exchange.php"> 积分商城 <span></span> </a> </li> 
+     <li> <a href="category.php?id=1651"> 夏日饮品 <span></span> </a> </li> 
+     <li> <a href="category.php?id=1626"> 中秋钜惠 <span></span> </a> </li> 
+     <li> <a href="category.php?id=1488" target="_blank"> 新品上市 <span></span> </a> </li> 
+     <li> <a href="category.php?id=1486"> 人气热卖 <span></span> </a> </li> 
+     <li> <a href="brand.php" target="_blank"> 品牌专区 <span></span> </a> </li> 
+     <li> <a href="article_cat.php?id=12"> 最新动态 <span></span> </a> </li> 
+    </ul> 
+   </div> 
+   <div class="h4"> 
+    <script type="text/javascript">
+		<!--
+		function checkSearchForm()
+		{
+			if(document.getElementById('keyword').value)
+			{
+				return true;
+			}
+			else
+			{
+				alert("请输入搜索关键词！");
+							return false;
+			}
+		}
+		-->
+		</script> 
+    <div class="f_l search"> 
+     <form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()"> 
+      <select name="category" id="category"> <option value="0">所有分类</option> <option value="249">家居用品</option><option value="1605">&nbsp;&nbsp;&nbsp;&nbsp;茶杯</option><option value="1483">&nbsp;&nbsp;&nbsp;&nbsp;马桶坐垫</option><option value="1606">&nbsp;&nbsp;&nbsp;&nbsp;紫砂壶/杯子</option><option value="546">&nbsp;&nbsp;&nbsp;&nbsp;书籍文娱类</option><option value="1571">&nbsp;&nbsp;&nbsp;&nbsp;被套/枕套</option><option value="1484">&nbsp;&nbsp;&nbsp;&nbsp;棉被</option><option value="1548">&nbsp;&nbsp;&nbsp;&nbsp;Hockey</option><option value="1552">&nbsp;&nbsp;&nbsp;&nbsp;电子产品</option><option value="340">&nbsp;&nbsp;&nbsp;&nbsp;厨房用品</option><option value="254">&nbsp;&nbsp;&nbsp;&nbsp;其他用品</option><option value="326">活动专区</option><option value="1137">&nbsp;&nbsp;&nbsp;&nbsp;中秋月饼</option><option value="1134">&nbsp;&nbsp;&nbsp;&nbsp;手机SIM卡</option><option value="1626">&nbsp;&nbsp;&nbsp;&nbsp;中秋钜惠</option><option value="494">火锅专栏</option><option value="906">&nbsp;&nbsp;&nbsp;&nbsp;酸菜鱼/调料</option><option value="520">&nbsp;&nbsp;&nbsp;&nbsp;火锅用具</option><option value="1572">&nbsp;&nbsp;&nbsp;&nbsp;麻辣鱼调料</option><option value="495">&nbsp;&nbsp;&nbsp;&nbsp;火锅底料</option><option value="499">&nbsp;&nbsp;&nbsp;&nbsp;调料蘸酱</option><option value="504">&nbsp;&nbsp;&nbsp;&nbsp;火锅配菜</option><option value="510">&nbsp;&nbsp;&nbsp;&nbsp;新鲜配菜</option><option value="514">&nbsp;&nbsp;&nbsp;&nbsp;火锅饮料</option><option value="226">水果豆腐蔬菜</option><option value="1597">&nbsp;&nbsp;&nbsp;&nbsp;新鲜茴香</option><option value="1622">&nbsp;&nbsp;&nbsp;&nbsp;豆芽</option><option value="1225">&nbsp;&nbsp;&nbsp;&nbsp;萝卜</option><option value="1636">&nbsp;&nbsp;&nbsp;&nbsp;空心菜</option><option value="1383">&nbsp;&nbsp;&nbsp;&nbsp;笋丝/笋片</option><option value="1489">&nbsp;&nbsp;&nbsp;&nbsp;老豆腐</option><option value="1289">&nbsp;&nbsp;&nbsp;&nbsp;鲜木瓜</option><option value="1364">&nbsp;&nbsp;&nbsp;&nbsp;金针菇</option><option value="1203">&nbsp;&nbsp;&nbsp;&nbsp;酸白菜</option><option value="869">&nbsp;&nbsp;&nbsp;&nbsp;蔬菜</option><option value="1237">&nbsp;&nbsp;&nbsp;&nbsp;冬笋尖</option><option value="1414">&nbsp;&nbsp;&nbsp;&nbsp;嫩莴笋</option><option value="985">&nbsp;&nbsp;&nbsp;&nbsp;豆制品系列</option><option value="1624">&nbsp;&nbsp;&nbsp;&nbsp;鲜玉米</option><option value="1657">&nbsp;&nbsp;&nbsp;&nbsp;丝瓜</option><option value="870">&nbsp;&nbsp;&nbsp;&nbsp;水果</option><option value="1304">&nbsp;&nbsp;&nbsp;&nbsp;白果仁</option><option value="1654">&nbsp;&nbsp;&nbsp;&nbsp;豌豆仁</option><option value="993">&nbsp;&nbsp;&nbsp;&nbsp;其他系列</option><option value="1535">&nbsp;&nbsp;&nbsp;&nbsp;新鲜韭菜</option><option value="1591">&nbsp;&nbsp;&nbsp;&nbsp;小青菜</option><option value="1331">&nbsp;&nbsp;&nbsp;&nbsp;番薯</option><option value="1648">&nbsp;&nbsp;&nbsp;&nbsp;苋菜</option><option value="1373">&nbsp;&nbsp;&nbsp;&nbsp;蟹味菇</option><option value="1389">&nbsp;&nbsp;&nbsp;&nbsp;佛手-合掌瓜</option><option value="1285">&nbsp;&nbsp;&nbsp;&nbsp;鲜毛豆</option><option value="488">肉类海鲜</option><option value="1505">&nbsp;&nbsp;&nbsp;&nbsp;牛肉卷</option><option value="1596">&nbsp;&nbsp;&nbsp;&nbsp;虾丸</option><option value="1652">&nbsp;&nbsp;&nbsp;&nbsp;鱼饼</option><option value="1407">&nbsp;&nbsp;&nbsp;&nbsp;肉丸子</option><option value="1506">&nbsp;&nbsp;&nbsp;&nbsp;羊肉卷</option><option value="491">&nbsp;&nbsp;&nbsp;&nbsp;半成品</option><option value="489">&nbsp;&nbsp;&nbsp;&nbsp;肉类即食</option><option value="490">&nbsp;&nbsp;&nbsp;&nbsp;海鲜类即食</option><option value="19">方便速食类</option><option value="1122">&nbsp;&nbsp;&nbsp;&nbsp;越南牛肉粉</option><option value="984">&nbsp;&nbsp;&nbsp;&nbsp;农心辛拉面系列</option><option value="1503">&nbsp;&nbsp;&nbsp;&nbsp;即食火锅</option><option value="981">&nbsp;&nbsp;&nbsp;&nbsp;非油炸方便面-热干面</option><option value="976">&nbsp;&nbsp;&nbsp;&nbsp;康师傅系列</option><option value="978">&nbsp;&nbsp;&nbsp;&nbsp;日清食品</option><option value="1123">&nbsp;&nbsp;&nbsp;&nbsp;越南鸡肉味粉丝</option><option value="982">&nbsp;&nbsp;&nbsp;&nbsp;今麦郎系列</option><option value="979">&nbsp;&nbsp;&nbsp;&nbsp;统一系列</option><option value="1437">&nbsp;&nbsp;&nbsp;&nbsp;螺蛳粉系列</option><option value="1476">&nbsp;&nbsp;&nbsp;&nbsp;良呈美</option><option value="1139">&nbsp;&nbsp;&nbsp;&nbsp;南街村面</option><option value="999">&nbsp;&nbsp;&nbsp;&nbsp;粉丝系列</option><option value="983">&nbsp;&nbsp;&nbsp;&nbsp;五连包系列</option><option value="1308">&nbsp;&nbsp;&nbsp;&nbsp;煲饭</option><option value="1504">&nbsp;&nbsp;&nbsp;&nbsp;日本拉面</option><option value="20">&nbsp;&nbsp;&nbsp;&nbsp;其他系列</option><option value="137">&nbsp;&nbsp;&nbsp;&nbsp;八宝粥</option><option value="218">&nbsp;&nbsp;&nbsp;&nbsp;冲食类</option><option value="485">&nbsp;&nbsp;&nbsp;&nbsp;速食汤料</option><option value="148">&nbsp;&nbsp;&nbsp;&nbsp;即食罐头</option><option value="27">主食类</option><option value="1016">&nbsp;&nbsp;&nbsp;&nbsp;品牌系列</option><option value="1078">&nbsp;&nbsp;&nbsp;&nbsp;普通大米</option><option value="29">&nbsp;&nbsp;&nbsp;&nbsp;米类</option><option value="276">&nbsp;&nbsp;&nbsp;&nbsp;煮面类</option><option value="128">&nbsp;&nbsp;&nbsp;&nbsp;面点类</option><option value="239">&nbsp;&nbsp;&nbsp;&nbsp;面粉类</option><option value="224">&nbsp;&nbsp;&nbsp;&nbsp;五谷杂粮</option><option value="16">休闲零食类</option><option value="949">&nbsp;&nbsp;&nbsp;&nbsp;即食蛋类</option><option value="1446">&nbsp;&nbsp;&nbsp;&nbsp;煮花生</option><option value="1611">&nbsp;&nbsp;&nbsp;&nbsp;奶糖</option><option value="1132">&nbsp;&nbsp;&nbsp;&nbsp;鱿鱼酥</option><option value="1361">&nbsp;&nbsp;&nbsp;&nbsp;杨梅</option><option value="842">&nbsp;&nbsp;&nbsp;&nbsp;橡皮糖</option><option value="1371">&nbsp;&nbsp;&nbsp;&nbsp;点心</option><option value="1303">&nbsp;&nbsp;&nbsp;&nbsp;泡芙</option><option value="1069">&nbsp;&nbsp;&nbsp;&nbsp;糖果类</option><option value="1033">&nbsp;&nbsp;&nbsp;&nbsp;瓜子类</option><option value="1049">&nbsp;&nbsp;&nbsp;&nbsp;口水系列</option><option value="1581">&nbsp;&nbsp;&nbsp;&nbsp;小麻花</option><option value="1162">&nbsp;&nbsp;&nbsp;&nbsp;兵卒</option><option value="1030">&nbsp;&nbsp;&nbsp;&nbsp;休闲豆制品</option><option value="1055">&nbsp;&nbsp;&nbsp;&nbsp;麻糬/大幅/羊羹</option><option value="1208">&nbsp;&nbsp;&nbsp;&nbsp;相思梅</option><option value="1052">&nbsp;&nbsp;&nbsp;&nbsp;花生系列</option><option value="1140">&nbsp;&nbsp;&nbsp;&nbsp;一口酥</option><option value="1027">&nbsp;&nbsp;&nbsp;&nbsp;枣类</option><option value="1632">&nbsp;&nbsp;&nbsp;&nbsp;辣条</option><option value="1215">&nbsp;&nbsp;&nbsp;&nbsp;坚果类</option><option value="1060">&nbsp;&nbsp;&nbsp;&nbsp;酥饼类</option><option value="1128">&nbsp;&nbsp;&nbsp;&nbsp;板栗</option><option value="1228">&nbsp;&nbsp;&nbsp;&nbsp;香脆辣椒</option><option value="48">&nbsp;&nbsp;&nbsp;&nbsp;饼干/糕点/蛋卷类</option><option value="381">&nbsp;&nbsp;&nbsp;&nbsp;膨化油炸食品</option><option value="31">&nbsp;&nbsp;&nbsp;&nbsp;核桃/果仁/其它</option><option value="389">&nbsp;&nbsp;&nbsp;&nbsp;蔬果干</option><option value="395">&nbsp;&nbsp;&nbsp;&nbsp;蜜饯</option><option value="370">&nbsp;&nbsp;&nbsp;&nbsp;肉类即食/海味即食</option><option value="57">&nbsp;&nbsp;&nbsp;&nbsp;果冻/龟苓膏/凉粉</option><option value="21">腌制品</option><option value="1354">&nbsp;&nbsp;&nbsp;&nbsp;泡椒木耳</option><option value="620">&nbsp;&nbsp;&nbsp;&nbsp;泡菜/萝卜</option><option value="1384">&nbsp;&nbsp;&nbsp;&nbsp;剁椒魔芋丝</option><option value="759">&nbsp;&nbsp;&nbsp;&nbsp;雪菜/酸菜/大头菜</option><option value="1073">&nbsp;&nbsp;&nbsp;&nbsp;榨菜类</option><option value="1284">&nbsp;&nbsp;&nbsp;&nbsp;卜留克</option><option value="402">&nbsp;&nbsp;&nbsp;&nbsp;海带/海草</option><option value="82">&nbsp;&nbsp;&nbsp;&nbsp;其它腌制品</option><option value="414">&nbsp;&nbsp;&nbsp;&nbsp;豆角/豇豆/什锦</option><option value="79">&nbsp;&nbsp;&nbsp;&nbsp;腐乳</option><option value="299">&nbsp;&nbsp;&nbsp;&nbsp;蛋类</option><option value="375">&nbsp;&nbsp;&nbsp;&nbsp;半成品（非即食）</option><option value="17">调味类</option><option value="1455">&nbsp;&nbsp;&nbsp;&nbsp;芝麻油</option><option value="89">&nbsp;&nbsp;&nbsp;&nbsp;酱油/料酒/醋/香油</option><option value="419">&nbsp;&nbsp;&nbsp;&nbsp;调味料粉</option><option value="423">&nbsp;&nbsp;&nbsp;&nbsp;调味酱汁</option><option value="432">&nbsp;&nbsp;&nbsp;&nbsp;菜肴/面料酱</option><option value="106">&nbsp;&nbsp;&nbsp;&nbsp;汤料</option><option value="437">&nbsp;&nbsp;&nbsp;&nbsp;糖/辅料</option><option value="18">干货类</option><option value="744">&nbsp;&nbsp;&nbsp;&nbsp;香菇</option><option value="641">&nbsp;&nbsp;&nbsp;&nbsp;黑木耳</option><option value="1154">&nbsp;&nbsp;&nbsp;&nbsp;龙眼干</option><option value="825">&nbsp;&nbsp;&nbsp;&nbsp;百合片</option><option value="822">&nbsp;&nbsp;&nbsp;&nbsp;荔枝干</option><option value="728">&nbsp;&nbsp;&nbsp;&nbsp;鸡心枣</option><option value="725">&nbsp;&nbsp;&nbsp;&nbsp;枸杞</option><option value="863">&nbsp;&nbsp;&nbsp;&nbsp;卤水料</option><option value="788">&nbsp;&nbsp;&nbsp;&nbsp;莲子</option><option value="732">&nbsp;&nbsp;&nbsp;&nbsp;花菇</option><option value="1165">&nbsp;&nbsp;&nbsp;&nbsp;粉丝</option><option value="793">&nbsp;&nbsp;&nbsp;&nbsp;辣椒干</option><option value="1231">&nbsp;&nbsp;&nbsp;&nbsp;青菜笋干</option><option value="693">&nbsp;&nbsp;&nbsp;&nbsp;金钱菇</option><option value="817">&nbsp;&nbsp;&nbsp;&nbsp;桂圆干</option><option value="745">&nbsp;&nbsp;&nbsp;&nbsp;雪耳-银耳</option><option value="785">&nbsp;&nbsp;&nbsp;&nbsp;花椒</option><option value="294">&nbsp;&nbsp;&nbsp;&nbsp;海产类</option><option value="296">&nbsp;&nbsp;&nbsp;&nbsp;干菜类</option><option value="180">&nbsp;&nbsp;&nbsp;&nbsp;豆/面制品</option><option value="62">&nbsp;&nbsp;&nbsp;&nbsp;菌菇类</option><option value="323">&nbsp;&nbsp;&nbsp;&nbsp;营养汤、粥料</option><option value="444">&nbsp;&nbsp;&nbsp;&nbsp;烹任辅料</option><option value="445">&nbsp;&nbsp;&nbsp;&nbsp;保健药材</option><option value="22">饮品</option><option value="1500">&nbsp;&nbsp;&nbsp;&nbsp;八宝粥</option><option value="1464">&nbsp;&nbsp;&nbsp;&nbsp;咖啡</option><option value="1501">&nbsp;&nbsp;&nbsp;&nbsp;汽水</option><option value="195">&nbsp;&nbsp;&nbsp;&nbsp;茶饮</option><option value="306">&nbsp;&nbsp;&nbsp;&nbsp;乳/豆饮品/其它</option><option value="84">&nbsp;&nbsp;&nbsp;&nbsp;果饮</option><option value="194">&nbsp;&nbsp;&nbsp;&nbsp;酒精饮料</option><option value="25">&nbsp;&nbsp;&nbsp;&nbsp;冲泡类</option><option value="86">酒类</option><option value="1009">&nbsp;&nbsp;&nbsp;&nbsp;茅台酒</option><option value="886">&nbsp;&nbsp;&nbsp;&nbsp;二锅头</option><option value="1336">&nbsp;&nbsp;&nbsp;&nbsp;清酒</option><option value="1316">&nbsp;&nbsp;&nbsp;&nbsp;泸州老窖</option><option value="1562">&nbsp;&nbsp;&nbsp;&nbsp;尖庄</option><option value="209">&nbsp;&nbsp;&nbsp;&nbsp;黄酒</option><option value="208">&nbsp;&nbsp;&nbsp;&nbsp;白酒</option><option value="473">&nbsp;&nbsp;&nbsp;&nbsp;葡萄酒</option><option value="278">&nbsp;&nbsp;&nbsp;&nbsp;米酒</option><option value="214">&nbsp;&nbsp;&nbsp;&nbsp;啤酒</option><option value="277">&nbsp;&nbsp;&nbsp;&nbsp;果酒</option><option value="337">甜品</option><option value="365">&nbsp;&nbsp;&nbsp;&nbsp;红豆沙</option><option value="917">&nbsp;&nbsp;&nbsp;&nbsp;糖水龙眼</option><option value="1643">&nbsp;&nbsp;&nbsp;&nbsp;椰奶</option><option value="538">&nbsp;&nbsp;&nbsp;&nbsp;椰浆</option><option value="366">&nbsp;&nbsp;&nbsp;&nbsp;酒酿</option><option value="1554">&nbsp;&nbsp;&nbsp;&nbsp;藕粉</option><option value="1118">&nbsp;&nbsp;&nbsp;&nbsp;糖水芒果</option><option value="1524">&nbsp;&nbsp;&nbsp;&nbsp;糖水马蹄</option><option value="857">&nbsp;&nbsp;&nbsp;&nbsp;珍珠粉圆</option><option value="1211">&nbsp;&nbsp;&nbsp;&nbsp;糖水杨梅</option><option value="916">&nbsp;&nbsp;&nbsp;&nbsp;糖水荔枝</option><option value="654">&nbsp;&nbsp;&nbsp;&nbsp;黑豆沙</option><option value="929">&nbsp;&nbsp;&nbsp;&nbsp;糖桂花</option><option value="487">&nbsp;&nbsp;&nbsp;&nbsp;西米/珍珠</option><option value="1608">&nbsp;&nbsp;&nbsp;&nbsp;米酒汁</option><option value="955">&nbsp;&nbsp;&nbsp;&nbsp;凉粉</option><option value="1212">&nbsp;&nbsp;&nbsp;&nbsp;糖水枇杷</option><option value="555">&nbsp;&nbsp;&nbsp;&nbsp;八宝粥/奶茶</option><option value="158">日韩食品</option><option value="535">&nbsp;&nbsp;&nbsp;&nbsp;调料</option><option value="339">保健护肤品</option><option value="1282">&nbsp;&nbsp;&nbsp;&nbsp;口服类</option><option value="1560">&nbsp;&nbsp;&nbsp;&nbsp;绿药膏</option><option value="1283">&nbsp;&nbsp;&nbsp;&nbsp;外用类</option><option value="217">其它</option><option value="304">&nbsp;&nbsp;&nbsp;&nbsp;补邮专链</option><option value="234">&nbsp;&nbsp;&nbsp;&nbsp;其它</option> </select> 
+      <input name="keywords" type="text" id="keyword" class="text" value=""> 
+      <input type="image" src="themes/shopw/images/btn_search.gif" alt="搜索">
+      <a href="search.php?act=advanced_search">&nbsp;&nbsp;高级搜索</a> 
+     </form> 
+    </div> 
+    <div class="f_l hotkeywords fc4 f14" id="marqueediv6" style=" display:none;"> 
+    </div> 
+    <div class="f_r tr f14"> 
+     <div class="cart"> 
+      <div class="cart_info" id="ECS_CARTINFO"> 
+       <a href="flow.php" title="查看购物车">总计0件商品,重0g,0.00</a>
       </div> 
-      <form action="search.php" method="get"> 
-       <ul class="searchk"> 
-        <li class="search1"> <input type="text" name="keywords" id="textfield" placeholder="请输入商品名称或订单号查询..." class="search_keywords"> </li> 
-        <li class="tb search2"> <input class="tb search_btn" type="submit" name="button" id="button" value="提交"> </li> 
-       </ul> 
-      </form> 
+      <a href="flow.php"><img src="themes/shopw/images/btn_flow.gif" class="f_l"></a>
+      <a href="user.php?act=order_list"><img src="themes/shopw/images/btn_order.gif" class="f_l"></a> 
      </div> 
     </div> 
    </div> 
-   <div class="nav"> 
-    <div class="w_bg"> 
-     <div class="inav"> 
-      <div class="iinav">
-       商品分类
-       <i></i>
-      </div> 
-      <div class="xnav"> 
-       <ul> 
-        <li> <h2> <i></i> <img src="data/afficheimg/20160223nvnjmo.png" style="width:36px;height:36px;" alt="德国亚超-德国网上亚洲食品超市-乡味肆意的亚超  调料-干货-主食-零食-冰鲜-厨具-柴米油盐酱醋茶">　<a href="category.php?id=179">特别专栏</a> </h2> 
-         <div class="i_nav"> 
-          <div class="subitem"> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=180">端午节</a>
-            </dt> 
-            <dd> 
-             <span><a href="category.php?id=467">粽叶</a></span> 
-             <span><a href="category.php?id=468">糯米</a></span> 
-             <span><a href="category.php?id=469">红枣</a></span> 
-             <span><a href="category.php?id=470">香菇</a></span> 
-             <span><a href="category.php?id=471">豆沙</a></span> 
-             <span><a href="category.php?id=472">咸蛋</a></span> 
-             <span><a href="category.php?id=555">板栗</a></span> 
-             <span><a href="category.php?id=719">花生</a></span> 
-            </dd> 
-           </dl> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=246">台灣美食</a>
-            </dt> 
-            <dd> 
-             <span><a href="category.php?id=247">主食麵食</a></span> 
-             <span><a href="category.php?id=249">公卖局月子酒</a></span> 
-             <span><a href="category.php?id=251">泡麵</a></span> 
-             <span><a href="category.php?id=255">酒水</a></span> 
-             <span><a href="category.php?id=257">罐头速食</a></span> 
-             <span><a href="category.php?id=260">零食</a></span> 
-             <span><a href="category.php?id=265">醬料调料</a></span> 
-             <span><a href="category.php?id=271">廚房用具</a></span> 
-             <span><a href="category.php?id=427">飮料</a></span> 
-             <span><a href="category.php?id=518">凤梨酥</a></span> 
-            </dd> 
-           </dl> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=311">秋冬特辑</a>
-            </dt> 
-            <dd> 
-             <span><a href="category.php?id=485">暖身冬饮</a></span> 
-             <span><a href="category.php?id=557">冬季零食</a></span> 
-             <span><a href="category.php?id=663">滋补煲汤</a></span> 
-            </dd> 
-           </dl> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=315">火锅专栏</a>
-            </dt> 
-            <dd> 
-             <span><a href="category.php?id=323">火锅底料</a></span> 
-             <span><a href="category.php?id=324">调料</a></span> 
-             <span><a href="category.php?id=325">配菜</a></span> 
-             <span><a href="category.php?id=474">粉面</a></span> 
-             <span><a href="category.php?id=545">魔芋</a></span> 
-            </dd> 
-           </dl> 
-          </div> 
-          <div class="i_cat"> 
-           <dl class="i_prom"> 
-            <!--<dt>促销活动</dt>
-                    <dd> --> 
-            <!--</dd>--> 
-           </dl> 
-          </div> 
-         </div> </li> 
-        <li> <h2> <i></i> <img src="data/afficheimg/20160223anintp.png" style="width:36px;height:36px;" alt="德国亚超-德国网上亚洲食品超市-乡味肆意的亚超  调料-干货-主食-零食-冰鲜-厨具-柴米油盐酱醋茶">　<a href="category.php?id=175">生鲜冷藏</a> </h2> 
-         <div class="i_nav"> 
-          <div class="subitem"> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=181">生鲜蔬果</a>
-            </dt> 
-            <dd> 
-             <span><a href="category.php?id=627">莲藕</a></span> 
-             <span><a href="category.php?id=628">蒜</a></span> 
-             <span><a href="category.php?id=629">芋头</a></span> 
-             <span><a href="category.php?id=630">地瓜</a></span> 
-             <span><a href="category.php?id=631">生姜</a></span> 
-             <span><a href="category.php?id=632">小白菜</a></span> 
-             <span><a href="category.php?id=633">蒜苔</a></span> 
-             <span><a href="category.php?id=634">金针菇</a></span> 
-             <span><a href="category.php?id=635">山药淮山</a></span> 
-             <span><a href="category.php?id=638">豆芽菜</a></span> 
-             <span><a href="category.php?id=639">佛手瓜</a></span> 
-             <span><a href="category.php?id=670">茭白</a></span> 
-             <span><a href="category.php?id=680">丝瓜</a></span> 
-             <span><a href="category.php?id=681">茄子</a></span> 
-            </dd> 
-           </dl> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=237">冷藏豆制品</a>
-            </dt> 
-            <dd> 
-             <span><a href="category.php?id=340">油豆腐</a></span> 
-             <span><a href="category.php?id=341">嫩豆腐</a></span> 
-             <span><a href="category.php?id=466">豆腐干</a></span> 
-            </dd> 
-           </dl> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=238">韩国年糕</a>
-            </dt> 
-            <dd> 
-             <span><a href="category.php?id=356">韩国Chongga</a></span> 
-             <span><a href="category.php?id=678">Foodberry</a></span> 
-             <span><a href="category.php?id=679">张力生</a></span> 
-            </dd> 
-           </dl> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=552">冷藏肉类</a>
-            </dt> 
-            <dd> 
-             <span><a href="category.php?id=553">虾</a></span> 
-            </dd> 
-           </dl> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=645">冰冻食品</a>
-            </dt> 
-            <dd> 
-             <span><a href="category.php?id=646">虾饺水饺馄饨</a></span> 
-             <span><a href="category.php?id=647">包子</a></span> 
-             <span><a href="category.php?id=649">丸子鱼饼</a></span> 
-             <span><a href="category.php?id=652">冷冻蔬菜</a></span> 
-             <span><a href="category.php?id=653">冻虾仁</a></span> 
-             <span><a href="category.php?id=654">羊肉卷</a></span> 
-             <span><a href="category.php?id=671">汤圆</a></span> 
-             <span><a href="category.php?id=676">油条</a></span> 
-             <span><a href="category.php?id=677">凤爪鸡爪</a></span> 
-            </dd> 
-           </dl> 
-          </div> 
-          <div class="i_cat"> 
-           <dl class="i_prom"> 
-            <!--<dt>促销活动</dt>
-                    <dd> --> 
-            <!--</dd>--> 
-           </dl> 
-          </div> 
-         </div> </li> 
-        <li> <h2> <i></i> 　<a href="category.php?id=720">美妆护肤</a> </h2> 
-         <div class="i_nav"> 
-          <div class="subitem"> 
-          </div> 
-          <div class="i_cat"> 
-           <dl class="i_prom"> 
-            <!--<dt>促销活动</dt>
-                    <dd> --> 
-            <!--</dd>--> 
-           </dl> 
-          </div> 
-         </div> </li> 
-        <li> <h2> <i></i> <img src="data/afficheimg/20160223acrxxr.png" style="width:36px;height:36px;" alt="德国亚超-德国网上亚洲食品超市-乡味肆意的亚超  调料-干货-主食-零食-冰鲜-厨具-柴米油盐酱醋茶">　<a href="category.php?id=71">主食粉面</a> </h2> 
-         <div class="i_nav"> 
-          <div class="subitem"> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=84">大米</a>
-            </dt> 
-            <dd> 
-             <span><a href="category.php?id=212">泰国印度米</a></span> 
-             <span><a href="category.php?id=213">中日韩大米</a></span> 
-             <span><a href="category.php?id=604">小米</a></span> 
-             <span><a href="category.php?id=87">五谷杂粮米</a></span> 
-             <span><a href="category.php?id=187">糯米</a></span> 
-             <span><a href="category.php?id=375">薏米</a></span> 
-            </dd> 
-           </dl> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=377">杂粮</a>
-            </dt> 
-            <dd> 
-             <span><a href="category.php?id=376">西米</a></span> 
-             <span><a href="category.php?id=379">绿豆</a></span> 
-             <span><a href="category.php?id=380">黄豆</a></span> 
-             <span><a href="category.php?id=381">红豆</a></span> 
-             <span><a href="category.php?id=502">芝麻</a></span> 
-             <span><a href="category.php?id=577">黑豆</a></span> 
-             <span><a href="category.php?id=623">玉米</a></span> 
-             <span><a href="category.php?id=661">小麦</a></span> 
-             <span><a href="category.php?id=481">杂粮粉糊</a></span> 
-            </dd> 
-           </dl> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=164">米粉</a>
-            </dt> 
-            <dd> 
-             <span><a href="category.php?id=163">粉丝</a></span> 
-             <span><a href="category.php?id=389">宽粉</a></span> 
-             <span><a href="category.php?id=390">粉条粉皮</a></span> 
-             <span><a href="category.php?id=391">河粉</a></span> 
-            </dd> 
-           </dl> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=85">面食</a>
-            </dt> 
-            <dd> 
-             <span><a href="category.php?id=165">面条</a></span> 
-             <span><a href="category.php?id=220">乌冬面</a></span> 
-             <span><a href="category.php?id=236">热干面</a></span> 
-             <span><a href="category.php?id=259">刀削面</a></span> 
-             <span><a href="category.php?id=428">凉面</a></span> 
-             <span><a href="category.php?id=571">拉面</a></span> 
-             <span><a href="category.php?id=597">辛拉面</a></span> 
-             <span><a href="category.php?id=640">铺盖面</a></span> 
-             <span><a href="category.php?id=641">面皮面片</a></span> 
-             <span><a href="category.php?id=658">重庆小面</a></span> 
-             <span><a href="category.php?id=659">拌面</a></span> 
-             <span><a href="category.php?id=668">炒面</a></span> 
-             <span><a href="category.php?id=672">泡面快熟面</a></span> 
-             <span><a href="category.php?id=673">蛋面</a></span> 
-             <span><a href="category.php?id=674">虾子面</a></span> 
-             <span><a href="category.php?id=675">阳春面</a></span> 
-            </dd> 
-           </dl> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=83">面粉</a>
-            </dt> 
-            <dd> 
-             <span><a href="category.php?id=328">地瓜粉</a></span> 
-             <span><a href="category.php?id=329">糯米粉</a></span> 
-             <span><a href="category.php?id=382">抹茶粉</a></span> 
-             <span><a href="category.php?id=383">石膏粉</a></span> 
-             <span><a href="category.php?id=384">虾饺粉</a></span> 
-             <span><a href="category.php?id=385">小麦粉</a></span> 
-             <span><a href="category.php?id=386">芡粉淀粉</a></span> 
-             <span><a href="category.php?id=387">绿豆粉</a></span> 
-             <span><a href="category.php?id=578">粘米粉</a></span> 
-             <span><a href="category.php?id=580">苏打粉</a></span> 
-             <span><a href="category.php?id=620">嫩肉粉</a></span> 
-             <span><a href="category.php?id=388">其他</a></span> 
-            </dd> 
-           </dl> 
-          </div> 
-          <div class="i_cat"> 
-           <dl class="i_prom"> 
-            <!--<dt>促销活动</dt>
-                    <dd> --> 
-            <!--</dd>--> 
-           </dl> 
-          </div> 
-         </div> </li> 
-        <li> <h2> <i></i> <img src="data/afficheimg/20160223ebrbln.png" style="width:36px;height:36px;" alt="德国亚超-德国网上亚洲食品超市-乡味肆意的亚超  调料-干货-主食-零食-冰鲜-厨具-柴米油盐酱醋茶">　<a href="category.php?id=72">油盐酱醋</a> </h2> 
-         <div class="i_nav"> 
-          <div class="subitem"> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=332">调味品</a>
-            </dt> 
-            <dd> 
-             <span><a href="category.php?id=412">卤料</a></span> 
-             <span><a href="category.php?id=642">味淋</a></span> 
-             <span><a href="category.php?id=88">醋类</a></span> 
-             <span><a href="category.php?id=89">调料酒/汁</a></span> 
-             <span><a href="category.php?id=96">酱油生抽老抽</a></span> 
-             <span><a href="category.php?id=102">糖类</a></span> 
-             <span><a href="category.php?id=103">味精</a></span> 
-             <span><a href="category.php?id=104">蚝油豉汁鱼露</a></span> 
-             <span><a href="category.php?id=480">其他</a></span> 
-            </dd> 
-           </dl> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=333">酱料</a>
-            </dt> 
-            <dd> 
-             <span><a href="category.php?id=199">芝麻酱</a></span> 
-             <span><a href="category.php?id=392">排骨酱</a></span> 
-             <span><a href="category.php?id=393">豆瓣酱</a></span> 
-             <span><a href="category.php?id=394">辣椒酱</a></span> 
-             <span><a href="category.php?id=395">叉烧酱</a></span> 
-             <span><a href="category.php?id=396">花生酱</a></span> 
-             <span><a href="category.php?id=397">甜面酱</a></span> 
-             <span><a href="category.php?id=398">香菇酱</a></span> 
-             <span><a href="category.php?id=399">蒜蓉酱</a></span> 
-             <span><a href="category.php?id=491">果酱</a></span> 
-             <span><a href="category.php?id=492">肉酱</a></span> 
-             <span><a href="category.php?id=562">黄豆酱豆瓣酱</a></span> 
-             <span><a href="category.php?id=567">甜辣酱</a></span> 
-             <span><a href="category.php?id=573">沙爹酱</a></span> 
-             <span><a href="category.php?id=574">姜蓉酱</a></span> 
-             <span><a href="category.php?id=586">海鲜酱</a></span> 
-             <span><a href="category.php?id=596">鱼香茄子酱</a></span> 
-             <span><a href="category.php?id=602">麻婆豆腐酱</a></span> 
-             <span><a href="category.php?id=603">酱爆牛仔骨酱</a></span> 
-             <span><a href="category.php?id=608">韩大酱</a></span> 
-             <span><a href="category.php?id=539">韭花酱</a></span> 
-            </dd> 
-           </dl> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=335">调料底料</a>
-            </dt> 
-            <dd> 
-             <span><a href="category.php?id=101">面调料</a></span> 
-             <span><a href="category.php?id=214">鱼调料</a></span> 
-             <span><a href="category.php?id=459">烧烤调料</a></span> 
-             <span><a href="category.php?id=508">肉调料</a></span> 
-             <span><a href="category.php?id=515">腌/泡制料</a></span> 
-             <span><a href="category.php?id=542">香锅调料</a></span> 
-             <span><a href="category.php?id=559">炒料</a></span> 
-             <span><a href="category.php?id=566">腐乳汁</a></span> 
-             <span><a href="category.php?id=569">麻辣烫底料</a></span> 
-             <span><a href="category.php?id=591">黑椒汁</a></span> 
-            </dd> 
-           </dl> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=400">调味粉</a>
-            </dt> 
-            <dd> 
-             <span><a href="category.php?id=401">胡椒粉</a></span> 
-             <span><a href="category.php?id=402">花椒粉</a></span> 
-             <span><a href="category.php?id=403">大蒜粉</a></span> 
-             <span><a href="category.php?id=404">五香粉</a></span> 
-             <span><a href="category.php?id=405">孜然粉</a></span> 
-             <span><a href="category.php?id=406">辣椒粉</a></span> 
-             <span><a href="category.php?id=583">椒盐粉</a></span> 
-             <span><a href="category.php?id=621">十三香</a></span> 
-            </dd> 
-           </dl> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=407">油类</a>
-            </dt> 
-            <dd> 
-             <span><a href="category.php?id=408">花椒油</a></span> 
-             <span><a href="category.php?id=410">香麻油</a></span> 
-             <span><a href="category.php?id=411">芝麻油</a></span> 
-             <span><a href="category.php?id=488">辣椒油</a></span> 
-            </dd> 
-           </dl> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=414">其它</a>
-            </dt> 
-            <dd> 
-             <span><a href="category.php?id=415">咖喱</a></span> 
-             <span><a href="category.php?id=416">酒酿</a></span> 
-             <span><a href="category.php?id=457">炼乳</a></span> 
-             <span><a href="category.php?id=575">剁椒泡椒</a></span> 
-             <span><a href="category.php?id=607">芥末</a></span> 
-            </dd> 
-           </dl> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=336">知名品牌</a>
-            </dt> 
-            <dd> 
-             <span><a href="category.php?id=98">老干妈</a></span> 
-             <span><a href="category.php?id=93">饭扫光</a></span> 
-             <span><a href="category.php?id=99">李锦记</a></span> 
-            </dd> 
-           </dl> 
-          </div> 
-          <div class="i_cat"> 
-           <dl class="i_prom"> 
-            <!--<dt>促销活动</dt>
-                    <dd> --> 
-            <!--</dd>--> 
-           </dl> 
-          </div> 
-         </div> </li> 
-        <li> <h2> <i></i> <img src="data/afficheimg/20160223rdmama.png" style="width:36px;height:36px;" alt="德国亚超-德国网上亚洲食品超市-乡味肆意的亚超  调料-干货-主食-零食-冰鲜-厨具-柴米油盐酱醋茶">　<a href="category.php?id=74">干货食材</a> </h2> 
-         <div class="i_nav"> 
-          <div class="subitem"> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=112">豆制品</a>
-            </dt> 
-            <dd> 
-             <span><a href="category.php?id=344">腐竹</a></span> 
-             <span><a href="category.php?id=489">豆皮</a></span> 
-            </dd> 
-           </dl> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=343">肉类</a>
-            </dt> 
-            <dd> 
-             <span><a href="category.php?id=499">虾</a></span> 
-             <span><a href="category.php?id=107">腊肉 腊肠</a></span> 
-            </dd> 
-           </dl> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=422">其它</a>
-            </dt> 
-            <dd> 
-             <span><a href="category.php?id=417">豆沙</a></span> 
-             <span><a href="category.php?id=423">腌制菜</a></span> 
-             <span><a href="category.php?id=429">咸蛋</a></span> 
-             <span><a href="category.php?id=493">豆豉</a></span> 
-             <span><a href="category.php?id=558">香酥洋葱</a></span> 
-             <span><a href="category.php?id=585">面筋</a></span> 
-             <span><a href="category.php?id=590">烤麸</a></span> 
-             <span><a href="category.php?id=592">仙草</a></span> 
-             <span><a href="category.php?id=595">莲蓉</a></span> 
-             <span><a href="category.php?id=605">皮蛋</a></span> 
-            </dd> 
-           </dl> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=616">干根茎</a>
-            </dt> 
-            <dd> 
-             <span><a href="category.php?id=617">当归</a></span> 
-             <span><a href="category.php?id=108">笋类</a></span> 
-            </dd> 
-           </dl> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=113">干菜干花</a>
-            </dt> 
-            <dd> 
-             <span><a href="category.php?id=460">干辣椒</a></span> 
-             <span><a href="category.php?id=478">银耳木耳</a></span> 
-             <span><a href="category.php?id=494">紫菜海带</a></span> 
-             <span><a href="category.php?id=570">梅干菜</a></span> 
-             <span><a href="category.php?id=609">金银花干</a></span> 
-             <span><a href="category.php?id=614">菊花干</a></span> 
-             <span><a href="category.php?id=618">百合</a></span> 
-             <span><a href="category.php?id=619">黄花菜</a></span> 
-             <span><a href="category.php?id=116">菌菇类</a></span> 
-            </dd> 
-           </dl> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=114">干果</a>
-            </dt> 
-            <dd> 
-             <span><a href="category.php?id=176">枣类</a></span> 
-             <span><a href="category.php?id=476">枸杞</a></span> 
-             <span><a href="category.php?id=568">罗汉果</a></span> 
-             <span><a href="category.php?id=587">白果仁</a></span> 
-             <span><a href="category.php?id=588">花生</a></span> 
-             <span><a href="category.php?id=610">莲子</a></span> 
-             <span><a href="category.php?id=611">山楂干</a></span> 
-             <span><a href="category.php?id=612">芡实</a></span> 
-             <span><a href="category.php?id=613">龙眼</a></span> 
-             <span><a href="category.php?id=615">草果粒</a></span> 
-             <span><a href="category.php?id=556">板栗</a></span> 
-            </dd> 
-           </dl> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=115">干叶香料</a>
-            </dt> 
-            <dd> 
-             <span><a href="category.php?id=434">荷叶</a></span> 
-             <span><a href="category.php?id=435">香叶</a></span> 
-             <span><a href="category.php?id=501">陈皮</a></span> 
-             <span><a href="category.php?id=506">桂皮</a></span> 
-             <span><a href="category.php?id=507">花椒</a></span> 
-             <span><a href="category.php?id=560">茴香</a></span> 
-             <span><a href="category.php?id=589">八角</a></span> 
-             <span><a href="category.php?id=598">粽叶</a></span> 
-             <span><a href="category.php?id=599">胡椒粒</a></span> 
-            </dd> 
-           </dl> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=117">汤料</a>
-            </dt> 
-            <dd> 
-             <span><a href="category.php?id=500">速食汤</a></span> 
-             <span><a href="category.php?id=509">浓汤羹</a></span> 
-             <span><a href="category.php?id=540">味增汤</a></span> 
-             <span><a href="category.php?id=551">中药汤</a></span> 
-            </dd> 
-           </dl> 
-          </div> 
-          <div class="i_cat"> 
-           <dl class="i_prom"> 
-            <!--<dt>促销活动</dt>
-                    <dd> --> 
-            <!--</dd>--> 
-           </dl> 
-          </div> 
-         </div> </li> 
-        <li> <h2> <i></i> <img src="data/afficheimg/20160223rgvaya.png" style="width:36px;height:36px;" alt="德国亚超-德国网上亚洲食品超市-乡味肆意的亚超  调料-干货-主食-零食-冰鲜-厨具-柴米油盐酱醋茶">　<a href="category.php?id=106">方便食品</a> </h2> 
-         <div class="i_nav"> 
-          <div class="subitem"> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=292">方便面</a>
-            </dt> 
-            <dd> 
-             <span><a href="category.php?id=348">康师傅</a></span> 
-             <span><a href="category.php?id=349">出前一丁</a></span> 
-             <span><a href="category.php?id=350">今麦郎</a></span> 
-             <span><a href="category.php?id=351">韩国农心/咕咕</a></span> 
-             <span><a href="category.php?id=352">Yum Yum</a></span> 
-             <span><a href="category.php?id=666">统一</a></span> 
-             <span><a href="category.php?id=153">Mama 妈妈</a></span> 
-             <span><a href="category.php?id=155">白家</a></span> 
-             <span><a href="category.php?id=161">维力</a></span> 
-            </dd> 
-           </dl> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=105">即食品</a>
-            </dt> 
-            <dd> 
-             <span><a href="category.php?id=196">八宝粥</a></span> 
-             <span><a href="category.php?id=353">佐餐酱菜</a></span> 
-             <span><a href="category.php?id=424">肉松</a></span> 
-             <span><a href="category.php?id=426">佐餐罐头</a></span> 
-             <span><a href="category.php?id=576">海蜇</a></span> 
-             <span><a href="category.php?id=90">榨菜</a></span> 
-             <span><a href="category.php?id=94">腐乳</a></span> 
-            </dd> 
-           </dl> 
-          </div> 
-          <div class="i_cat"> 
-           <dl class="i_prom"> 
-            <!--<dt>促销活动</dt>
-                    <dd> --> 
-            <!--</dd>--> 
-           </dl> 
-          </div> 
-         </div> </li> 
-        <li> <h2> <i></i> <img src="data/afficheimg/20160223lffbzj.png" style="width:36px;height:36px;" alt="德国亚超-德国网上亚洲食品超市-乡味肆意的亚超  调料-干货-主食-零食-冰鲜-厨具-柴米油盐酱醋茶">　<a href="category.php?id=75">休闲食品</a> </h2> 
-         <div class="i_nav"> 
-          <div class="subitem"> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=354">居家零食</a>
-            </dt> 
-            <dd> 
-             <span><a href="category.php?id=190">豆干</a></span> 
-             <span><a href="category.php?id=191">麻糬</a></span> 
-             <span><a href="category.php?id=193">膨化食品</a></span> 
-             <span><a href="category.php?id=194">果冻</a></span> 
-             <span><a href="category.php?id=197">龟苓膏</a></span> 
-             <span><a href="category.php?id=452">海苔紫菜</a></span> 
-             <span><a href="category.php?id=453">坚果类</a></span> 
-             <span><a href="category.php?id=454">饼干蛋糕</a></span> 
-             <span><a href="category.php?id=455">果干蜜饯类</a></span> 
-             <span><a href="category.php?id=594">零食面</a></span> 
-             <span><a href="category.php?id=600">辣条</a></span> 
-             <span><a href="category.php?id=660">泡芙</a></span> 
-             <span><a href="category.php?id=667">干脆面</a></span> 
-             <span><a href="category.php?id=121">糖果甜食</a></span> 
-             <span><a href="category.php?id=122">话梅</a></span> 
-             <span><a href="category.php?id=124">肉干肉脯</a></span> 
-             <span><a href="category.php?id=125">素食</a></span> 
-            </dd> 
-           </dl> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=126">饮料冲剂</a>
-            </dt> 
-            <dd> 
-             <span><a href="category.php?id=192">果汁</a></span> 
-             <span><a href="category.php?id=456">凉茶包</a></span> 
-             <span><a href="category.php?id=517">奶茶粉</a></span> 
-             <span><a href="category.php?id=127">豆浆粉</a></span> 
-            </dd> 
-           </dl> 
-          </div> 
-          <div class="i_cat"> 
-           <dl class="i_prom"> 
-            <!--<dt>促销活动</dt>
-                    <dd> --> 
-            <!--</dd>--> 
-           </dl> 
-          </div> 
-         </div> </li> 
-        <li> <h2> <i></i> <img src="data/afficheimg/20160712xnesie.jpg" style="width:36px;height:36px;" alt="德国亚超-德国网上亚洲食品超市-乡味肆意的亚超  调料-干货-主食-零食-冰鲜-厨具-柴米油盐酱醋茶">　<a href="category.php?id=418">酒水饮料</a> </h2> 
-         <div class="i_nav"> 
-          <div class="subitem"> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=419">酒</a>
-            </dt> 
-            <dd> 
-             <span><a href="category.php?id=445">白酒</a></span> 
-             <span><a href="category.php?id=446">竹叶清酒</a></span> 
-             <span><a href="category.php?id=447">月子酒</a></span> 
-             <span><a href="category.php?id=448">五加皮</a></span> 
-             <span><a href="category.php?id=449">玫瑰露酒</a></span> 
-             <span><a href="category.php?id=450">果酒</a></span> 
-             <span><a href="category.php?id=451">黄酒</a></span> 
-             <span><a href="category.php?id=487">啤酒</a></span> 
-             <span><a href="category.php?id=505">米酒</a></span> 
-             <span><a href="category.php?id=606">二锅头</a></span> 
-             <span><a href="category.php?id=622">漕卤</a></span> 
-             <span><a href="category.php?id=684">韩国烧酒</a></span> 
-            </dd> 
-           </dl> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=420">饮料</a>
-            </dt> 
-            <dd> 
-             <span><a href="category.php?id=425">豆浆</a></span> 
-             <span><a href="category.php?id=443">果汁</a></span> 
-             <span><a href="category.php?id=444">康师傅</a></span> 
-             <span><a href="category.php?id=504">冬瓜茶</a></span> 
-             <span><a href="category.php?id=565">杏仁露</a></span> 
-             <span><a href="category.php?id=625">奶茶</a></span> 
-             <span><a href="category.php?id=657">波霸粉圆、珍珠</a></span> 
-             <span><a href="category.php?id=554">凉茶</a></span> 
-             <span><a href="category.php?id=458">其他</a></span> 
-            </dd> 
-           </dl> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=473">茶</a>
-            </dt> 
-            <dd> 
-             <span><a href="category.php?id=479">蜂蜜茶</a></span> 
-             <span><a href="category.php?id=582">榛果杏仁茶</a></span> 
-            </dd> 
-           </dl> 
-          </div> 
-          <div class="i_cat"> 
-           <dl class="i_prom"> 
-            <!--<dt>促销活动</dt>
-                    <dd> --> 
-            <!--</dd>--> 
-           </dl> 
-          </div> 
-         </div> </li> 
-        <li> <h2> <i></i> <img src="data/afficheimg/20160712huqtus.jpg" style="width:36px;height:36px;" alt="德国亚超-德国网上亚洲食品超市-乡味肆意的亚超  调料-干货-主食-零食-冰鲜-厨具-柴米油盐酱醋茶">　<a href="category.php?id=342">异国美食</a> </h2> 
-         <div class="i_nav"> 
-          <div class="subitem"> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=431">欧洲食品</a>
-            </dt> 
-            <dd> 
-             <span><a href="category.php?id=432">丹麦</a></span> 
-            </dd> 
-           </dl> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=77">日韩食品</a>
-            </dt> 
-            <dd> 
-             <span><a href="category.php?id=174">泡菜</a></span> 
-             <span><a href="category.php?id=486">饮料</a></span> 
-             <span><a href="category.php?id=541">韩国年糕</a></span> 
-             <span><a href="category.php?id=564">日本大根</a></span> 
-             <span><a href="category.php?id=572">日本拉面</a></span> 
-             <span><a href="category.php?id=584">日本豆腐</a></span> 
-             <span><a href="category.php?id=683">酒水</a></span> 
-             <span><a href="category.php?id=128">调料酱料</a></span> 
-             <span><a href="category.php?id=129">零食</a></span> 
-             <span><a href="category.php?id=130">主食面食</a></span> 
-             <span><a href="category.php?id=131">寿司材料</a></span> 
-            </dd> 
-           </dl> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=78">东南亚食品</a>
-            </dt> 
-            <dd> 
-             <span><a href="category.php?id=563">越南米纸</a></span> 
-             <span><a href="category.php?id=579">咖喱</a></span> 
-             <span><a href="category.php?id=132">调味料酱</a></span> 
-             <span><a href="category.php?id=133">主食</a></span> 
-             <span><a href="category.php?id=134">休闲食品</a></span> 
-            </dd> 
-           </dl> 
-          </div> 
-          <div class="i_cat"> 
-           <dl class="i_prom"> 
-            <!--<dt>促销活动</dt>
-                    <dd> --> 
-            <!--</dd>--> 
-           </dl> 
-          </div> 
-         </div> </li> 
-        <li> <h2> <i></i> <img src="data/afficheimg/20181106llmnlq.jpg" style="width:36px;height:36px;" alt="德国亚超-德国网上亚洲食品超市-乡味肆意的亚超  调料-干货-主食-零食-冰鲜-厨具-柴米油盐酱醋茶">　<a href="category.php?id=698">数码产品</a> </h2> 
-         <div class="i_nav"> 
-          <div class="subitem"> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=699">胶带</a>
-            </dt> 
-            <dd> 
-            </dd> 
-           </dl> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=700">数据线</a>
-            </dt> 
-            <dd> 
-            </dd> 
-           </dl> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=701">插头</a>
-            </dt> 
-            <dd> 
-            </dd> 
-           </dl> 
-          </div> 
-          <div class="i_cat"> 
-           <dl class="i_prom"> 
-            <!--<dt>促销活动</dt>
-                    <dd> --> 
-            <!--</dd>--> 
-           </dl> 
-          </div> 
-         </div> </li> 
-        <li> <h2> <i></i> <img src="data/afficheimg/20160223aqkuqd.png" style="width:36px;height:36px;" alt="德国亚超-德国网上亚洲食品超市-乡味肆意的亚超  调料-干货-主食-零食-冰鲜-厨具-柴米油盐酱醋茶">　<a href="category.php?id=355">亚超特色</a> </h2> 
-         <div class="i_nav"> 
-          <div class="subitem"> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=81">厨房用具</a>
-            </dt> 
-            <dd> 
-             <span><a href="category.php?id=168">电饭锅</a></span> 
-             <span><a href="category.php?id=169">筷子</a></span> 
-             <span><a href="category.php?id=440">寿司卷</a></span> 
-             <span><a href="category.php?id=441">铁锅</a></span> 
-             <span><a href="category.php?id=442">漏勺饭勺</a></span> 
-             <span><a href="category.php?id=166">茶具</a></span> 
-             <span><a href="category.php?id=170">磨刀石</a></span> 
-            </dd> 
-           </dl> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=208">杂货铺</a>
-            </dt> 
-            <dd> 
-             <span><a href="category.php?id=209">电话卡</a></span> 
-             <span><a href="category.php?id=211">杂货</a></span> 
-             <span><a href="category.php?id=436">红包</a></span> 
-             <span><a href="category.php?id=437">日历</a></span> 
-             <span><a href="category.php?id=438">麻将</a></span> 
-             <span><a href="category.php?id=439">茶具</a></span> 
-             <span><a href="category.php?id=601">板蓝根 枇杷膏</a></span> 
-            </dd> 
-           </dl> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=215">DHL包裹单</a>
-            </dt> 
-            <dd> 
-             <span><a href="category.php?id=216">德国境内</a></span> 
-             <span><a href="category.php?id=217">欧盟国家</a></span> 
-            </dd> 
-           </dl> 
-          </div> 
-          <div class="i_cat"> 
-           <dl class="i_prom"> 
-            <!--<dt>促销活动</dt>
-                    <dd> --> 
-            <!--</dd>--> 
-           </dl> 
-          </div> 
-         </div> </li> 
-        <li> <h2> <i></i> 　<a href="category.php?id=712">英尼直邮</a> </h2> 
-         <div class="i_nav"> 
-          <div class="subitem"> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=713">周家庄</a>
-            </dt> 
-            <dd> 
-            </dd> 
-           </dl> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=714">知味观</a>
-            </dt> 
-            <dd> 
-            </dd> 
-           </dl> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=715">珍视明</a>
-            </dt> 
-            <dd> 
-            </dd> 
-           </dl> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=716">沈大成</a>
-            </dt> 
-            <dd> 
-            </dd> 
-           </dl> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=717">禾煜</a>
-            </dt> 
-            <dd> 
-            </dd> 
-           </dl> 
-           <dl> 
-            <dt> 
-             <a href="category.php?id=718">UMTEA</a>
-            </dt> 
-            <dd> 
-            </dd> 
-           </dl> 
-          </div> 
-          <div class="i_cat"> 
-           <dl class="i_prom"> 
-            <!--<dt>促销活动</dt>
-                    <dd> --> 
-            <!--</dd>--> 
-           </dl> 
-          </div> 
-         </div> </li> 
-        <div class="HackBox"></div> 
-       </ul> 
-      </div> 
-     </div> 
-     <div class="rnav"> 
-      <ul> 
-       <li class="rnav_home"><a href="/" title="首页">首页</a></li> 
-       <li><a href="category.php?id=204">新品上新</a> </li> 
-       <li><a href="http://www.yachao.de/category.php?id=215">DHL包裹单</a> </li> 
-       <li><a href="http://www.yachao.de/category.php?id=369">特价区</a> </li> 
-       <li><a href="http://www.yachao.de/article.php?id=255">[新手上路]</a> </li> 
-       <li><a href="category.php?id=643">仓库自取</a> </li> 
-       <li><a href="-">【长期活动】</a> 
-        <div class="r_nav">
-         <ul> 
-          <li><a href="http://www.yachao.de/goods.php?id=5780">免费送</a></li> 
-          <li><a href="http://weibo.com/3820011542/C5WdowFXu?from=page_1005053820011542_profile&amp;wvr=6&amp;mod=weibotime&amp;type=comment#_rnd1478785300334">微博晒单</a></li> 
-          <li><a href="http://www.yachao.de/article.php?id=198">码上有礼</a></li> 
-          <li><a href="http://www.yachao.de/article.php?id=253">首单有礼</a></li> 
-         </ul>
-        </div> </li> 
-       <li><a href="article.php?id=2">隐私保护</a> 
-        <div class="r_nav">
-         <ul> 
-          <li><a href="article.php?id=2">隐私保护</a></li> 
-         </ul>
-        </div> </li> 
-       <li><a href="category.php?id=720">美妆护肤</a> </li> 
-      </ul> 
-     </div> 
-     <div class="h_news"> 
-      <h3>快讯:</h3> 
-      <i class="but_up"></i>
-      <i class="but_down"></i> 
-      <div class="gundong"> 
-       <ul> 
-        <li><a href="article.php?id=252" title="获取discount码">获取discount码</a></li> 
-        <li><a href="article.php?id=305" title="叮--请签收您的“八月份优惠”">叮--请签收您的“八月份优惠”</a></li> 
-        <li><a href="article.php?id=253" title="首单有礼，推荐有奖">首单有礼，推荐有奖</a></li> 
-        <li><a href="article.php?id=243" title="买10送1">买10送1</a></li> 
-        <li><a href="article.php?id=223" title="热辣辣火锅季">热辣辣火锅季</a></li> 
-        <li><a href="article.php?id=221" title="冬令进补好汤">冬令进补好汤</a></li> 
-        <li><a href="article.php?id=204" title="如何微信领取discount码（有66折惊喜！）">如何微信领取discount码（有66折惊喜！）</a></li> 
-        <li><a href="article.php?id=198" title="关注亚超微信、微博送2欧红包">关注亚超微信、微博送2欧红包</a></li> 
-        <li><a href="article.php?id=185" title="德国亚超微博">德国亚超微博</a></li> 
-        <li><a href="article.php?id=171" title="15种食物中暗藏健康秘诀">15种食物中暗藏健康秘诀</a></li> 
-       </ul> 
-      </div> 
-     </div> 
-    </div> 
+   <div style="color:#F00; font-weight:bold;">
+    感谢顾客的支持和理解，网站已经恢复正常，如有顾客没收到订单确认邮件的，请电话 040-38673727，或加微信:hualianl725，我立即为您处理，深表感谢！！！
    </div> 
   </div> 
-  <div class="anew_kf"> 
-   <ul>
-    <li class="anew_kf_qq" title="立即咨询">
-     <div class="anew_kf_t">
-      <span class="anew_jt"></span>
-      <h2>客服中心</h2>
-      <p><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=3272528097&amp;site=yachao&amp;menu=yes" target="_blank">小郑</a></p>
-     </div><a href="#"></a></li>
-    <li class="anew_kf_time" title="工作时间">
-     <div class="anew_kf_t">
-      <span class="anew_jt"></span>
-      <h2>工作时间（德国时间）</h2>
-      <p>周一至周五6:30~15:30</p>
-     </div><a href="#"></a></li>
-    <li class="anew_kf_mail" title="邮箱">
-     <div class="anew_kf_t">
-      <span class="anew_jt"></span>
-      <h2>德国亚超邮箱</h2>
-      <p><a href="mailto:info@yachao.de">售前售后投诉：<br>info@yachao.de</a></p>
-      <p style="display:none;"><a href="mailto:newsletter@yachao.de">新闻邮件订阅/退订：<br>newsletter@yachao.de</a></p>
-     </div></li>
-    <li class="anew_kf_kd">
-     <div class="anew_kf_t">
-      <span class="anew_jt"></span>
-      <h2>物流查询（输入运单号）：</h2>
-      <p> </p>
-      <form action="express.php" target="_blank" method="post"> 
-       <input class="kd_text" type="text" placeholder="自动识别物流类型" name="num"> 
-       <input type="hidden" name="source" value="auto"> 
-       <input class="kd_submit" type="submit" value="查询"> 
-      </form>
-      <p></p> 
-     </div></li> 
-    <li class="anew_kf_tel" title="咨询热线"> 
-     <div class="anew_kf_t"> 
-      <h2>咨询热线</h2> 
-      <p>49(0)89-416159091 (中文) </p> 
-      <p>49(0)89-306688585 (中文) </p> 
-     </div> </li> 
-   </ul> 
+  <div class="block clearfix">
+   <div class="patch" style="padding-bottom:0px;"> 
+    <ol class="patch-5 step-1"> 
+     <li class="li-1"><span>1.</span>加购物车</li> 
+     <li class="li-2"><span>2.</span>结算中心</li> 
+     <li class="li-3"><span>3.</span>填写订单</li> 
+     <li class="li-4"><span>4.</span>付款确认</li> 
+    </ol> 
+   </div>
   </div> 
-  <div class="block clearfix"> 
-   <div class="ur_here">
+  <div class="blank"></div> 
+  <div class="block box"> 
+   <div id="ur_here">
      当前位置: 
     <a href=".">首页</a> 
     <code>&gt;</code> 
-    <a href="category.php?id=71">主食粉面</a> 
+    <a href="category.php?id=337">甜品</a> 
     <code>&gt;</code> 
-    <a href="category.php?id=84">大米</a> 
-    <code>&gt;</code> 
-    <a href="category.php?id=212">泰国印度米</a>
+    <a href="category.php?id=1608">米酒汁</a> 
    </div> 
-   <div class="EarLeft fl"> 
-    <div id="history_div" style="display: block;"> 
-     <div class="modTit1"> 
-      <h2 class="LPor">销售排行 </h2> 
+  </div> 
+  <div class="blank"></div> 
+  <div class="block clearfix"> 
+   <div class="AreaL"> 
+    <div class="baseModelCenter bm1 my_left_category" id="catTree"> 
+     <div class="t"> 
+      <strong class="title f14"><a href="catalog.php">商品分类</a></strong> 
+      <div></div> 
      </div> 
-     <div id="history_list"> 
-      <ul class="clearfix"> 
-       <li class="goodsimg"> <a href="goods.php?id=5780" title=""><img src="images/201612/thumb_img/5780_thumb_G_1480656897686.jpg" alt=""></a> </li> 
-       <li style="width:110px"> <a href="goods.php?id=5780" title="">过期/临期/破损...</a> <br> 售价： 0.01 </li> 
-      </ul> 
-      <ul class="clearfix"> 
-       <li class="goodsimg"> <a href="goods.php?id=1089" title=""><img src="images/201701/thumb_img/1089_thumb_G_1484726206095.jpg" alt=""></a> </li> 
-       <li style="width:110px"> <a href="goods.php?id=1089" title="">韩国农心 辛拉面...</a> <br> 售价： 0.99 </li> 
-      </ul> 
-      <ul class="clearfix"> 
-       <li class="goodsimg"> <a href="goods.php?id=6840" title=""><img src="images/no_picture.gif" alt=""></a> </li> 
-       <li style="width:110px"> <a href="goods.php?id=6840" title="">梭子蟹（仓库自取...</a> <br> 售价： 15.50 </li> 
-      </ul> 
-      <ul class="clearfix"> 
-       <li class="goodsimg"> <a href="goods.php?id=1070" title=""><img src="images/201606/thumb_img/1070_thumb_G_1465467934342.jpg" alt=""></a> </li> 
-       <li style="width:110px"> <a href="goods.php?id=1070" title="">康师傅方便面 香...</a> <br> 售价： 0.99 </li> 
-      </ul> 
-      <ul class="clearfix"> 
-       <li class="goodsimg"> <a href="goods.php?id=1267" title=""><img src="images/201610/thumb_img/1267_thumb_G_1476702660971.jpg" alt=""></a> </li> 
-       <li style="width:110px"> <a href="goods.php?id=1267" title="">李锦记 特级鲜味...</a> <br> 售价： 1.79 </li> 
-      </ul> 
-      <ul class="clearfix"> 
-       <li class="goodsimg"> <a href="goods.php?id=3009" title=""><img src="images/201606/thumb_img/3009_thumb_G_1466660959309.jpg" alt=""></a> </li> 
-       <li style="width:110px"> <a href="goods.php?id=3009" title="">鱼泉榨菜 特等品...</a> <br> 售价： 0.59 </li> 
-      </ul> 
-      <ul class="clearfix"> 
-       <li class="goodsimg"> <a href="goods.php?id=5840" title=""><img src="images/201510/thumb_img/5840_thumb_G_1445932374500.jpg" alt=""></a> </li> 
-       <li style="width:110px"> <a href="goods.php?id=5840" title="">康师傅方便面 鲜...</a> <br> 售价： 0.99 </li> 
-      </ul> 
-      <ul class="clearfix"> 
-       <li class="goodsimg"> <a href="goods.php?id=5839" title=""><img src="images/201510/thumb_img/5839_thumb_G_1445932184614.jpg" alt=""></a> </li> 
-       <li style="width:110px"> <a href="goods.php?id=5839" title="">康师傅方便面 香...</a> <br> 售价： 0.99 </li> 
-      </ul> 
-      <ul class="clearfix"> 
-       <li class="goodsimg"> <a href="goods.php?id=4432" title=""><img src="images/201607/thumb_img/4432_thumb_G_1468235869599.jpg" alt=""></a> </li> 
-       <li style="width:110px"> <a href="goods.php?id=4432" title="">冷藏 统一 日本...</a> <br> 售价： 1.69 </li> 
-      </ul> 
-      <ul class="clearfix"> 
-       <li class="goodsimg"> <a href="goods.php?id=1108" title=""><img src="images/201606/thumb_img/1108_thumb_G_1466569887904.jpg" alt=""></a> </li> 
-       <li style="width:110px"> <a href="goods.php?id=1108" title="">龙口粉丝/天坛粉...</a> <br> 售价： 0.39 </li> 
-      </ul> 
+     <div id="AllSort" class="m"> 
+      <div class="h2_cat" onmouseover="this.className='h2_cat active_cat'" onmouseout="this.className='h2_cat'"> 
+       <h4><a href="category.php?id=249" style="color:#de2204;">
+         <div style="_margin-top:5px;">
+          &nbsp;&nbsp;家居用品
+         </div></a></h4> 
+       <div class="h3_cat"> 
+        <div class="shadow"> 
+         <div class="shadow_border"> 
+          <ul> 
+           <li class="sub_cat"><a href="category.php?id=546" style="color:blue"><b>书籍文娱类</b></a></li> 
+           <li><a href="category.php?id=547">书籍</a></li> 
+           <li><a href="category.php?id=548">棋牌麻将</a></li> 
+           <li><a href="category.php?id=1483">马桶坐垫</a></li> 
+           <li><a href="category.php?id=1484">棉被</a></li> 
+           <li><a href="category.php?id=1548">Hockey</a></li> 
+           <li><a href="category.php?id=1571">被套/枕套</a></li> 
+           <li><a href="category.php?id=1605">茶杯</a></li> 
+           <li><a href="category.php?id=1606">紫砂壶/杯子</a></li> 
+           <li class="sub_cat"><a href="category.php?id=1552" style="color:blue"><b>电子产品</b></a></li> 
+           <li><a href="category.php?id=1352">电视机顶盒</a></li> 
+           <li><a href="category.php?id=1550">手机充电数据线</a></li> 
+           <li><a href="category.php?id=1551">手机壳</a></li> 
+           <li class="sub_cat"><a href="category.php?id=340" style="color:blue"><b>厨房用品</b></a></li> 
+           <li><a href="category.php?id=525">电饭煲</a></li> 
+           <li><a href="category.php?id=526">勺匙</a></li> 
+           <li><a href="category.php?id=527">火锅</a></li> 
+           <li><a href="category.php?id=528">豆浆机</a></li> 
+           <li><a href="category.php?id=529">筷子</a></li> 
+           <li><a href="category.php?id=530">其他厨房用品</a></li> 
+           <li><a href="category.php?id=542">菜板</a></li> 
+           <li><a href="category.php?id=720">切菜刀</a></li> 
+           <li><a href="category.php?id=1249">蒸锅</a></li> 
+           <li><a href="category.php?id=1461">炒菜铁锅</a></li> 
+           <li><a href="category.php?id=1567">泡面杯</a></li> 
+           <li class="sub_cat"><a href="category.php?id=254" style="color:blue"><b>其他用品</b></a></li> 
+           <li><a href="category.php?id=531">转换插头</a></li> 
+           <li><a href="category.php?id=532">懒人桌</a></li> 
+           <li><a href="category.php?id=544">保温保暖商品</a></li> 
+           <li><a href="category.php?id=545">其他</a></li> 
+           <li><a href="category.php?id=970">加湿器</a></li> 
+           <li><a href="category.php?id=1466">卡通小梳镜</a></li> 
+          </ul> 
+          <div class="clear"></div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="h2_cat" onmouseover="this.className='h2_cat active_cat'" onmouseout="this.className='h2_cat'"> 
+       <h4><a href="category.php?id=326" style="color:#de2204;">
+         <div style="_margin-top:5px;">
+          &nbsp;&nbsp;活动专区
+         </div></a></h4> 
+       <div class="h3_cat"> 
+        <div class="shadow"> 
+         <div class="shadow_border"> 
+          <ul> 
+           <li><a href="category.php?id=1134">手机SIM卡</a></li> 
+           <li><a href="category.php?id=1137">中秋月饼</a></li> 
+           <li class="sub_cat"><a href="category.php?id=1626" style="color:blue"><b>中秋钜惠</b></a></li> 
+           <li><a href="category.php?id=1651">夏日饮品</a></li> 
+          </ul> 
+          <div class="clear"></div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="h2_cat" onmouseover="this.className='h2_cat active_cat'" onmouseout="this.className='h2_cat'"> 
+       <h4><a href="category.php?id=494" style="color:#de2204;">
+         <div style="_margin-top:5px;">
+          &nbsp;&nbsp;火锅专栏
+         </div></a></h4> 
+       <div class="h3_cat"> 
+        <div class="shadow"> 
+         <div class="shadow_border"> 
+          <ul> 
+           <li><a href="category.php?id=520">火锅用具</a></li> 
+           <li class="sub_cat"><a href="category.php?id=906" style="color:blue"><b>酸菜鱼/调料</b></a></li> 
+           <li><a href="category.php?id=1298">泡凤爪料</a></li> 
+           <li><a href="category.php?id=1572">麻辣鱼调料</a></li> 
+           <li class="sub_cat"><a href="category.php?id=495" style="color:blue"><b>火锅底料</b></a></li> 
+           <li><a href="category.php?id=496">清汤型</a></li> 
+           <li><a href="category.php?id=497">麻辣型</a></li> 
+           <li><a href="category.php?id=498">滋补等其他型</a></li> 
+           <li class="sub_cat"><a href="category.php?id=499" style="color:blue"><b>调料蘸酱</b></a></li> 
+           <li><a href="category.php?id=541">王致和系列</a></li> 
+           <li><a href="category.php?id=930">芝麻酱</a></li> 
+           <li><a href="category.php?id=1556">沙拉汁</a></li> 
+           <li><a href="category.php?id=500">川崎系列</a></li> 
+           <li><a href="category.php?id=502">其他精选调料</a></li> 
+           <li class="sub_cat"><a href="category.php?id=504" style="color:blue"><b>火锅配菜</b></a></li> 
+           <li><a href="category.php?id=706">金针菇</a></li> 
+           <li><a href="category.php?id=922">魔芋条</a></li> 
+           <li><a href="category.php?id=936">笋丝</a></li> 
+           <li><a href="category.php?id=1110">笋片</a></li> 
+           <li><a href="category.php?id=505">年糕</a></li> 
+           <li><a href="category.php?id=506">粉丝/粉皮</a></li> 
+           <li><a href="category.php?id=507">肉皮/笋干/腐竹</a></li> 
+           <li><a href="category.php?id=509">菌菇/木耳</a></li> 
+           <li class="sub_cat"><a href="category.php?id=510" style="color:blue"><b>新鲜配菜</b></a></li> 
+           <li><a href="category.php?id=835">莲藕片</a></li> 
+           <li><a href="category.php?id=836">盒豆腐</a></li> 
+           <li><a href="category.php?id=873">荷兰豆</a></li> 
+           <li><a href="category.php?id=940">柚子</a></li> 
+           <li><a href="category.php?id=1601">山药</a></li> 
+           <li><a href="category.php?id=511">瓜果蔬菜</a></li> 
+           <li><a href="category.php?id=512">豆制品</a></li> 
+           <li><a href="category.php?id=513">调味配料</a></li> 
+           <li class="sub_cat"><a href="category.php?id=514" style="color:blue"><b>火锅饮料</b></a></li> 
+           <li><a href="category.php?id=515">清爽饮料</a></li> 
+           <li><a href="category.php?id=516">酒类</a></li> 
+          </ul> 
+          <div class="clear"></div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="h2_cat" onmouseover="this.className='h2_cat active_cat'" onmouseout="this.className='h2_cat'"> 
+       <h4><a href="category.php?id=226" style="color:#de2204;">
+         <div style="_margin-top:5px;">
+          &nbsp;&nbsp;水果豆腐蔬菜
+         </div></a></h4> 
+       <div class="h3_cat"> 
+        <div class="shadow"> 
+         <div class="shadow_border"> 
+          <ul> 
+           <li class="sub_cat"><a href="category.php?id=869" style="color:blue"><b>蔬菜</b></a></li> 
+           <li><a href="category.php?id=834">莲藕</a></li> 
+           <li><a href="category.php?id=874">香菜</a></li> 
+           <li><a href="category.php?id=957">芋头</a></li> 
+           <li><a href="category.php?id=986">佛手</a></li> 
+           <li><a href="category.php?id=987">姜</a></li> 
+           <li><a href="category.php?id=989">冬瓜</a></li> 
+           <li><a href="category.php?id=990">金针菇</a></li> 
+           <li><a href="category.php?id=991">青菜</a></li> 
+           <li><a href="category.php?id=992">山药</a></li> 
+           <li><a href="category.php?id=994">芥菜</a></li> 
+           <li><a href="category.php?id=995">马蹄</a></li> 
+           <li><a href="category.php?id=1276">芥蓝</a></li> 
+           <li><a href="category.php?id=1451">韭菜花/韭菜苔</a></li> 
+           <li><a href="category.php?id=1454">青椒</a></li> 
+           <li><a href="category.php?id=1471">小葱</a></li> 
+           <li class="sub_cat"><a href="category.php?id=870" style="color:blue"><b>水果</b></a></li> 
+           <li><a href="category.php?id=941">柚子</a></li> 
+           <li class="sub_cat"><a href="category.php?id=985" style="color:blue"><b>豆制品系列</b></a></li> 
+           <li><a href="category.php?id=831">豆腐</a></li> 
+           <li><a href="category.php?id=875">油豆腐</a></li> 
+           <li><a href="category.php?id=888">豆制品</a></li> 
+           <li><a href="category.php?id=963">豆腐皮</a></li> 
+           <li><a href="category.php?id=1163">豆腐干</a></li> 
+           <li><a href="category.php?id=1405">豆腐泡</a></li> 
+           <li><a href="category.php?id=1406">豆腐丝</a></li> 
+           <li><a href="category.php?id=1433">百叶结</a></li> 
+           <li><a href="category.php?id=1529">烤麸干</a></li> 
+           <li class="sub_cat"><a href="category.php?id=993" style="color:blue"><b>其他系列</b></a></li> 
+           <li><a href="category.php?id=1584">白萝卜</a></li> 
+           <li><a href="category.php?id=1621">豆芽</a></li> 
+           <li><a href="category.php?id=310">冷藏</a></li> 
+           <li><a href="category.php?id=1203">酸白菜</a></li> 
+           <li><a href="category.php?id=1225">萝卜</a></li> 
+           <li><a href="category.php?id=1237">冬笋尖</a></li> 
+           <li><a href="category.php?id=1285">鲜毛豆</a></li> 
+           <li><a href="category.php?id=1289">鲜木瓜</a></li> 
+           <li><a href="category.php?id=1304">白果仁</a></li> 
+           <li><a href="category.php?id=1331">番薯</a></li> 
+           <li><a href="category.php?id=1364">金针菇</a></li> 
+           <li class="sub_cat"><a href="category.php?id=1373" style="color:blue"><b>蟹味菇</b></a></li> 
+           <li><a href="category.php?id=1374">鲜蘑菇</a></li> 
+           <li><a href="category.php?id=1383">笋丝/笋片</a></li> 
+           <li><a href="category.php?id=1389">佛手-合掌瓜</a></li> 
+           <li><a href="category.php?id=1414">嫩莴笋</a></li> 
+           <li><a href="category.php?id=1489">老豆腐</a></li> 
+           <li><a href="category.php?id=1535">新鲜韭菜</a></li> 
+           <li><a href="category.php?id=1591">小青菜</a></li> 
+           <li><a href="category.php?id=1597">新鲜茴香</a></li> 
+           <li class="sub_cat"><a href="category.php?id=1622" style="color:blue"><b>豆芽</b></a></li> 
+           <li><a href="category.php?id=1623">鲜玉米</a></li> 
+           <li><a href="category.php?id=1624">鲜玉米</a></li> 
+           <li><a href="category.php?id=1636">空心菜</a></li> 
+           <li><a href="category.php?id=1648">苋菜</a></li> 
+           <li><a href="category.php?id=1654">豌豆仁</a></li> 
+           <li><a href="category.php?id=1657">丝瓜</a></li> 
+          </ul> 
+          <div class="clear"></div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="h2_cat" onmouseover="this.className='h2_cat active_cat'" onmouseout="this.className='h2_cat'"> 
+       <h4><a href="category.php?id=488" style="color:#de2204;">
+         <div style="_margin-top:5px;">
+          &nbsp;&nbsp;肉类海鲜
+         </div></a></h4> 
+       <div class="h3_cat"> 
+        <div class="shadow"> 
+         <div class="shadow_border"> 
+          <ul> 
+           <li class="sub_cat"><a href="category.php?id=491" style="color:blue"><b>半成品</b></a></li> 
+           <li><a href="category.php?id=378">腊肉/腊肠</a></li> 
+           <li class="sub_cat"><a href="category.php?id=1407" style="color:blue"><b>肉丸子</b></a></li> 
+           <li><a href="category.php?id=1408">牛肉丸子</a></li> 
+           <li><a href="category.php?id=1416">鱼丸</a></li> 
+           <li><a href="category.php?id=1505">牛肉卷</a></li> 
+           <li><a href="category.php?id=1506">羊肉卷</a></li> 
+           <li><a href="category.php?id=1596">虾丸</a></li> 
+           <li><a href="category.php?id=1652">鱼饼</a></li> 
+           <li class="sub_cat"><a href="category.php?id=489" style="color:blue"><b>肉类即食</b></a></li> 
+           <li><a href="category.php?id=1418">猪耳朵</a></li> 
+           <li><a href="category.php?id=1419">卤鸭翅</a></li> 
+           <li><a href="category.php?id=1420">鸭掌</a></li> 
+           <li><a href="category.php?id=1429">猪蹄-猪脚</a></li> 
+           <li><a href="category.php?id=1430">泡椒凤爪</a></li> 
+           <li><a href="category.php?id=1497">鸭脖</a></li> 
+           <li><a href="category.php?id=1498">牛百叶</a></li> 
+           <li><a href="category.php?id=1499">牛板筋</a></li> 
+           <li><a href="category.php?id=490">海鲜类即食</a></li> 
+          </ul> 
+          <div class="clear"></div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="h2_cat" onmouseover="this.className='h2_cat active_cat'" onmouseout="this.className='h2_cat'"> 
+       <h4><a href="category.php?id=19" style="color:#de2204;">
+         <div style="_margin-top:5px;">
+          &nbsp;&nbsp;方便速食类
+         </div></a></h4> 
+       <div class="h3_cat"> 
+        <div class="shadow"> 
+         <div class="shadow_border"> 
+          <ul> 
+           <li class="sub_cat"><a href="category.php?id=976" style="color:blue"><b>康师傅系列</b></a></li> 
+           <li><a href="category.php?id=1599">老坛酸菜排骨面</a></li> 
+           <li><a href="category.php?id=557">面霸</a></li> 
+           <li><a href="category.php?id=794">康师傅（全部产品）</a></li> 
+           <li><a href="category.php?id=558">经典美味</a></li> 
+           <li><a href="category.php?id=559">珍品</a></li> 
+           <li><a href="category.php?id=560">辣旋风</a></li> 
+           <li><a href="category.php?id=561">江南美食</a></li> 
+           <li><a href="category.php?id=564">大食袋</a></li> 
+           <li><a href="category.php?id=563">亚洲精选</a></li> 
+           <li><a href="category.php?id=584">好滋味</a></li> 
+           <li><a href="category.php?id=586">劲爽</a></li> 
+           <li><a href="category.php?id=565">千椒百味</a></li> 
+           <li><a href="category.php?id=576">碗面</a></li> 
+           <li><a href="category.php?id=569">干拌面</a></li> 
+           <li><a href="category.php?id=590">本帮烧</a></li> 
+           <li class="sub_cat"><a href="category.php?id=978" style="color:blue"><b>日清食品</b></a></li> 
+           <li><a href="category.php?id=574">出前一丁</a></li> 
+           <li><a href="category.php?id=972">合味道/开杯乐</a></li> 
+           <li><a href="category.php?id=1267">飞碟UFO</a></li> 
+           <li><a href="category.php?id=1268">炒面大王</a></li> 
+           <li><a href="category.php?id=1269">拉面王</a></li> 
+           <li><a href="category.php?id=1467">豚骨面</a></li> 
+           <li class="sub_cat"><a href="category.php?id=979" style="color:blue"><b>统一系列</b></a></li> 
+           <li><a href="category.php?id=1170">统一100</a></li> 
+           <li><a href="category.php?id=1171">来一桶</a></li> 
+           <li><a href="category.php?id=1172">巧面馆</a></li> 
+           <li><a href="category.php?id=1173">酱拌面</a></li> 
+           <li><a href="category.php?id=1174">汤达人</a></li> 
+           <li class="sub_cat"><a href="category.php?id=981" style="color:blue"><b>非油炸方便面-热干面</b></a></li> 
+           <li><a href="category.php?id=1177">原味系列</a></li> 
+           <li><a href="category.php?id=1178">湘味香辣</a></li> 
+           <li><a href="category.php?id=1179">四川麻辣</a></li> 
+           <li><a href="category.php?id=1209">虾子面</a></li> 
+           <li><a href="category.php?id=1210">瑶柱面</a></li> 
+           <li><a href="category.php?id=1235">全蛋面</a></li> 
+           <li><a href="category.php?id=1236">拉面</a></li> 
+           <li><a href="category.php?id=1645">火锅面</a></li> 
+           <li class="sub_cat"><a href="category.php?id=982" style="color:blue"><b>今麦郎系列</b></a></li> 
+           <li><a href="category.php?id=570">辣煌尚</a></li> 
+           <li><a href="category.php?id=837">今麦郎</a></li> 
+           <li><a href="category.php?id=1180">上品</a></li> 
+           <li><a href="category.php?id=1181">香锅麻辣</a></li> 
+           <li><a href="category.php?id=1182">骨汤弹面</a></li> 
+           <li><a href="category.php?id=1183">珍品</a></li> 
+           <li><a href="category.php?id=1184">今野拉面</a></li> 
+           <li><a href="category.php?id=1185">炒面</a></li> 
+           <li><a href="category.php?id=1186">一元王</a></li> 
+           <li class="sub_cat"><a href="category.php?id=983" style="color:blue"><b>五连包系列</b></a></li> 
+           <li><a href="category.php?id=1187">康师傅</a></li> 
+           <li><a href="category.php?id=1188">今麦郎</a></li> 
+           <li><a href="category.php?id=1189">白家粉丝</a></li> 
+           <li><a href="category.php?id=562">五连包</a></li> 
+           <li class="sub_cat"><a href="category.php?id=984" style="color:blue"><b>农心辛拉面系列</b></a></li> 
+           <li><a href="category.php?id=1191">五连包</a></li> 
+           <li><a href="category.php?id=1192">鲜虾面</a></li> 
+           <li><a href="category.php?id=1193">香菇牛肉味</a></li> 
+           <li><a href="category.php?id=1194">辣白菜</a></li> 
+           <li><a href="category.php?id=1195">石锅牛肉面</a></li> 
+           <li><a href="category.php?id=1196">土豆排骨面</a></li> 
+           <li><a href="category.php?id=1198">乌龙面</a></li> 
+           <li><a href="category.php?id=1201">一鱿未尽拉面</a></li> 
+           <li class="sub_cat"><a href="category.php?id=999" style="color:blue"><b>粉丝系列</b></a></li> 
+           <li><a href="category.php?id=730">火锅粉条</a></li> 
+           <li><a href="category.php?id=827">面线</a></li> 
+           <li><a href="category.php?id=905">绿豆粉丝</a></li> 
+           <li><a href="category.php?id=996">光友粉丝</a></li> 
+           <li><a href="category.php?id=997">龙口粉丝</a></li> 
+           <li><a href="category.php?id=998">白家粉丝</a></li> 
+           <li><a href="category.php?id=1000">红薯粉条</a></li> 
+           <li><a href="category.php?id=1577">牛肉汤粉</a></li> 
+           <li><a href="category.php?id=1122">越南牛肉粉</a></li> 
+           <li><a href="category.php?id=1123">越南鸡肉味粉丝</a></li> 
+           <li><a href="category.php?id=1139">南街村面</a></li> 
+           <li><a href="category.php?id=1308">煲饭</a></li> 
+           <li class="sub_cat"><a href="category.php?id=1437" style="color:blue"><b>螺蛳粉系列</b></a></li> 
+           <li><a href="category.php?id=1649">螺蛳粉</a></li> 
+           <li class="sub_cat"><a href="category.php?id=1476" style="color:blue"><b>良呈美</b></a></li> 
+           <li><a href="category.php?id=1545">伤心凉皮</a></li> 
+           <li><a href="category.php?id=1546">魔芋凉皮</a></li> 
+           <li class="sub_cat"><a href="category.php?id=1503" style="color:blue"><b>即食火锅</b></a></li> 
+           <li><a href="category.php?id=1427">冒菜</a></li> 
+           <li><a href="category.php?id=1470">小小锅</a></li> 
+           <li><a href="category.php?id=1504">日本拉面</a></li> 
+           <li class="sub_cat"><a href="category.php?id=20" style="color:blue"><b>其他系列</b></a></li> 
+           <li><a href="category.php?id=361">粉皮</a></li> 
+           <li><a href="category.php?id=639">米粉</a></li> 
+           <li><a href="category.php?id=792">蛋面球</a></li> 
+           <li><a href="category.php?id=967">冷面</a></li> 
+           <li><a href="category.php?id=1288">农心系列</a></li> 
+           <li><a href="category.php?id=1310">海鲜汤面</a></li> 
+           <li><a href="category.php?id=1345">粉条</a></li> 
+           <li><a href="category.php?id=1378">维力系列</a></li> 
+           <li><a href="category.php?id=1603">麻辣拌面</a></li> 
+           <li><a href="category.php?id=1604">担担面</a></li> 
+           <li class="sub_cat"><a href="category.php?id=137" style="color:blue"><b>八宝粥</b></a></li> 
+           <li><a href="category.php?id=596">银鹭</a></li> 
+           <li><a href="category.php?id=597">娃哈哈</a></li> 
+           <li><a href="category.php?id=598">巧口</a></li> 
+           <li><a href="category.php?id=599">台湾泰山</a></li> 
+           <li><a href="category.php?id=600">伍中</a></li> 
+           <li><a href="category.php?id=601">味源</a></li> 
+           <li><a href="category.php?id=674">黑米粥</a></li> 
+           <li><a href="category.php?id=1360">烧仙草</a></li> 
+           <li class="sub_cat"><a href="category.php?id=218" style="color:blue"><b>冲食类</b></a></li> 
+           <li><a href="category.php?id=578">芝麻糊</a></li> 
+           <li><a href="category.php?id=580">藕粉</a></li> 
+           <li><a href="category.php?id=582">玉米糊</a></li> 
+           <li><a href="category.php?id=651">豆浆</a></li> 
+           <li><a href="category.php?id=657">绿豆粉</a></li> 
+           <li><a href="category.php?id=658">番薯粉</a></li> 
+           <li><a href="category.php?id=701">五谷粥</a></li> 
+           <li><a href="category.php?id=852">多谷滋养餐</a></li> 
+           <li><a href="category.php?id=859">花生糊</a></li> 
+           <li><a href="category.php?id=1205">杏仁糊</a></li> 
+           <li><a href="category.php?id=1251">芝麻粉</a></li> 
+           <li><a href="category.php?id=1278">雀巢奶粉</a></li> 
+           <li><a href="category.php?id=1293">奶茶</a></li> 
+           <li><a href="category.php?id=1390">32谷粉</a></li> 
+           <li><a href="category.php?id=1391">擂茶饮</a></li> 
+           <li><a href="category.php?id=1392">薏米仁粉</a></li> 
+           <li><a href="category.php?id=1393">黑豆粉</a></li> 
+           <li><a href="category.php?id=1474">奶粉</a></li> 
+           <li><a href="category.php?id=1653">椰子粉</a></li> 
+           <li class="sub_cat"><a href="category.php?id=485" style="color:blue"><b>速食汤料</b></a></li> 
+           <li><a href="category.php?id=588">海带汤</a></li> 
+           <li><a href="category.php?id=589">紫菜汤</a></li> 
+           <li><a href="category.php?id=668">海带排骨汤</a></li> 
+           <li class="sub_cat"><a href="category.php?id=148" style="color:blue"><b>即食罐头</b></a></li> 
+           <li><a href="category.php?id=714">豆豉鲮鱼</a></li> 
+           <li><a href="category.php?id=719">雪菜罐头</a></li> 
+           <li><a href="category.php?id=765">贡丸</a></li> 
+           <li><a href="category.php?id=1313">口水娃</a></li> 
+           <li><a href="category.php?id=1368">素毛肚</a></li> 
+           <li><a href="category.php?id=290">肉类罐头</a></li> 
+           <li><a href="category.php?id=291">蔬菜罐头</a></li> 
+           <li><a href="category.php?id=289">糖水罐头</a></li> 
+           <li><a href="category.php?id=380">凉粉/龟苓膏</a></li> 
+          </ul> 
+          <div class="clear"></div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="h2_cat" onmouseover="this.className='h2_cat active_cat'" onmouseout="this.className='h2_cat'"> 
+       <h4><a href="category.php?id=27" style="color:#de2204;">
+         <div style="_margin-top:5px;">
+          &nbsp;&nbsp;主食类
+         </div></a></h4> 
+       <div class="h3_cat"> 
+        <div class="shadow"> 
+         <div class="shadow_border"> 
+          <ul> 
+           <li class="sub_cat"><a href="category.php?id=1016" style="color:blue"><b>品牌系列</b></a></li> 
+           <li><a href="category.php?id=1017">顶味挂面</a></li> 
+           <li><a href="category.php?id=1018">若男挂面</a></li> 
+           <li><a href="category.php?id=1019">春丝挂面</a></li> 
+           <li><a href="category.php?id=1026">寿桃牌</a></li> 
+           <li><a href="category.php?id=1494">思恋</a></li> 
+           <li><a href="category.php?id=1078">普通大米</a></li> 
+           <li class="sub_cat"><a href="category.php?id=29" style="color:blue"><b>米类</b></a></li> 
+           <li><a href="category.php?id=533">红米</a></li> 
+           <li><a href="category.php?id=608">寿司米</a></li> 
+           <li><a href="category.php?id=791">香米</a></li> 
+           <li><a href="category.php?id=1014">黑米</a></li> 
+           <li><a href="category.php?id=1015">长 米</a></li> 
+           <li><a href="category.php?id=1294">红米</a></li> 
+           <li><a href="category.php?id=1563">香米头</a></li> 
+           <li><a href="category.php?id=345">碎米</a></li> 
+           <li><a href="category.php?id=344">糯米</a></li> 
+           <li class="sub_cat"><a href="category.php?id=276" style="color:blue"><b>煮面类</b></a></li> 
+           <li><a href="category.php?id=550">煮面调料</a></li> 
+           <li><a href="category.php?id=656">荞麦面</a></li> 
+           <li><a href="category.php?id=872">长寿面</a></li> 
+           <li><a href="category.php?id=347">细面</a></li> 
+           <li><a href="category.php?id=346">宽面</a></li> 
+           <li><a href="category.php?id=348">碱水面</a></li> 
+           <li><a href="category.php?id=349">乌冬(龙)面</a></li> 
+           <li><a href="category.php?id=353">刀削/手擀/拉面</a></li> 
+           <li><a href="category.php?id=351">龙须面</a></li> 
+           <li><a href="category.php?id=357">阳春面</a></li> 
+           <li><a href="category.php?id=354">鸡蛋面</a></li> 
+           <li><a href="category.php?id=352">快熟面</a></li> 
+           <li><a href="category.php?id=350">油面</a></li> 
+           <li class="sub_cat"><a href="category.php?id=128" style="color:blue"><b>面点类</b></a></li> 
+           <li><a href="category.php?id=1115">鸭饼</a></li> 
+           <li><a href="category.php?id=1248">春卷皮</a></li> 
+           <li><a href="category.php?id=1403">混沌皮</a></li> 
+           <li><a href="category.php?id=1417">芝麻汤圆</a></li> 
+           <li><a href="category.php?id=1445">水饺</a></li> 
+           <li><a href="category.php?id=1485">包子/馒头</a></li> 
+           <li><a href="category.php?id=1493">花生汤圆</a></li> 
+           <li><a href="category.php?id=1495">五仁汤圆</a></li> 
+           <li><a href="category.php?id=1496">糯米藕</a></li> 
+           <li><a href="category.php?id=1510">饺子皮</a></li> 
+           <li><a href="category.php?id=1523">油条</a></li> 
+           <li><a href="category.php?id=1564">春卷</a></li> 
+           <li><a href="category.php?id=1585">芝麻球</a></li> 
+           <li><a href="category.php?id=1586">馄饨</a></li> 
+           <li><a href="category.php?id=1600">葱油饼</a></li> 
+           <li><a href="category.php?id=1620">手抓饼</a></li> 
+           <li><a href="category.php?id=1638">馒头</a></li> 
+           <li><a href="category.php?id=1639">南瓜饼</a></li> 
+           <li><a href="category.php?id=355">年糕</a></li> 
+           <li><a href="category.php?id=356">粽子</a></li> 
+           <li class="sub_cat"><a href="category.php?id=239" style="color:blue"><b>面粉类</b></a></li> 
+           <li><a href="category.php?id=843">菱粉</a></li> 
+           <li><a href="category.php?id=847">面包糠</a></li> 
+           <li><a href="category.php?id=877">菱粉</a></li> 
+           <li><a href="category.php?id=1214">生粉</a></li> 
+           <li><a href="category.php?id=1321">玉米粉</a></li> 
+           <li><a href="category.php?id=1322">番薯粉</a></li> 
+           <li><a href="category.php?id=1335">馒头面粉</a></li> 
+           <li><a href="category.php?id=330">糯/粘米粉</a></li> 
+           <li><a href="category.php?id=331">淀粉/澄粉</a></li> 
+           <li><a href="category.php?id=364">绿豆/黄豆粉</a></li> 
+           <li class="sub_cat"><a href="category.php?id=224" style="color:blue"><b>五谷杂粮</b></a></li> 
+           <li><a href="category.php?id=628">大麦仁</a></li> 
+           <li><a href="category.php?id=699">白芝麻</a></li> 
+           <li><a href="category.php?id=713">玉米渣</a></li> 
+           <li><a href="category.php?id=821">薏米</a></li> 
+           <li><a href="category.php?id=966">荞麦</a></li> 
+           <li><a href="category.php?id=1219">腰果</a></li> 
+           <li><a href="category.php?id=1222">白芸豆</a></li> 
+           <li><a href="category.php?id=1366">玉米粉</a></li> 
+           <li><a href="category.php?id=1367">荞麦粉</a></li> 
+           <li><a href="category.php?id=1376">米发糕粉</a></li> 
+           <li><a href="category.php?id=322">红黄白绿黑豆</a></li> 
+           <li><a href="category.php?id=335">小米/高梁</a></li> 
+           <li><a href="category.php?id=334">芝麻/花生</a></li> 
+           <li><a href="category.php?id=399">其它</a></li> 
+          </ul> 
+          <div class="clear"></div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="h2_cat" onmouseover="this.className='h2_cat active_cat'" onmouseout="this.className='h2_cat'"> 
+       <h4><a href="category.php?id=16" style="color:#de2204;">
+         <div style="_margin-top:5px;">
+          &nbsp;&nbsp;休闲零食类
+         </div></a></h4> 
+       <div class="h3_cat"> 
+        <div class="shadow"> 
+         <div class="shadow_border"> 
+          <ul> 
+           <li><a href="category.php?id=842">橡皮糖</a></li> 
+           <li class="sub_cat"><a href="category.php?id=949" style="color:blue"><b>即食蛋类</b></a></li> 
+           <li><a href="category.php?id=950">五香蛋</a></li> 
+           <li><a href="category.php?id=1044">咸蛋</a></li> 
+           <li class="sub_cat"><a href="category.php?id=1027" style="color:blue"><b>枣类</b></a></li> 
+           <li><a href="category.php?id=677">蜜枣</a></li> 
+           <li><a href="category.php?id=1028">红枣</a></li> 
+           <li><a href="category.php?id=1029">其他枣类</a></li> 
+           <li class="sub_cat"><a href="category.php?id=1030" style="color:blue"><b>休闲豆制品</b></a></li> 
+           <li><a href="category.php?id=1031">好巴食</a></li> 
+           <li><a href="category.php?id=1032">真香斋</a></li> 
+           <li><a href="category.php?id=1040">庶人访南溪豆干</a></li> 
+           <li><a href="category.php?id=1041">黄日香</a></li> 
+           <li><a href="category.php?id=1043">佳佳素牛肉干</a></li> 
+           <li><a href="category.php?id=1046">香香嘴</a></li> 
+           <li><a href="category.php?id=1047">祖名豆干</a></li> 
+           <li><a href="category.php?id=1048">开袋即食</a></li> 
+           <li><a href="category.php?id=1450">魔芋凉皮</a></li> 
+           <li><a href="category.php?id=1607">小辣棒</a></li> 
+           <li class="sub_cat"><a href="category.php?id=1033" style="color:blue"><b>瓜子类</b></a></li> 
+           <li><a href="category.php?id=913">黑瓜子</a></li> 
+           <li><a href="category.php?id=931">白瓜子</a></li> 
+           <li><a href="category.php?id=932">葵瓜子</a></li> 
+           <li><a href="category.php?id=1034">香瓜子</a></li> 
+           <li><a href="category.php?id=1035">原味瓜子</a></li> 
+           <li><a href="category.php?id=1036">西瓜子</a></li> 
+           <li><a href="category.php?id=1037">甘草瓜子</a></li> 
+           <li><a href="category.php?id=1038">南瓜子</a></li> 
+           <li><a href="category.php?id=1039">椒盐瓜子</a></li> 
+           <li><a href="category.php?id=1109">五香瓜子</a></li> 
+           <li><a href="category.php?id=1514">其他</a></li> 
+           <li><a href="category.php?id=1515">绿茶瓜子</a></li> 
+           <li><a href="category.php?id=1516">奶香瓜子</a></li> 
+           <li class="sub_cat"><a href="category.php?id=1049" style="color:blue"><b>口水系列</b></a></li> 
+           <li><a href="category.php?id=763">蚕豆</a></li> 
+           <li><a href="category.php?id=764">Koh日本</a></li> 
+           <li><a href="category.php?id=784">笋丝</a></li> 
+           <li><a href="category.php?id=1051">怪味胡豆</a></li> 
+           <li><a href="category.php?id=1511">兰花豆</a></li> 
+           <li><a href="category.php?id=1513">青豆</a></li> 
+           <li><a href="category.php?id=34">口水娃</a></li> 
+           <li><a href="category.php?id=1512">甘源牌瓜子仁</a></li> 
+           <li class="sub_cat"><a href="category.php?id=1052" style="color:blue"><b>花生系列</b></a></li> 
+           <li><a href="category.php?id=648">小鱼干花生</a></li> 
+           <li><a href="category.php?id=1050">花生类</a></li> 
+           <li><a href="category.php?id=1479">花生豆</a></li> 
+           <li class="sub_cat"><a href="category.php?id=1055" style="color:blue"><b>麻糬/大幅/羊羹</b></a></li> 
+           <li><a href="category.php?id=879">宝岛麻糬</a></li> 
+           <li><a href="category.php?id=1056">台湾米大福麻糬</a></li> 
+           <li><a href="category.php?id=1057">皇族和风麻糬</a></li> 
+           <li><a href="category.php?id=1058">雪之恋麻糬</a></li> 
+           <li class="sub_cat"><a href="category.php?id=1060" style="color:blue"><b>酥饼类</b></a></li> 
+           <li><a href="category.php?id=853">大豆酥饼</a></li> 
+           <li><a href="category.php?id=855">桃酥</a></li> 
+           <li><a href="category.php?id=926">夹心酥</a></li> 
+           <li><a href="category.php?id=1061">十月初五牌</a></li> 
+           <li><a href="category.php?id=1064">旺旺仙贝酥饼</a></li> 
+           <li><a href="category.php?id=1067">凤梨酥</a></li> 
+           <li><a href="category.php?id=1460">乐香麦</a></li> 
+           <li><a href="category.php?id=1509">花生酥</a></li> 
+           <li class="sub_cat"><a href="category.php?id=1069" style="color:blue"><b>糖果类</b></a></li> 
+           <li><a href="category.php?id=1070">麦芽糖</a></li> 
+           <li><a href="category.php?id=1071">橡皮糖</a></li> 
+           <li><a href="category.php?id=1072">姜糖</a></li> 
+           <li><a href="category.php?id=1079">酥糖</a></li> 
+           <li><a href="category.php?id=1114">牛奶糖</a></li> 
+           <li><a href="category.php?id=1245">桂圆糖</a></li> 
+           <li><a href="category.php?id=134">黄糖</a></li> 
+           <li><a href="category.php?id=1128">板栗</a></li> 
+           <li><a href="category.php?id=1132">鱿鱼酥</a></li> 
+           <li><a href="category.php?id=1140">一口酥</a></li> 
+           <li><a href="category.php?id=1162">兵卒</a></li> 
+           <li><a href="category.php?id=1208">相思梅</a></li> 
+           <li class="sub_cat"><a href="category.php?id=1215" style="color:blue"><b>坚果类</b></a></li> 
+           <li><a href="category.php?id=1612">豌豆</a></li> 
+           <li><a href="category.php?id=1228">香脆辣椒</a></li> 
+           <li><a href="category.php?id=1303">泡芙</a></li> 
+           <li><a href="category.php?id=1361">杨梅</a></li> 
+           <li class="sub_cat"><a href="category.php?id=1371" style="color:blue"><b>点心</b></a></li> 
+           <li><a href="category.php?id=1462">红豆糕/小羊羔</a></li> 
+           <li><a href="category.php?id=1537">桂圆糕</a></li> 
+           <li><a href="category.php?id=1446">煮花生</a></li> 
+           <li><a href="category.php?id=1581">小麻花</a></li> 
+           <li><a href="category.php?id=1611">奶糖</a></li> 
+           <li><a href="category.php?id=1632">辣条</a></li> 
+           <li class="sub_cat"><a href="category.php?id=48" style="color:blue"><b>饼干/糕点/蛋卷类</b></a></li> 
+           <li><a href="category.php?id=754">糙米卷</a></li> 
+           <li><a href="category.php?id=755">夹心棒</a></li> 
+           <li><a href="category.php?id=807">椒盐饼</a></li> 
+           <li><a href="category.php?id=808">鸡蛋卷</a></li> 
+           <li><a href="category.php?id=833">小熊饼</a></li> 
+           <li><a href="category.php?id=854">葡式公婆饼</a></li> 
+           <li><a href="category.php?id=858">能量99棒</a></li> 
+           <li><a href="category.php?id=862">蛋卷</a></li> 
+           <li><a href="category.php?id=900">灌心饼</a></li> 
+           <li><a href="category.php?id=1062">十月初五牌饼干/蛋卷</a></li> 
+           <li><a href="category.php?id=1065">旺旺食品</a></li> 
+           <li><a href="category.php?id=1066">金富士饼</a></li> 
+           <li><a href="category.php?id=1141">日盈苏打饼干</a></li> 
+           <li><a href="category.php?id=1142">嘉士利饼干</a></li> 
+           <li><a href="category.php?id=1302">百力滋</a></li> 
+           <li><a href="category.php?id=1650">芝麻酥</a></li> 
+           <li><a href="category.php?id=382">月饼</a></li> 
+           <li><a href="category.php?id=384">饼干/蛋卷</a></li> 
+           <li><a href="category.php?id=50">沙琪玛/威化饼/爆米花</a></li> 
+           <li><a href="category.php?id=383">桂林特产绿豆糕/香芋糕</a></li> 
+           <li class="sub_cat"><a href="category.php?id=381" style="color:blue"><b>膨化油炸食品</b></a></li> 
+           <li><a href="category.php?id=385">薯片/虾条/洋葱圈</a></li> 
+           <li><a href="category.php?id=386">仙贝/雪饼/米果</a></li> 
+           <li><a href="category.php?id=1133">烧烤栗米条</a></li> 
+           <li><a href="category.php?id=1168">真鱿味</a></li> 
+           <li><a href="category.php?id=1247">干脆面</a></li> 
+           <li><a href="category.php?id=167">麻花/锅巴</a></li> 
+           <li class="sub_cat"><a href="category.php?id=31" style="color:blue"><b>核桃/果仁/其它</b></a></li> 
+           <li><a href="category.php?id=1053">果仁</a></li> 
+           <li><a href="category.php?id=1054">桃仁</a></li> 
+           <li><a href="category.php?id=1218">腰果</a></li> 
+           <li><a href="category.php?id=1631">辣花生</a></li> 
+           <li><a href="category.php?id=141">核桃</a></li> 
+           <li class="sub_cat"><a href="category.php?id=389" style="color:blue"><b>蔬果干</b></a></li> 
+           <li><a href="category.php?id=771">综合水果干</a></li> 
+           <li><a href="category.php?id=823">荔枝干</a></li> 
+           <li><a href="category.php?id=1068">龙眼/桂圆干(肉）</a></li> 
+           <li><a href="category.php?id=1220">莲藕干</a></li> 
+           <li><a href="category.php?id=1273">辣卤花生</a></li> 
+           <li><a href="category.php?id=391">板栗</a></li> 
+           <li><a href="category.php?id=392">甘薯/南瓜</a></li> 
+           <li class="sub_cat"><a href="category.php?id=395" style="color:blue"><b>蜜饯</b></a></li> 
+           <li><a href="category.php?id=396">话梅/果脯</a></li> 
+           <li><a href="category.php?id=898">绿茶梅</a></li> 
+           <li><a href="category.php?id=927">加应子</a></li> 
+           <li><a href="category.php?id=1003">综合梅</a></li> 
+           <li><a href="category.php?id=1042">甘薯/红薯干</a></li> 
+           <li class="sub_cat"><a href="category.php?id=370" style="color:blue"><b>肉类即食/海味即食</b></a></li> 
+           <li><a href="category.php?id=371">肉松</a></li> 
+           <li><a href="category.php?id=372">肉干</a></li> 
+           <li><a href="category.php?id=373">鱼干</a></li> 
+           <li><a href="category.php?id=914">凤爪</a></li> 
+           <li><a href="category.php?id=1337">鸭脖</a></li> 
+           <li><a href="category.php?id=1338">鸭掌</a></li> 
+           <li><a href="category.php?id=1339">鸭翅</a></li> 
+           <li><a href="category.php?id=1340">猪耳朵</a></li> 
+           <li><a href="category.php?id=1341">火腿肠</a></li> 
+           <li><a href="category.php?id=1342">牛百叶</a></li> 
+           <li><a href="category.php?id=1347">猪皮</a></li> 
+           <li><a href="category.php?id=1348">猪蹄</a></li> 
+           <li><a href="category.php?id=1363">卤鸭头</a></li> 
+           <li><a href="category.php?id=1491">牛板筋</a></li> 
+           <li><a href="category.php?id=1582">卤肉</a></li> 
+           <li><a href="category.php?id=1598">牛肉干</a></li> 
+           <li><a href="category.php?id=1640">虾皮</a></li> 
+           <li><a href="category.php?id=374">海苔</a></li> 
+           <li class="sub_cat"><a href="category.php?id=57" style="color:blue"><b>果冻/龟苓膏/凉粉</b></a></li> 
+           <li><a href="category.php?id=1538">布丁-凉粉</a></li> 
+           <li><a href="category.php?id=468">果冻</a></li> 
+           <li><a href="category.php?id=469">龟苓膏</a></li> 
+           <li><a href="category.php?id=470">凉粉</a></li> 
+          </ul> 
+          <div class="clear"></div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="h2_cat" onmouseover="this.className='h2_cat active_cat'" onmouseout="this.className='h2_cat'"> 
+       <h4><a href="category.php?id=21" style="color:#de2204;">
+         <div style="_margin-top:5px;">
+          &nbsp;&nbsp;腌制品
+         </div></a></h4> 
+       <div class="h3_cat"> 
+        <div class="shadow"> 
+         <div class="shadow_border"> 
+          <ul> 
+           <li class="sub_cat"><a href="category.php?id=620" style="color:blue"><b>泡菜/萝卜</b></a></li> 
+           <li><a href="category.php?id=663">辣白菜</a></li> 
+           <li><a href="category.php?id=669">海带泡菜</a></li> 
+           <li><a href="category.php?id=671">香豆泡菜</a></li> 
+           <li><a href="category.php?id=672">甘兰泡菜</a></li> 
+           <li><a href="category.php?id=673">辣青菜</a></li> 
+           <li><a href="category.php?id=711">酸辣泡菜</a></li> 
+           <li><a href="category.php?id=1100">酱汁紫苏叶泡菜</a></li> 
+           <li><a href="category.php?id=1270">娃娃菜</a></li> 
+           <li><a href="category.php?id=1382">泡椒/小米辣/野山椒</a></li> 
+           <li><a href="category.php?id=1475">酸豇豆</a></li> 
+           <li><a href="category.php?id=192">萝卜</a></li> 
+           <li class="sub_cat"><a href="category.php?id=759" style="color:blue"><b>雪菜/酸菜/大头菜</b></a></li> 
+           <li><a href="category.php?id=630">酸菜</a></li> 
+           <li><a href="category.php?id=643">美味雪菜</a></li> 
+           <li><a href="category.php?id=1095">雪菜笋丝</a></li> 
+           <li><a href="category.php?id=1096">雪菜毛豆</a></li> 
+           <li><a href="category.php?id=1097">大头菜</a></li> 
+           <li class="sub_cat"><a href="category.php?id=1073" style="color:blue"><b>榨菜类</b></a></li> 
+           <li><a href="category.php?id=644">木耳榨菜</a></li> 
+           <li><a href="category.php?id=1074">榨菜丝</a></li> 
+           <li><a href="category.php?id=1075">榨菜片</a></li> 
+           <li><a href="category.php?id=80">榨菜</a></li> 
+           <li><a href="category.php?id=1284">卜留克</a></li> 
+           <li><a href="category.php?id=1354">泡椒木耳</a></li> 
+           <li><a href="category.php?id=1384">剁椒魔芋丝</a></li> 
+           <li class="sub_cat"><a href="category.php?id=402" style="color:blue"><b>海带/海草</b></a></li> 
+           <li><a href="category.php?id=404">海带</a></li> 
+           <li><a href="category.php?id=405">海草</a></li> 
+           <li class="sub_cat"><a href="category.php?id=82" style="color:blue"><b>其它腌制品</b></a></li> 
+           <li><a href="category.php?id=747">橄榄菜</a></li> 
+           <li><a href="category.php?id=798">辣椒白茄子</a></li> 
+           <li><a href="category.php?id=830">碎米芽菜</a></li> 
+           <li><a href="category.php?id=920">八宝菜</a></li> 
+           <li><a href="category.php?id=1098">香辣菜</a></li> 
+           <li><a href="category.php?id=1099">野蕨菜</a></li> 
+           <li><a href="category.php?id=1227">泡椒</a></li> 
+           <li><a href="category.php?id=1385">韭菜花</a></li> 
+           <li><a href="category.php?id=1412">姜片</a></li> 
+           <li><a href="category.php?id=1527">麻辣酱</a></li> 
+           <li><a href="category.php?id=406">香笋</a></li> 
+           <li><a href="category.php?id=407">酱瓜</a></li> 
+           <li><a href="category.php?id=408">菌菇</a></li> 
+           <li class="sub_cat"><a href="category.php?id=79" style="color:blue"><b>腐乳</b></a></li> 
+           <li><a href="category.php?id=410">辣腐乳</a></li> 
+           <li><a href="category.php?id=411">白腐乳</a></li> 
+           <li><a href="category.php?id=412">红腐乳</a></li> 
+           <li><a href="category.php?id=953">米浆腐乳</a></li> 
+           <li class="sub_cat"><a href="category.php?id=414" style="color:blue"><b>豆角/豇豆/什锦</b></a></li> 
+           <li><a href="category.php?id=645">酸辣豆角</a></li> 
+           <li><a href="category.php?id=1101">什锦</a></li> 
+           <li><a href="category.php?id=1102">豇豆</a></li> 
+           <li><a href="category.php?id=1309">泡菜</a></li> 
+           <li><a href="category.php?id=1587">香辣榨菜丝</a></li> 
+           <li class="sub_cat"><a href="category.php?id=299" style="color:blue"><b>蛋类</b></a></li> 
+           <li><a href="category.php?id=1103">咸蛋</a></li> 
+           <li><a href="category.php?id=228">皮蛋</a></li> 
+           <li class="sub_cat"><a href="category.php?id=375" style="color:blue"><b>半成品（非即食）</b></a></li> 
+           <li><a href="category.php?id=376">清水果蔬</a></li> 
+           <li><a href="category.php?id=734">海蜇丝</a></li> 
+           <li><a href="category.php?id=1574">清水笋尖</a></li> 
+          </ul> 
+          <div class="clear"></div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="h2_cat" onmouseover="this.className='h2_cat active_cat'" onmouseout="this.className='h2_cat'"> 
+       <h4><a href="category.php?id=17" style="color:#de2204;">
+         <div style="_margin-top:5px;">
+          &nbsp;&nbsp;调味类
+         </div></a></h4> 
+       <div class="h3_cat"> 
+        <div class="shadow"> 
+         <div class="shadow_border"> 
+          <ul> 
+           <li><a href="category.php?id=1455">芝麻油</a></li> 
+           <li class="sub_cat"><a href="category.php?id=89" style="color:blue"><b>酱油/料酒/醋/香油</b></a></li> 
+           <li><a href="category.php?id=682">寿司酱油</a></li> 
+           <li><a href="category.php?id=705">花雕酒</a></li> 
+           <li><a href="category.php?id=844">老抽</a></li> 
+           <li><a href="category.php?id=845">生抽</a></li> 
+           <li><a href="category.php?id=1147">凉拌醋</a></li> 
+           <li><a href="category.php?id=1148">陈醋</a></li> 
+           <li><a href="category.php?id=1149">姜蒜醋</a></li> 
+           <li><a href="category.php?id=1319">添丁甜醋</a></li> 
+           <li><a href="category.php?id=1346">酱汁</a></li> 
+           <li><a href="category.php?id=1413">寿司醋</a></li> 
+           <li><a href="category.php?id=1641">照烧汁</a></li> 
+           <li><a href="category.php?id=1655">味醂</a></li> 
+           <li><a href="category.php?id=415">酱油</a></li> 
+           <li><a href="category.php?id=416">料酒</a></li> 
+           <li><a href="category.php?id=417">醋</a></li> 
+           <li><a href="category.php?id=418">香油/辣椒油/芝麻油</a></li> 
+           <li class="sub_cat"><a href="category.php?id=419" style="color:blue"><b>调味料粉</b></a></li> 
+           <li><a href="category.php?id=695">孜然</a></li> 
+           <li><a href="category.php?id=715">花椒</a></li> 
+           <li><a href="category.php?id=832">五香粉</a></li> 
+           <li><a href="category.php?id=884">炸粉</a></li> 
+           <li><a href="category.php?id=1025">沙姜粉</a></li> 
+           <li><a href="category.php?id=1104">十三香</a></li> 
+           <li><a href="category.php?id=1105">八角</a></li> 
+           <li><a href="category.php?id=1129">辣椒粉</a></li> 
+           <li><a href="category.php?id=1150">茴香</a></li> 
+           <li><a href="category.php?id=1151">桂皮</a></li> 
+           <li><a href="category.php?id=1207">陈皮</a></li> 
+           <li><a href="category.php?id=1271">香叶</a></li> 
+           <li><a href="category.php?id=1272">辣椒面</a></li> 
+           <li><a href="category.php?id=1344">生姜粉</a></li> 
+           <li><a href="category.php?id=1432">椒盐</a></li> 
+           <li><a href="category.php?id=1447">包饺子料</a></li> 
+           <li><a href="category.php?id=1468">丁香</a></li> 
+           <li><a href="category.php?id=1590">花椒粉/花椒面</a></li> 
+           <li><a href="category.php?id=1633">甘草片</a></li> 
+           <li><a href="category.php?id=420">味精/鸡精</a></li> 
+           <li class="sub_cat"><a href="category.php?id=423" style="color:blue"><b>调味酱汁</b></a></li> 
+           <li><a href="category.php?id=616">明虾酱</a></li> 
+           <li><a href="category.php?id=631">排骨酱</a></li> 
+           <li><a href="category.php?id=633">腌酱</a></li> 
+           <li><a href="category.php?id=650">大豆酱</a></li> 
+           <li><a href="category.php?id=722">卤料</a></li> 
+           <li><a href="category.php?id=739">调味料</a></li> 
+           <li><a href="category.php?id=743">红翻天</a></li> 
+           <li><a href="category.php?id=767">干黄酱</a></li> 
+           <li><a href="category.php?id=772">糟卤</a></li> 
+           <li><a href="category.php?id=779">甜面酱</a></li> 
+           <li><a href="category.php?id=816">蚝油</a></li> 
+           <li><a href="category.php?id=907">鱼露</a></li> 
+           <li><a href="category.php?id=911">海鲜酱</a></li> 
+           <li><a href="category.php?id=933">姜汁</a></li> 
+           <li><a href="category.php?id=934">蒜汁</a></li> 
+           <li><a href="category.php?id=1007">芝麻酱</a></li> 
+           <li><a href="category.php?id=1265">芥末</a></li> 
+           <li><a href="category.php?id=1320">烤肉酱</a></li> 
+           <li><a href="category.php?id=1625">酱油膏</a></li> 
+           <li><a href="category.php?id=1627">味极鲜</a></li> 
+           <li><a href="category.php?id=1634">泡菜料</a></li> 
+           <li><a href="category.php?id=1647">酱油</a></li> 
+           <li><a href="category.php?id=424">蚝油/豉汁/南乳汁</a></li> 
+           <li><a href="category.php?id=425">醉鸡汁/卤水汁</a></li> 
+           <li><a href="category.php?id=426">辣椒/蒜蓉酱</a></li> 
+           <li><a href="category.php?id=427">豆豉/豆瓣酱/豆酱</a></li> 
+           <li><a href="category.php?id=428">芝麻/花生</a></li> 
+           <li><a href="category.php?id=429">叉烧/烧烤/烤鸭/酸辣酱</a></li> 
+           <li><a href="category.php?id=430">咖喱/沙爹(茶)酱</a></li> 
+           <li><a href="category.php?id=431">酸甜酱/凉拌酱</a></li> 
+           <li><a href="category.php?id=483">其它</a></li> 
+           <li class="sub_cat"><a href="category.php?id=432" style="color:blue"><b>菜肴/面料酱</b></a></li> 
+           <li><a href="category.php?id=710">山椒酸菜面料</a></li> 
+           <li><a href="category.php?id=723">五香粉</a></li> 
+           <li><a href="category.php?id=774">香水鸡</a></li> 
+           <li><a href="category.php?id=775">香水兔</a></li> 
+           <li><a href="category.php?id=776">香水鸭</a></li> 
+           <li><a href="category.php?id=796">炸酱</a></li> 
+           <li><a href="category.php?id=871">豚骨酱</a></li> 
+           <li><a href="category.php?id=921">粉蒸肉</a></li> 
+           <li><a href="category.php?id=965">拌面料</a></li> 
+           <li><a href="category.php?id=1425">四川冒菜</a></li> 
+           <li><a href="category.php?id=433">煮鱼</a></li> 
+           <li><a href="category.php?id=434">烧菜</a></li> 
+           <li><a href="category.php?id=435">甜面酱</a></li> 
+           <li><a href="category.php?id=436">其它面酱</a></li> 
+           <li class="sub_cat"><a href="category.php?id=106" style="color:blue"><b>汤料</b></a></li> 
+           <li><a href="category.php?id=659">排骨炖鸡汤料</a></li> 
+           <li><a href="category.php?id=687">鸡鸭炖料</a></li> 
+           <li><a href="category.php?id=726">枸杞</a></li> 
+           <li><a href="category.php?id=727">鸡心枣</a></li> 
+           <li><a href="category.php?id=757">清补凉</a></li> 
+           <li><a href="category.php?id=806">淮山枸杞煲鸡</a></li> 
+           <li><a href="category.php?id=826">百合片</a></li> 
+           <li><a href="category.php?id=1628">味噌汤料</a></li> 
+           <li><a href="category.php?id=442">快汤料</a></li> 
+           <li><a href="category.php?id=443">炖汤料</a></li> 
+           <li class="sub_cat"><a href="category.php?id=437" style="color:blue"><b>糖/辅料</b></a></li> 
+           <li><a href="category.php?id=690">红糖</a></li> 
+           <li><a href="category.php?id=804">红砂糖</a></li> 
+           <li><a href="category.php?id=849">冰糖</a></li> 
+           <li><a href="category.php?id=899">鸡精</a></li> 
+           <li><a href="category.php?id=1013">黑糖</a></li> 
+           <li><a href="category.php?id=1021">麦芽糖</a></li> 
+           <li><a href="category.php?id=1156">小苏打</a></li> 
+           <li><a href="category.php?id=1166">苏打粉</a></li> 
+           <li><a href="category.php?id=1370">蒸肉粉</a></li> 
+           <li><a href="category.php?id=439">辅料</a></li> 
+          </ul> 
+          <div class="clear"></div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="h2_cat" onmouseover="this.className='h2_cat active_cat'" onmouseout="this.className='h2_cat'"> 
+       <h4><a href="category.php?id=18" style="color:#de2204;">
+         <div style="_margin-top:5px;">
+          &nbsp;&nbsp;干货类
+         </div></a></h4> 
+       <div class="h3_cat"> 
+        <div class="shadow"> 
+         <div class="shadow_border"> 
+          <ul> 
+           <li><a href="category.php?id=641">黑木耳</a></li> 
+           <li><a href="category.php?id=693">金钱菇</a></li> 
+           <li><a href="category.php?id=725">枸杞</a></li> 
+           <li><a href="category.php?id=728">鸡心枣</a></li> 
+           <li><a href="category.php?id=732">花菇</a></li> 
+           <li class="sub_cat"><a href="category.php?id=744" style="color:blue"><b>香菇</b></a></li> 
+           <li><a href="category.php?id=1330">冬菇片</a></li> 
+           <li><a href="category.php?id=1377">冬菇</a></li> 
+           <li><a href="category.php?id=745">雪耳-银耳</a></li> 
+           <li><a href="category.php?id=785">花椒</a></li> 
+           <li><a href="category.php?id=788">莲子</a></li> 
+           <li><a href="category.php?id=793">辣椒干</a></li> 
+           <li><a href="category.php?id=817">桂圆干</a></li> 
+           <li><a href="category.php?id=822">荔枝干</a></li> 
+           <li><a href="category.php?id=825">百合片</a></li> 
+           <li><a href="category.php?id=863">卤水料</a></li> 
+           <li><a href="category.php?id=1154">龙眼干</a></li> 
+           <li><a href="category.php?id=1165">粉丝</a></li> 
+           <li><a href="category.php?id=1231">青菜笋干</a></li> 
+           <li class="sub_cat"><a href="category.php?id=294" style="color:blue"><b>海产类</b></a></li> 
+           <li><a href="category.php?id=401">海苔</a></li> 
+           <li><a href="category.php?id=540">海鲜</a></li> 
+           <li><a href="category.php?id=1010">干鱿鱼</a></li> 
+           <li><a href="category.php?id=1400">虾皮</a></li> 
+           <li><a href="category.php?id=1401">虾仁</a></li> 
+           <li><a href="category.php?id=1578">带鱼</a></li> 
+           <li><a href="category.php?id=1579">黄花鱼</a></li> 
+           <li><a href="category.php?id=1580">石斑鱼</a></li> 
+           <li><a href="category.php?id=1642">海米/虾米</a></li> 
+           <li><a href="category.php?id=61">紫菜</a></li> 
+           <li><a href="category.php?id=64">海带</a></li> 
+           <li><a href="category.php?id=108">虾片</a></li> 
+           <li class="sub_cat"><a href="category.php?id=296" style="color:blue"><b>干菜类</b></a></li> 
+           <li><a href="category.php?id=615">海蜇丝</a></li> 
+           <li><a href="category.php?id=692">黄花菜</a></li> 
+           <li><a href="category.php?id=1232">香椿芽</a></li> 
+           <li><a href="category.php?id=1233">贡菜干</a></li> 
+           <li><a href="category.php?id=185">干绿菜</a></li> 
+           <li><a href="category.php?id=63">笋干</a></li> 
+           <li><a href="category.php?id=465">梅干菜</a></li> 
+           <li><a href="category.php?id=466">金针菜</a></li> 
+           <li><a href="category.php?id=67">藕干</a></li> 
+           <li class="sub_cat"><a href="category.php?id=180" style="color:blue"><b>豆/面制品</b></a></li> 
+           <li><a href="category.php?id=647">油面筋</a></li> 
+           <li><a href="category.php?id=655">罗汉斋</a></li> 
+           <li><a href="category.php?id=688">臭豆腐</a></li> 
+           <li><a href="category.php?id=689">豆腐干</a></li> 
+           <li><a href="category.php?id=903">豆腐花</a></li> 
+           <li><a href="category.php?id=904">速食豆腐</a></li> 
+           <li><a href="category.php?id=1435">珍菇</a></li> 
+           <li><a href="category.php?id=1442">响铃卷</a></li> 
+           <li><a href="category.php?id=1536">小豆皮</a></li> 
+           <li><a href="category.php?id=446">腐竹/豆腐皮</a></li> 
+           <li><a href="category.php?id=447">面筋/烤麸</a></li> 
+           <li class="sub_cat"><a href="category.php?id=62" style="color:blue"><b>菌菇类</b></a></li> 
+           <li><a href="category.php?id=642">黑木耳</a></li> 
+           <li><a href="category.php?id=840">姬菇</a></li> 
+           <li><a href="category.php?id=841">金针菇</a></li> 
+           <li><a href="category.php?id=1243">清水香菇</a></li> 
+           <li><a href="category.php?id=1637">金钱菇</a></li> 
+           <li><a href="category.php?id=448">香菇</a></li> 
+           <li><a href="category.php?id=449">黑白木耳</a></li> 
+           <li><a href="category.php?id=450">其它菌菇</a></li> 
+           <li class="sub_cat"><a href="category.php?id=323" style="color:blue"><b>营养汤、粥料</b></a></li> 
+           <li><a href="category.php?id=678">大枣</a></li> 
+           <li><a href="category.php?id=800">赤小豆</a></li> 
+           <li><a href="category.php?id=801">红小豆</a></li> 
+           <li><a href="category.php?id=802">绿豆</a></li> 
+           <li><a href="category.php?id=803">白眉豆</a></li> 
+           <li><a href="category.php?id=805">板栗仁</a></li> 
+           <li><a href="category.php?id=1152">黑豆</a></li> 
+           <li><a href="category.php?id=1280">黑芝麻</a></li> 
+           <li><a href="category.php?id=1323">南杏仁</a></li> 
+           <li><a href="category.php?id=1324">北杏仁</a></li> 
+           <li><a href="category.php?id=1350">大红豆</a></li> 
+           <li><a href="category.php?id=68">枣/山楂</a></li> 
+           <li><a href="category.php?id=153">桂圆/莲子/花生</a></li> 
+           <li><a href="category.php?id=118">枸杞/百合</a></li> 
+           <li><a href="category.php?id=181">淮山/茨实</a></li> 
+           <li><a href="category.php?id=463">汤包</a></li> 
+           <li class="sub_cat"><a href="category.php?id=444" style="color:blue"><b>烹任辅料</b></a></li> 
+           <li><a href="category.php?id=536">棕/荷叶</a></li> 
+           <li><a href="category.php?id=897">卤料</a></li> 
+           <li><a href="category.php?id=1106">辣椒粉</a></li> 
+           <li><a href="category.php?id=1473">老卤汁</a></li> 
+           <li><a href="category.php?id=451">辣椒</a></li> 
+           <li><a href="category.php?id=454">八角</a></li> 
+           <li class="sub_cat"><a href="category.php?id=445" style="color:blue"><b>保健药材</b></a></li> 
+           <li><a href="category.php?id=664">板蓝根</a></li> 
+           <li><a href="category.php?id=665">下火王</a></li> 
+           <li><a href="category.php?id=666">金银花</a></li> 
+           <li><a href="category.php?id=667">二十四味清凉茶</a></li> 
+           <li><a href="category.php?id=781">淮山</a></li> 
+           <li><a href="category.php?id=795">枸杞桂圆酒</a></li> 
+           <li><a href="category.php?id=799">灵芝冲剂</a></li> 
+           <li><a href="category.php?id=813">菊花干</a></li> 
+           <li><a href="category.php?id=814">黄芪</a></li> 
+           <li><a href="category.php?id=815">甘草片</a></li> 
+           <li><a href="category.php?id=818">金银花冲剂</a></li> 
+           <li><a href="category.php?id=895">当归</a></li> 
+           <li><a href="category.php?id=944">霸王花</a></li> 
+           <li><a href="category.php?id=945">生地</a></li> 
+           <li><a href="category.php?id=1107">红枣茶</a></li> 
+           <li><a href="category.php?id=1108">姜茶</a></li> 
+           <li><a href="category.php?id=1256">罗汉果冲剂</a></li> 
+           <li><a href="category.php?id=1295">党参</a></li> 
+           <li><a href="category.php?id=1305">白果仁</a></li> 
+           <li><a href="category.php?id=1656">金梅片</a></li> 
+           <li><a href="category.php?id=456">枣/山楂</a></li> 
+           <li><a href="category.php?id=460">灵芝/人参</a></li> 
+          </ul> 
+          <div class="clear"></div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="h2_cat" onmouseover="this.className='h2_cat active_cat'" onmouseout="this.className='h2_cat'"> 
+       <h4><a href="category.php?id=22" style="color:#de2204;">
+         <div style="_margin-top:5px;">
+          &nbsp;&nbsp;饮品
+         </div></a></h4> 
+       <div class="h3_cat"> 
+        <div class="shadow"> 
+         <div class="shadow_border"> 
+          <ul> 
+           <li><a href="category.php?id=1464">咖啡</a></li> 
+           <li class="sub_cat"><a href="category.php?id=1500" style="color:blue"><b>八宝粥</b></a></li> 
+           <li><a href="category.php?id=1261">燕麦粥</a></li> 
+           <li><a href="category.php?id=1357">糯米粥</a></li> 
+           <li><a href="category.php?id=1358">绿豆粥</a></li> 
+           <li><a href="category.php?id=1359">八宝粥</a></li> 
+           <li><a href="category.php?id=1395">红豆莲子粥</a></li> 
+           <li class="sub_cat"><a href="category.php?id=1501" style="color:blue"><b>汽水</b></a></li> 
+           <li><a href="category.php?id=1443">蓝莓汽水</a></li> 
+           <li><a href="category.php?id=1444">抹茶汽水</a></li> 
+           <li class="sub_cat"><a href="category.php?id=195" style="color:blue"><b>茶饮</b></a></li> 
+           <li><a href="category.php?id=1117">蜂蜜柚子茶</a></li> 
+           <li><a href="category.php?id=1557">抹茶</a></li> 
+           <li><a href="category.php?id=1619">酸梅汤</a></li> 
+           <li><a href="category.php?id=1630">大麦茶</a></li> 
+           <li><a href="category.php?id=281">红/绿茶饮</a></li> 
+           <li><a href="category.php?id=471">铁观音/乌龙茶饮</a></li> 
+           <li><a href="category.php?id=472">茉莉花茶饮</a></li> 
+           <li><a href="category.php?id=279">养生凉茶</a></li> 
+           <li class="sub_cat"><a href="category.php?id=84" style="color:blue"><b>果饮</b></a></li> 
+           <li><a href="category.php?id=282">果汁</a></li> 
+           <li><a href="category.php?id=283">果醋</a></li> 
+           <li><a href="category.php?id=912">果冻</a></li> 
+           <li><a href="category.php?id=1159">芒果</a></li> 
+           <li><a href="category.php?id=1160">石榴</a></li> 
+           <li><a href="category.php?id=1244">仙草蜜</a></li> 
+           <li><a href="category.php?id=1543">草莓汁</a></li> 
+           <li><a href="category.php?id=1544">罗望子汁</a></li> 
+           <li><a href="category.php?id=1565">菊花茶</a></li> 
+           <li class="sub_cat"><a href="category.php?id=306" style="color:blue"><b>乳/豆饮品/其它</b></a></li> 
+           <li><a href="category.php?id=1167">黑豆浆</a></li> 
+           <li><a href="category.php?id=1286">豆奶</a></li> 
+           <li><a href="category.php?id=1287">杏仁露</a></li> 
+           <li><a href="category.php?id=1300">糙米奶</a></li> 
+           <li><a href="category.php?id=1588">红豆汤</a></li> 
+           <li><a href="category.php?id=1589">绿豆汤</a></li> 
+           <li><a href="category.php?id=1616">酸奶</a></li> 
+           <li><a href="category.php?id=474">豆浆</a></li> 
+           <li><a href="category.php?id=477">奶茶</a></li> 
+           <li><a href="category.php?id=479">米浆</a></li> 
+           <li><a href="category.php?id=480">西米露</a></li> 
+           <li><a href="category.php?id=478">其它</a></li> 
+           <li class="sub_cat"><a href="category.php?id=194" style="color:blue"><b>酒精饮料</b></a></li> 
+           <li><a href="category.php?id=481">啤酒</a></li> 
+           <li><a href="category.php?id=635">白酒</a></li> 
+           <li class="sub_cat"><a href="category.php?id=25" style="color:blue"><b>冲泡类</b></a></li> 
+           <li><a href="category.php?id=1381">芝麻麦片</a></li> 
+           <li><a href="category.php?id=1629">大麦茶</a></li> 
+           <li><a href="category.php?id=285">茶/花茶</a></li> 
+           <li><a href="category.php?id=284">乳/豆制冲饮</a></li> 
+           <li><a href="category.php?id=482">芝麻糊/藕粉/麦片/玉米糊</a></li> 
+           <li><a href="category.php?id=286">保健冲饮</a></li> 
+          </ul> 
+          <div class="clear"></div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="h2_cat" onmouseover="this.className='h2_cat active_cat'" onmouseout="this.className='h2_cat'"> 
+       <h4><a href="category.php?id=86" style="color:#de2204;">
+         <div style="_margin-top:5px;">
+          &nbsp;&nbsp;酒类
+         </div></a></h4> 
+       <div class="h3_cat"> 
+        <div class="shadow"> 
+         <div class="shadow_border"> 
+          <ul> 
+           <li class="sub_cat"><a href="category.php?id=886" style="color:blue"><b>二锅头</b></a></li> 
+           <li><a href="category.php?id=1617">江小白</a></li> 
+           <li><a href="category.php?id=1009">茅台酒</a></li> 
+           <li><a href="category.php?id=1316">泸州老窖</a></li> 
+           <li><a href="category.php?id=1336">清酒</a></li> 
+           <li><a href="category.php?id=1562">尖庄</a></li> 
+           <li><a href="category.php?id=209">黄酒</a></li> 
+           <li><a href="category.php?id=208">白酒</a></li> 
+           <li><a href="category.php?id=278">米酒</a></li> 
+           <li><a href="category.php?id=473">葡萄酒</a></li> 
+           <li><a href="category.php?id=214">啤酒</a></li> 
+           <li><a href="category.php?id=277">果酒</a></li> 
+          </ul> 
+          <div class="clear"></div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="h2_cat" onmouseover="this.className='h2_cat active_cat'" onmouseout="this.className='h2_cat'"> 
+       <h4><a href="category.php?id=337" style="color:#de2204;">
+         <div style="_margin-top:5px;">
+          &nbsp;&nbsp;甜品
+         </div></a></h4> 
+       <div class="h3_cat"> 
+        <div class="shadow"> 
+         <div class="shadow_border"> 
+          <ul> 
+           <li class="sub_cat"><a href="category.php?id=365" style="color:blue"><b>红豆沙</b></a></li> 
+           <li><a href="category.php?id=1277">汤圆馅</a></li> 
+           <li><a href="category.php?id=1459">颗粒红豆馅</a></li> 
+           <li><a href="category.php?id=1615">红豆沙</a></li> 
+           <li><a href="category.php?id=366">酒酿</a></li> 
+           <li><a href="category.php?id=487">西米/珍珠</a></li> 
+           <li><a href="category.php?id=538">椰浆</a></li> 
+           <li><a href="category.php?id=654">黑豆沙</a></li> 
+           <li><a href="category.php?id=857">珍珠粉圆</a></li> 
+           <li><a href="category.php?id=916">糖水荔枝</a></li> 
+           <li><a href="category.php?id=917">糖水龙眼</a></li> 
+           <li class="sub_cat"><a href="category.php?id=929" style="color:blue"><b>糖桂花</b></a></li> 
+           <li><a href="category.php?id=1242">桂花糖</a></li> 
+           <li><a href="category.php?id=955">凉粉</a></li> 
+           <li><a href="category.php?id=1118">糖水芒果</a></li> 
+           <li><a href="category.php?id=1211">糖水杨梅</a></li> 
+           <li><a href="category.php?id=1212">糖水枇杷</a></li> 
+           <li><a href="category.php?id=1524">糖水马蹄</a></li> 
+           <li><a href="category.php?id=1554">藕粉</a></li> 
+           <li><a href="category.php?id=1608">米酒汁</a></li> 
+           <li><a href="category.php?id=1643">椰奶</a></li> 
+           <li class="sub_cat"><a href="category.php?id=555" style="color:blue"><b>八宝粥/奶茶</b></a></li> 
+           <li><a href="category.php?id=1155">清补凉</a></li> 
+          </ul> 
+          <div class="clear"></div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="h2_cat" onmouseover="this.className='h2_cat active_cat'" onmouseout="this.className='h2_cat'"> 
+       <h4><a href="category.php?id=158" style="color:#de2204;">
+         <div style="_margin-top:5px;">
+          &nbsp;&nbsp;日韩食品
+         </div></a></h4> 
+       <div class="h3_cat"> 
+        <div class="shadow"> 
+         <div class="shadow_border"> 
+          <ul> 
+           <li><a href="category.php?id=535">调料</a></li> 
+          </ul> 
+          <div class="clear"></div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="h2_cat" onmouseover="this.className='h2_cat active_cat'" onmouseout="this.className='h2_cat'"> 
+       <h4><a href="category.php?id=339" style="color:#de2204;">
+         <div style="_margin-top:5px;">
+          &nbsp;&nbsp;保健护肤品
+         </div></a></h4> 
+       <div class="h3_cat"> 
+        <div class="shadow"> 
+         <div class="shadow_border"> 
+          <ul> 
+           <li><a href="category.php?id=1282">口服类</a></li> 
+           <li><a href="category.php?id=1283">外用类</a></li> 
+           <li><a href="category.php?id=1560">绿药膏</a></li> 
+          </ul> 
+          <div class="clear"></div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="h2_cat" onmouseover="this.className='h2_cat active_cat'" onmouseout="this.className='h2_cat'"> 
+       <h4><a href="category.php?id=217" style="color:#de2204;">
+         <div style="_margin-top:5px;">
+          &nbsp;&nbsp;其它
+         </div></a></h4> 
+       <div class="h3_cat"> 
+        <div class="shadow"> 
+         <div class="shadow_border"> 
+          <ul> 
+           <li class="sub_cat"><a href="category.php?id=304" style="color:blue"><b>补邮专链</b></a></li> 
+           <li><a href="category.php?id=1490">急件</a></li> 
+           <li><a href="category.php?id=234">其它</a></li> 
+          </ul> 
+          <div class="clear"></div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="b">
+      <div></div>
      </div> 
     </div> 
-    <div class="blank10"></div> 
-    <div id="history_div"> 
-     <div class="modTit1"> 
-      <h2 class="LPor"> 浏览历史 </h2> 
-     </div> 
-     <div id="history_list"> 
+   </div> 
+   <div class="AreaR"> 
+    <div class="box"> 
+     <div class="box_1"> 
+      <h3><span>商品筛选</span></h3> 
+      <div class="screeBox"> 
+       <strong>品牌：</strong> 
+       <span>全部</span> 
+       <a href="category.php?id=1608&amp;brand=875&amp;price_min=0&amp;price_max=0">米婆婆</a>&nbsp; 
+      </div> 
      </div> 
     </div> 
-    <script type="text/javascript">
-if (document.getElementById('history_list').innerHTML.replace(/\s/g,'').length<1)
+    <div class="blank5"></div> 
+    <div class="box"> 
+     <div class="box_1"> 
+      <h3> <span>商品列表</span> 
+       <form method="GET" class="sort" name="listform"> 
+        <select name="sort" style="border:1px solid #ccc;"> <option value="goods_id">按上架时间排序</option><option value="shop_price">按价格排序</option><option value="last_update" selected>按更新时间排序</option> </select> 
+        <select name="order" style="border:1px solid #ccc;"> <option value="DESC" selected>倒序</option><option value="ASC">正序</option> </select> 
+        <input type="image" name="imageField" src="themes/shopw/images/bnt_go.gif" alt="go"> 
+        <input type="hidden" name="category" value="1608"> 
+        <input type="hidden" name="display" value="grid" id="display"> 
+        <input type="hidden" name="brand" value="0"> 
+        <input type="hidden" name="price_min" value="0"> 
+        <input type="hidden" name="price_max" value="0"> 
+        <input type="hidden" name="filter_attr" value="0"> 
+        <input type="hidden" name="page" value="1"> 
+       </form> </h3> 
+      <form name="compareForm" action="compare.php" method="post" onSubmit="return compareGoods(this);"> 
+       <div class="centerPadd"> 
+        <div class="clearfix goodsBox" style="border:none;"> 
+         <div class="goodsItem"> 
+          <a href="goods.php?id=6837"><img src="images/201902/thumb_img/6837_thumb_G_1549469262379.jpg" alt="米婆婆 养胃米酒汁-酒酿..." class="goodsimg"></a>
+          <br> 
+          <p><a href="goods.php?id=6837" title="米婆婆 养胃米酒汁-酒酿汁480ml">米婆婆 养胃米酒汁-酒酿...</a></p> 
+          <font class="shop_s">3.86</font>
+          <br> 
+          <a href="javascript:addToCart(6837)" class="f6"><img src="themes/shopw/images/button_buy.gif"></a> 
+         </div> 
+        </div> 
+       </div> 
+      </form> 
+     </div> 
+    </div> 
+    <div class="blank5"></div> 
+    <script type="Text/Javascript" language="JavaScript">
+<!--
+function selectPage(sel)
 {
-    document.getElementById('history_div').style.display='none';
+  sel.form.submit();
 }
-else
-{
-    document.getElementById('history_div').style.display='block';
-}
-function clear_history()
-{
-Ajax.call('user.php', 'act=clear_history',clear_history_Response, 'GET', 'TEXT',1,1);
-}
-function clear_history_Response(res)
-{
-document.getElementById('history_list').innerHTML = '您已清空最近浏览过的商品';
-}
+//-->
 </script> 
-   </div> 
-   <div class="EarRight fr"> 
-    <div class="goodsTitle"> 
-     <span class="fwhite f14b">商品列表</span> 
-    </div> 
-    <div class="tr sort"> 
-     <form method="GET" name="listform">
-       显示方式： 
-      <a href="javascript:;" onclick="javascript:display_mode('list')"><img src="themes/Yachao/images/display_mode_list.gif" alt=""></a> 
-      <a href="javascript:;" onclick="javascript:display_mode('grid')"><img src="themes/Yachao/images/display_mode_grid_act.gif" alt=""></a> 
-      <a href="javascript:;" onclick="javascript:display_mode('text')"><img src="themes/Yachao/images/display_mode_text.gif" alt=""></a>&nbsp;&nbsp; 
-      <select name="sort"> <option value="goods_id">按上架时间排序</option><option value="shop_price">按价格排序</option><option value="last_update" selected>按更新时间排序</option> </select> 
-      <select name="order"> <option value="DESC" selected>倒序</option><option value="ASC">正序</option> </select> 
-      <input type="submit" name="imageField" class="go2" style="position:relative;top:5px\9;_top:0px;*top:0px;" value=""> 
-      <input type="hidden" name="category" value="212"> 
-      <input type="hidden" name="display" value="grid" id="display"> 
-      <input type="hidden" name="brand" value="0"> 
-      <input type="hidden" name="price_min" value="0"> 
-      <input type="hidden" name="price_max" value="0"> 
-      <input type="hidden" name="filter_attr" value="0"> 
-      <input type="hidden" name="page" value="1"> 
-     </form> 
-    </div> 
-    <div class="blank10"></div> 
-    <form name="compareForm" action="compare.php" method="post" onSubmit="return compareGoods(this);"> 
-     <div class="grid"> 
-      <div class="goodsbox"> 
-       <div class="imgbox">
-        <a href="goods.php?id=4126"><img src="images/201606/goods_img/4126_G_1466581475488.jpg" alt="泰国Royal Thai 茉莉香米 4.5kg/Royal thai Jasminreis 4.5kg green" style="max-width:187px; max-height:180px;"></a>
-       </div> 
-       <a href="goods.php?id=4126" title="泰国Royal Thai 茉莉香米 4.5kg/Royal thai Jasminreis 4.5kg green" style="width:190px;height:35px;overflow: hidden;display: inline-block">泰国Royal Thai 茉莉香米 4.5kg/Royal thai Jasmi...</a>
-       <br> 市场价格：
-       <font class="market"> 16.79</font>　库存：19
-       <br> 本店售价：
-       <font class="fpink"> 13.99</font>
-       <br> 
-       <a href="javascript:addToCart(4126)"><img src="themes/Yachao/images/bnt_buy_s2.gif"></a> 
-       <a href="javascript:collect(4126)"><img src="themes/Yachao/images/bnt_coll_s2.gif"></a> 
-       <a href="javascript:;" id="compareLink" onclick="Compare.add(4126,'泰国Royal Thai 茉莉香米 4.5kg/Royal thai Jasminreis 4.5kg green','0')"><img src="themes/Yachao/images/bnt_compare2.gif"></a> 
-      </div> 
-      <div class="goodsbox"> 
-       <div class="imgbox">
-        <a href="goods.php?id=2175"><img src="images/201606/goods_img/2175_G_1465472469939.jpg" alt="金狮牌 丝苗米10LBS 绿袋 4.5kg/Goldenlion jasmin Reis 4.5kg green" style="max-width:187px; max-height:180px;"></a>
-       </div> 
-       <a href="goods.php?id=2175" title="金狮牌 丝苗米10LBS 绿袋 4.5kg/Goldenlion jasmin Reis 4.5kg green" style="width:190px;height:35px;overflow: hidden;display: inline-block">金狮牌 丝苗米10LBS 绿袋 4.5kg/Goldenlion jasmin ...</a>
-       <br> 市场价格：
-       <font class="market"> 14.39</font>　库存：16
-       <br> 本店售价：
-       <font class="fpink"> 11.99</font>
-       <br> 
-       <a href="javascript:addToCart(2175)"><img src="themes/Yachao/images/bnt_buy_s2.gif"></a> 
-       <a href="javascript:collect(2175)"><img src="themes/Yachao/images/bnt_coll_s2.gif"></a> 
-       <a href="javascript:;" id="compareLink" onclick="Compare.add(2175,'金狮牌 丝苗米10LBS 绿袋 4.5kg/Goldenlion jasmin Reis 4.5kg green','0')"><img src="themes/Yachao/images/bnt_compare2.gif"></a> 
-      </div> 
-      <div class="goodsbox"> 
-       <div class="imgbox">
-        <a href="goods.php?id=5642"><img src="images/201512/goods_img/5642_G_1450944207745.jpg" alt="冷藏 Royal Thai 上等红糙米 1kg  /Roter Langkorn Reis 1kg red" style="max-width:187px; max-height:180px;"></a>
-       </div> 
-       <a href="goods.php?id=5642" title="冷藏 Royal Thai 上等红糙米 1kg  /Roter Langkorn Reis 1kg red" style="width:190px;height:35px;overflow: hidden;display: inline-block">冷藏 Royal Thai 上等红糙米 1kg /Roter Langkorn...</a>
-       <br> 市场价格：
-       <font class="market"> 3.46</font>　库存：15
-       <br> 本店售价：
-       <font class="fpink"> 2.89</font>
-       <br> 
-       <a href="javascript:addToCart(5642)"><img src="themes/Yachao/images/bnt_buy_s2.gif"></a> 
-       <a href="javascript:collect(5642)"><img src="themes/Yachao/images/bnt_coll_s2.gif"></a> 
-       <a href="javascript:;" id="compareLink" onclick="Compare.add(5642,'冷藏 Royal Thai 上等红糙米 1kg  /Roter Langkorn Reis 1kg red','0')"><img src="themes/Yachao/images/bnt_compare2.gif"></a> 
-      </div> 
-      <div class="goodsbox"> 
-       <div class="imgbox">
-        <a href="goods.php?id=4988"><img src="images/201610/goods_img/4988_G_1476688417534.jpg" alt="冷藏 Royai-Thai 泰国特选 上等香糙米 1kg /Brauner Reis 1kg" style="max-width:187px; max-height:180px;"></a>
-       </div> 
-       <a href="goods.php?id=4988" title="冷藏 Royai-Thai 泰国特选 上等香糙米 1kg /Brauner Reis 1kg" style="width:190px;height:35px;overflow: hidden;display: inline-block">冷藏 Royai-Thai 泰国特选 上等香糙米 1kg /Brauner Re...</a>
-       <br> 市场价格：
-       <font class="market"> 3.11</font>　库存：10
-       <br> 本店售价：
-       <font class="fpink"> 2.59</font>
-       <br> 
-       <a href="javascript:addToCart(4988)"><img src="themes/Yachao/images/bnt_buy_s2.gif"></a> 
-       <a href="javascript:collect(4988)"><img src="themes/Yachao/images/bnt_coll_s2.gif"></a> 
-       <a href="javascript:;" id="compareLink" onclick="Compare.add(4988,'冷藏 Royai-Thai 泰国特选 上等香糙米 1kg /Brauner Reis 1kg','0')"><img src="themes/Yachao/images/bnt_compare2.gif"></a> 
-      </div> 
-      <div class="goodsbox"> 
-       <div class="imgbox">
-        <a href="goods.php?id=5545"><img src="images/201606/goods_img/5545_G_1466584067356.jpg" alt="泰国Royal Thai 茉莉香米 10kg/Royal Thai Jasminreis 10kg" style="max-width:187px; max-height:180px;"></a>
-       </div> 
-       <a href="goods.php?id=5545" title="泰国Royal Thai 茉莉香米 10kg/Royal Thai Jasminreis 10kg" style="width:190px;height:35px;overflow: hidden;display: inline-block">泰国Royal Thai 茉莉香米 10kg/Royal Thai Jasmin...</a>
-       <br> 市场价格：
-       <font class="market"> 34.79</font>　库存：7
-       <br> 本店售价：
-       <font class="fpink"> 28.99</font>
-       <br> 
-       <a href="javascript:addToCart(5545)"><img src="themes/Yachao/images/bnt_buy_s2.gif"></a> 
-       <a href="javascript:collect(5545)"><img src="themes/Yachao/images/bnt_coll_s2.gif"></a> 
-       <a href="javascript:;" id="compareLink" onclick="Compare.add(5545,'泰国Royal Thai 茉莉香米 10kg/Royal Thai Jasminreis 10kg','0')"><img src="themes/Yachao/images/bnt_compare2.gif"></a> 
-      </div> 
-      <div class="goodsbox"> 
-       <div class="imgbox">
-        <a href="goods.php?id=3262"><img src="images/201607/goods_img/3262_G_1467795212430.jpg" alt="泰国 金凤 特级茉莉香米1kg/Golden phoenix Jasmin Reis 1kg" style="max-width:187px; max-height:180px;"></a>
-       </div> 
-       <a href="goods.php?id=3262" title="泰国 金凤 特级茉莉香米1kg/Golden phoenix Jasmin Reis 1kg" style="width:190px;height:35px;overflow: hidden;display: inline-block">泰国 金凤 特级茉莉香米1kg/Golden phoenix Jasmin Re...</a>
-       <br> 市场价格：
-       <font class="market"> 3.83</font>　库存：4
-       <br> 本店售价：
-       <font class="fpink"> 3.19</font>
-       <br> 
-       <a href="javascript:addToCart(3262)"><img src="themes/Yachao/images/bnt_buy_s2.gif"></a> 
-       <a href="javascript:collect(3262)"><img src="themes/Yachao/images/bnt_coll_s2.gif"></a> 
-       <a href="javascript:;" id="compareLink" onclick="Compare.add(3262,'泰国 金凤 特级茉莉香米1kg/Golden phoenix Jasmin Reis 1kg','0')"><img src="themes/Yachao/images/bnt_compare2.gif"></a> 
-      </div> 
-      <div class="goodsbox"> 
-       <div class="imgbox">
-        <a href="goods.php?id=2273"><img src="images/201606/goods_img/2273_G_1465457595694.jpg" alt="泰国Royal Thai 茉莉香米头 红袋 4.5kg/Royal Thai brokenReis 4.5kg red" style="max-width:187px; max-height:180px;"></a>
-       </div> 
-       <a href="goods.php?id=2273" title="泰国Royal Thai 茉莉香米头 红袋 4.5kg/Royal Thai brokenReis 4.5kg red" style="width:190px;height:35px;overflow: hidden;display: inline-block">泰国Royal Thai 茉莉香米头 红袋 4.5kg/Royal Thai b...</a>
-       <br> 市场价格：
-       <font class="market"> 13.19</font>　库存：4
-       <br> 本店售价：
-       <font class="fpink"> 10.99</font>
-       <br> 
-       <a href="javascript:addToCart(2273)"><img src="themes/Yachao/images/bnt_buy_s2.gif"></a> 
-       <a href="javascript:collect(2273)"><img src="themes/Yachao/images/bnt_coll_s2.gif"></a> 
-       <a href="javascript:;" id="compareLink" onclick="Compare.add(2273,'泰国Royal Thai 茉莉香米头 红袋 4.5kg/Royal Thai brokenReis 4.5kg red','0')"><img src="themes/Yachao/images/bnt_compare2.gif"></a> 
-      </div> 
-      <div class="goodsbox"> 
-       <div class="imgbox">
-        <a href="goods.php?id=5851"><img src="images/201510/goods_img/5851_G_1445959022482.jpg" alt="泰国Royal Thai 茉莉香米【易压坏其他商品，请单拍】20kg/Royal Thai Jasminreis 20kg" style="max-width:187px; max-height:180px;"></a>
-       </div> 
-       <a href="goods.php?id=5851" title="泰国Royal Thai 茉莉香米【易压坏其他商品，请单拍】20kg/Royal Thai Jasminreis 20kg" style="width:190px;height:35px;overflow: hidden;display: inline-block">泰国Royal Thai 茉莉香米【易压坏其他商品，请单拍】20kg/Royal...</a>
-       <br> 市场价格：
-       <font class="market"> 63.59</font>　
-       <font style="color:#F00">无货</font>
-       <br> 本店售价：
-       <font class="fpink"> 52.99</font>
-       <br> 
-       <a href="javascript:addToCart(5851)"><img src="themes/Yachao/images/bnt_buy_s2.gif"></a> 
-       <a href="javascript:collect(5851)"><img src="themes/Yachao/images/bnt_coll_s2.gif"></a> 
-       <a href="javascript:;" id="compareLink" onclick="Compare.add(5851,'泰国Royal Thai 茉莉香米【易压坏其他商品，请单拍】20kg/Royal Thai Jasminreis 20kg','0')"><img src="themes/Yachao/images/bnt_compare2.gif"></a> 
-      </div> 
-      <div class="goodsbox"> 
-       <div class="imgbox">
-        <a href="goods.php?id=2281"><img src="images/201005/goods_img/2281_G_1273008242709.jpg" alt="泰国金凤 特级茉莉香米4.5kg 玫红袋 /Golden phoenix Jasmin Reis 4.5kg red" style="max-width:187px; max-height:180px;"></a>
-       </div> 
-       <a href="goods.php?id=2281" title="泰国金凤 特级茉莉香米4.5kg 玫红袋 /Golden phoenix Jasmin Reis 4.5kg red" style="width:190px;height:35px;overflow: hidden;display: inline-block">泰国金凤 特级茉莉香米4.5kg 玫红袋 /Golden phoenix Jas...</a>
-       <br> 市场价格：
-       <font class="market"> 19.19</font>　
-       <font style="color:#F00">无货</font>
-       <br> 本店售价：
-       <font class="fpink"> 15.99</font>
-       <br> 
-       <a href="javascript:addToCart(2281)"><img src="themes/Yachao/images/bnt_buy_s2.gif"></a> 
-       <a href="javascript:collect(2281)"><img src="themes/Yachao/images/bnt_coll_s2.gif"></a> 
-       <a href="javascript:;" id="compareLink" onclick="Compare.add(2281,'泰国金凤 特级茉莉香米4.5kg 玫红袋 /Golden phoenix Jasmin Reis 4.5kg red','0')"><img src="themes/Yachao/images/bnt_compare2.gif"></a> 
-      </div> 
-      <div class="goodsbox"> 
-       <div class="imgbox">
-        <a href="goods.php?id=1102"><img src="images/201002/goods_img/1102_G_1267366276144.jpg" alt="泰国金凤 特级茉莉香米头 4.5kg 蓝袋 /Golden ph?nix Broken Jasmin Reis 4.5kg blue" style="max-width:187px; max-height:180px;"></a>
-       </div> 
-       <a href="goods.php?id=1102" title="泰国金凤 特级茉莉香米头 4.5kg 蓝袋 /Golden ph?nix Broken Jasmin Reis 4.5kg blue" style="width:190px;height:35px;overflow: hidden;display: inline-block">泰国金凤 特级茉莉香米头 4.5kg 蓝袋 /Golden ph?nix Bro...</a>
-       <br> 市场价格：
-       <font class="market"> 10.79</font>　
-       <font style="color:#F00">无货</font>
-       <br> 本店售价：
-       <font class="fpink"> 8.99</font>
-       <br> 
-       <a href="javascript:addToCart(1102)"><img src="themes/Yachao/images/bnt_buy_s2.gif"></a> 
-       <a href="javascript:collect(1102)"><img src="themes/Yachao/images/bnt_coll_s2.gif"></a> 
-       <a href="javascript:;" id="compareLink" onclick="Compare.add(1102,'泰国金凤 特级茉莉香米头 4.5kg 蓝袋 /Golden ph?nix Broken Jasmin Reis 4.5kg blue','0')"><img src="themes/Yachao/images/bnt_compare2.gif"></a> 
-      </div> 
-     </div> 
-    </form> 
     <script type="text/javascript">
 window.onload = function()
 {
@@ -1339,14 +1416,11 @@ var btn_buy = "购买";
 var is_cancel = "取消";
 var select_spe = "请选择商品属性";
 </script> 
-    <div class="pagebar"> 
-     <form name="selectPageForm" action="/category.php" method="get"> 
-      <div id="pager">
-        总计 
-       <b>10</b> 个记录 
-      </div> 
-     </form> 
-    </div> 
+    <form name="selectPageForm" action="/category.php" method="get"> 
+     <div id="pager" class="pagebar"> 
+      <span class="f_l f6" style="margin-right:10px;">总计 <b>1</b> 个记录</span> 
+     </div> 
+    </form> 
     <script type="Text/Javascript" language="JavaScript">
 <!--
 function selectPage(sel)
@@ -1355,162 +1429,155 @@ function selectPage(sel)
 }
 //-->
 </script> 
-   </div> 
-  </div> 
-  <div class="footer"> 
-   <div class="shengmingw"> 
-    <div class="w_bg"> 
-     <div class="shengming"> 
-      <dl class="sm1"> 
-       <dt>
-        家乡美食
-       </dt> 
-       <dd>
-        精选各大美食品牌
-       </dd> 
-      </dl> 
-      <dl class="sm2"> 
-       <dt>
-        直邮欧洲各国
-       </dt> 
-       <dd>
-        货物来源地直邮至欧洲
-       </dd> 
-      </dl> 
-      <dl class="sm3"> 
-       <dt>
-        优质服务导购
-       </dt> 
-       <dd>
-        为您提供最贴心的客服体验
-       </dd> 
-      </dl> 
-      <dl class="sm4"> 
-       <dt>
-        帮助中心
-       </dt> 
-       <dd>
-        您的购物指南
-       </dd> 
-      </dl> 
-     </div> 
-     <div class="foot_nav"> 
-      <div class="f_nav_l"> 
-       <dl> 
-        <dt>
-         配送方式
-        </dt> 
-        <dd>
-         <a href="article.php?id=23" title="DHL和DPD">DHL和DPD</a>
-        </dd> 
-        <dd>
-         <a href="article.php?id=25" title="德国境内快递">德国境内快递</a>
-        </dd> 
-        <dd>
-         <a href="article.php?id=178" title="欧洲配送信息">欧洲配送信息</a>
-        </dd> 
-       </dl> 
-       <dl> 
-        <dt>
-         购物指南
-        </dt> 
-        <dd>
-         <a href="article.php?id=28" title="常见问题解答">常见问题解答</a>
-        </dd> 
-        <dd>
-         <a href="article.php?id=176" title="如何购物">如何购物</a>
-        </dd> 
-        <dd>
-         <a href="article.php?id=187" title="售前FAQ">售前FAQ</a>
-        </dd> 
-        <dd>
-         <a href="article.php?id=188" title="售中FAQ">售中FAQ</a>
-        </dd> 
-        <dd>
-         <a href="article.php?id=189" title="售后FAQ">售后FAQ</a>
-        </dd> 
-        <dd>
-         <a href="article.php?id=225" title="关于积分与discount码">关于积分与discount码</a>
-        </dd> 
-       </dl> 
-       <dl> 
-        <dt>
-         付款方式
-        </dt> 
-        <dd>
-         <a href="article.php?id=174" title="银行转帐">银行转帐</a>
-        </dd> 
-        <dd>
-         <a href="article.php?id=190" title="Paypal付款">Paypal付款</a>
-        </dd> 
-        <dd>
-         <a href="article.php?id=238" title="关于Paypal支付未显已付款">关于Paypal支付未显已付款</a>
-        </dd> 
-       </dl> 
-       <dl> 
-        <dt>
-         关于订单修改
-        </dt> 
-        <dd>
-         <a href="article.php?id=232" title="取消订单">取消订单</a>
-        </dd> 
-        <dd>
-         <a href="article.php?id=233" title="汇款凭证上传失败">汇款凭证上传失败</a>
-        </dd> 
-        <dd>
-         <a href="article.php?id=234" title="修改订单商品">修改订单商品</a>
-        </dd> 
-        <dd>
-         <a href="article.php?id=235" title="修改订单收货地址">修改订单收货地址</a>
-        </dd> 
-        <dd>
-         <a href="article.php?id=239" title="购买包裹单">购买包裹单</a>
-        </dd> 
-       </dl> 
-       <dl> 
-        <dt>
-         售后服务
-        </dt> 
-        <dd>
-         <a href="article.php?id=191" title="售后问题处理">售后问题处理</a>
-        </dd> 
-        <dd>
-         <a href="article.php?id=193" title="包裹追踪">包裹追踪</a>
-        </dd> 
-       </dl> 
-      </div> 
-      <div class="f_nav_r"> 
-       <p><img src="\themes\Yachao\style\images\index\ewm.jpg" title="德国亚超微信二维码" alt="德国亚超微信二维码">关注微信 </p> 
-       <p> 随时随地 </p> 
-       <p>知晓优惠</p> 
+    <div class="blank5"></div> 
+    <div class="box"> 
+     <div class="box_1"> 
+      <h3> <span>浏览历史</span></h3> 
+      <div class="centerPadd"> 
+       <div class="clearfix goodsBox" style="border:none;"> 
+       </div> 
       </div> 
      </div> 
     </div> 
-    <div class="HackBox"></div> 
    </div> 
-   <div class="footer_nav"> 
-    <a href="article.php?cat_id=-1" target="_blank">市场规范</a> 　|　 
-    <a href="article.php?id=4" target="_blank">联系方式</a> 　|　 
-    <a href="article.php?id=5" target="_blank">关于我们</a> 
-   </div> 
-   <div class="banquan"> 
-    <p>? 2005-2019 德国亚超 版权所有，并保留所有权利。powered by <a href="http://www.kaiyuan.de/" target="_blank">kaiyuan.de</a><br> Siemensstrasse.1a 85716 Unterschleissheim Tel: +49(0)89-416159091 Fax:49(0)89-306688 581 E-mail: info@yachao.de <br> </p> 
-   </div> 
-   <div class="HackBox"></div> 
-   <script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?36c652b15265ff28d262001f203db4a8";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script> 
-   <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":["qzone","tsina","weixin","sqq","fbook","twi","copy"],"bdPic":"","bdStyle":"0","bdSize":"16"},"slide":{"type":"slide","bdImg":"0","bdPos":"left","bdTop":"0"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script> 
   </div> 
-  <div class="nav_fanhui" onclick="javascript :history.back(-1);">
-   <i></i>
-  </div>  
-  <script type="text/javascript" src="themes/Yachao/js/tips.js"></script>  
+  <div class="blank5"></div> 
+  <div id="help"> 
+   <div> 
+    <dl class="hdl_0"> 
+     <dt>
+      <a href="article_cat.php?id=16" title="新手上路">新手上路</a>
+     </dt> 
+     <dd>
+      <a href="article.php?id=10" title="购物流程">购物流程</a>
+     </dd> 
+     <dd>
+      <a href="article.php?id=77" title="会员注册">会员注册</a>
+     </dd> 
+     <dd>
+      <a href="article.php?id=78" title="订单修改">订单修改</a>
+     </dd> 
+     <dd>
+      <a href="article.php?id=79" title="获取赠品">获取赠品</a>
+     </dd> 
+    </dl> 
+    <dl class="hdl_1"> 
+     <dt>
+      <a href="article_cat.php?id=7" title="配送与支付 ">配送与支付 </a>
+     </dt> 
+     <dd>
+      <a href="article.php?id=3" title="配送方式">配送方式</a>
+     </dd> 
+     <dd>
+      <a href="article.php?id=15" title="配送区域">配送区域</a>
+     </dd> 
+     <dd>
+      <a href="article.php?id=16" title="配送资费">配送资费</a>
+     </dd> 
+     <dd>
+      <a href="article.php?id=17" title="支付方式">支付方式</a>
+     </dd> 
+    </dl> 
+    <dl class="hdl_2"> 
+     <dt>
+      <a href="article_cat.php?id=10" title="会员中心">会员中心</a>
+     </dt> 
+     <dd>
+      <a href="article.php?id=18" title="优惠措施">优惠措施</a>
+     </dd> 
+     <dd>
+      <a href="article.php?id=19" title="有关余额">有关余额</a>
+     </dd> 
+     <dd>
+      <a href="article.php?id=20" title="有关积分">有关积分</a>
+     </dd> 
+     <dd>
+      <a href="article.php?id=80" title="奖励活动">奖励活动</a>
+     </dd> 
+    </dl> 
+    <dl class="hdl_3"> 
+     <dt>
+      <a href="article_cat.php?id=9" title="服务与联系">服务与联系</a>
+     </dt> 
+     <dd>
+      <a href="article.php?id=21" title="退换货处理">退换货处理</a>
+     </dd> 
+     <dd>
+      <a href="article.php?id=25" title="客服咨询">客服咨询</a>
+     </dd> 
+     <dd>
+      <a href="article.php?id=26" title="投诉建议">投诉建议</a>
+     </dd> 
+     <dd>
+      <a href="article.php?id=85" title="留言板">留言板</a>
+     </dd> 
+     <dd>
+      <a href="article.php?id=143" title="亚超电器一律都保修六个月；未使用过的电器，一个月内可退换">亚超电器一律都保修六个月；未使用...</a>
+     </dd> 
+     <dd>
+      <a href="article.php?id=144" title="退款说明">退款说明</a>
+     </dd> 
+    </dl> 
+    <dl class="hdl_4"> 
+     <dt>
+      <a href="article_cat.php?id=17" title="关于产品">关于产品</a>
+     </dt> 
+     <dd>
+      <a href="article.php?id=81" title="关于商品">关于商品</a>
+     </dd> 
+     <dd>
+      <a href="article.php?id=82" title="赠/促销品">赠/促销品</a>
+     </dd> 
+     <dd>
+      <a href="article.php?id=83" title="关于标签">关于标签</a>
+     </dd> 
+     <dd>
+      <a href="article.php?id=84" title="关于图片">关于图片</a>
+     </dd> 
+    </dl> 
+   </div> 
+  </div>
+  <div class="blank"></div> 
+  <div class="blank"></div> 
+  <div class="blank"></div> 
+  <p align="center" id="footerNav"> <a href="article.php?id=1">AGB</a> - <a href="article.php?id=2">隐私保护</a> - <a href="message.php">留言板</a> - <a href="article.php?id=4">联系我们</a> - <a href="article.php?id=5">Impressum</a> </p> 
+  <div id="footer"> 
+   <div class="text"> 
+    <a href="http://www.dehua.de" target="_blank"><img src="themes/shopw/images/logo_dehua.png"></a> 
+    <a href="http://www.dolc.de" target="_blank"><img src="themes/shopw/images/bt11.jpg"></a> 
+    <a href="https://www.paypal.de" target="_blank"><img src="themes/shopw/images/bt22.jpg"></a> 
+    <a href="https://www.dhl.com" target="_blank"><img src="themes/shopw/images/bt33.jpg"></a> 
+    <a href="http://www.ups.de" target="_blank"><img src="themes/shopw/images/bt44.jpg"></a> 
+    <a href="http://www.csuchen.de" target="_blank"><img src="themes/shopw/images/bt55.jpg"></a> 
+    <a href="http://www.sobuy.de" target="_blank"><img src="themes/shopw/images/bt66.jpg"></a> 
+    <a href="http://www.deutschepost.de/dpag?xmlFile=828" target="_blank"><img src="themes/shopw/images/bt77.jpg"></a> 
+    <br> ? 2009-2019 亚超在线 yachaoonline.com 版权所有，并保留所有权利。 Lademannbogen 3, 22339 Hamburg Germany 
+    <br>Tel: 客服电话: 040-3867 3727, 客服微信:hualianl725, 采购: 017 8802 3630, Fax:040-7308 4022, 客服QQ:1426652695,邮箱：yachaoonline@hotmail.de，info@yachaoonline.com 
+    <br> 
+    <br> 
+    <br> 
+    <div align="left">
+     <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16880238-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+    </div> 
+    <div style="display:none">
+     共执行 1280 个查询，用时 0.418603 秒，在线 374 人，Gzip 已禁用，占用内存 9.338 MB
+     <img src="api/cron.php?t=1569867687" alt="" style="width:0px;height:0px;">
+     <br>
+    </div> 
+    <div align="left" id="rss">
+     <a href="feed.php?cat=1608"><img src="themes/shopw/images/xml_rss2.gif" alt="rss"></a>
+    </div> 
+   </div> 
+   <script type="text/javascript" src="//v1.jiathis.com/code_mini/jiathis_r.js?type=left&amp;move=0&amp;btn=l5.gif" charset="utf-8"></script> 
+  </div>   
  </body>
 </html>

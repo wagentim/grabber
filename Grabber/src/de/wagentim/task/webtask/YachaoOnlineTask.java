@@ -1,6 +1,5 @@
 package de.wagentim.task.webtask;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -15,6 +14,8 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import de.wagentim.common.IConstants;
 import de.wagentim.grabber.db.PriceHistory;
@@ -23,7 +24,7 @@ import de.wagentim.grabber.db.SqliteDBController;
 import de.wagentim.utils.PriceHistoryComparator;
 import de.wagentim.utils.Utils;
 
-public class YachaoTask
+public class YachaoOnlineTask
 {
 	private Document doc;
 	private String file = Utils.getAbsolutePath("test.html");
@@ -32,8 +33,9 @@ public class YachaoTask
 	private Map<Integer, Product> oldProducts = Collections.emptyMap();
 	private List<Product> updatedProds = new ArrayList<Product>();
 	private final SqliteDBController controller;
+	private final static Logger logger = LoggerFactory.getLogger(YachaoOnlineTask.class);
 
-	public YachaoTask()
+	public YachaoOnlineTask()
 	{
 		controller = new SqliteDBController();
 	}
@@ -67,13 +69,13 @@ public class YachaoTask
 		try
 		{
 			doc = Jsoup.connect(getStartLink()).get();
-
+//
 //			FileWriter fw = new FileWriter(new File(file));
 //			fw.write(doc.html());
 //			fw.flush();
 
 //			doc = Jsoup.parse(new File(file), "utf-8");
-			Elements elements = doc.select(".subitem dd a");
+			Elements elements = doc.select(".shadow_border a");
 
 			Iterator<Element> it = elements.iterator();
 			List<String> cates = new ArrayList<String>();
@@ -81,23 +83,23 @@ public class YachaoTask
 			while (it.hasNext())
 			{
 				Element e = it.next();
-				String fullLink = getStartLink() + e.attr("href");
+				String fullLink = getLinkPrefix() + e.attr("href");
 //				System.out.println(fullLink);
 				cates.add(fullLink);
 			}
-
+			
 			// Step 2. Get Detail Product
-
+//
 			for (String link : cates)
 			{
 				doc = Jsoup.connect(link).get();
-
+//
 //				FileWriter fw = new FileWriter(new File(file));
 //				fw.write(doc.html());
 //				fw.flush();
 
 //				doc = Jsoup.parse(new File(file), "utf-8");
-				elements = doc.select(".goodsbox");
+				elements = doc.select(".goodsItem");
 
 				it = elements.iterator();
 
@@ -116,7 +118,7 @@ public class YachaoTask
 						if (ele.hasAttr("title"))
 						{
 
-							link = getStartLink() + ele.attr("href");
+							link = getLinkPrefix() + ele.attr("href");
 							int id = getProductID(link);
 
 							Product product = oldProducts.get(id);
@@ -140,13 +142,13 @@ public class YachaoTask
 //						System.out.println(product.getName());
 //						System.out.println(product.getLink());
 
-							Element marketPrice = e.select(".market").first();
-							String s = marketPrice.text();
-							product.setMarketPrice(String.valueOf(handlePrice(s)));
+//							Element marketPrice = e.select(".market").first();
+//							String s = marketPrice.text();
+//							product.setMarketPrice(String.valueOf(handlePrice(s)));
 //						System.out.println(product.getMarketPrice());
 
-							Element shopPrice = e.select(".fpink").first();
-							s = shopPrice.text();
+							Element shopPrice = e.select(".shop_s").first();
+							String s = shopPrice.text();
 							product.setCurrentPrice(String.valueOf(handlePrice(s)));
 							ph.setPrice(product.getCurrentPrice());
 //						System.out.println(product.getCurrentPrice());
@@ -188,7 +190,7 @@ public class YachaoTask
 
 	public static void main(String[] args)
 	{
-		YachaoTask task = new YachaoTask();
+		YachaoOnlineTask task = new YachaoOnlineTask();
 		task.run();
 		
 //		task.printDBID();
@@ -196,12 +198,17 @@ public class YachaoTask
 
 	protected String getDBTableName()
 	{
-		return "yachao";
+		return "yachaoonline";
 	}
 
 	public String getStartLink()
 	{
-		return "https://www.yachao.de/";
+		return "https://www.yachaoonline.de/index.php";
+	}
+	
+	public String getLinkPrefix()
+	{
+		return "https://www.yachaoonline.de/";
 	}
 
 	public String getSiteShort()
