@@ -42,7 +42,7 @@ public class Product
 	{
 		if(!name.equals(getName()))
 		{
-			System.out.println("Name changed. " + getName() + " | " + name);
+			System.out.println("Name changed: " + getName() + " | " + name);
 			changed = true;
 		}
 		
@@ -56,7 +56,7 @@ public class Product
 	{
 		if(amount != getAmount())
 		{
-			System.out.println("amount changed. " + getAmount() + " | " + amount);
+			System.out.println("amount changed: " + getAmount() + " | " + amount);
 			changed = true;
 		}
 		
@@ -66,16 +66,18 @@ public class Product
 	{
 		return link;
 	}
+	
 	public void setLink(String link)
 	{
 		if(!link.equals(getLink()))
 		{
-			System.out.println("link changed. " + getLink() + " | " + link);
+			System.out.println("link changed: " + getLink() + " | " + link);
 			changed = true;
 		}
 		
 		this.link = link;
 	}
+	
 	public String getSiteShort()
 	{
 		return siteName;
@@ -84,57 +86,65 @@ public class Product
 	{
 		if(!siteShort.equals(getSiteShort()))
 		{
-			System.out.println("siteShort changed. " + getSiteShort() + " | " + siteShort);
+			System.out.println("siteShort changed: " + getSiteShort() + " | " + siteShort);
 			changed = true;
 		}
 		
 		this.siteName = siteShort;
 	}
+	
 	public String getCurrentPrice()
 	{
 		return currentPrice;
 	}
+	
 	public void setCurrentPrice(String currentPrice)
 	{
 		if(!currentPrice.equals(getCurrentPrice()))
 		{
-			System.out.println("currentPrice changed. " + getCurrentPrice() + " | " + currentPrice);
+			System.out.println("currentPrice changed: " + getCurrentPrice() + " | " + currentPrice);
 			changed = true;
 		}
 		
 		this.currentPrice = currentPrice;
 	}
+	
 	public String getMarketPrice()
 	{
 		return marketPrice;
 	}
+	
 	public void setMarketPrice(String marketPrice)
 	{
 		if(!marketPrice.equals(getMarketPrice()))
 		{
-			System.out.println("marketPrice changed. " + getMarketPrice() + " | " + marketPrice);
+			System.out.println("marketPrice changed: " + getMarketPrice() + " | " + marketPrice);
 			changed = true;
 		}
 		
 		this.marketPrice = marketPrice;
 	}
+	
 	public List<PriceHistory> getHistory()
 	{
 		return history;
 	}
+	
 	public void setHistory(List<PriceHistory> history)
 	{
 		this.history = history;
 	}
+	
 	public String imageLink()
 	{
 		return imageLink;
 	}
+	
 	public void setImageLink(String imageLink)
 	{
 		if(!imageLink.equals(imageLink()))
 		{
-			System.out.println("imageLink changed. " + imageLink() + " | " + imageLink);
+			System.out.println("imageLink changed: " + imageLink() + " | " + imageLink);
 			changed = true;
 		}
 		

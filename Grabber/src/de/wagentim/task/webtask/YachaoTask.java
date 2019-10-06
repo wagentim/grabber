@@ -1,13 +1,11 @@
 package de.wagentim.task.webtask;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -15,23 +13,24 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import de.wagentim.common.IConstants;
+import de.wagentim.grabber.core.AbstractTask;
 import de.wagentim.grabber.db.PriceHistory;
 import de.wagentim.grabber.db.Product;
 import de.wagentim.grabber.db.SqliteDBController;
 import de.wagentim.utils.PriceHistoryComparator;
-import de.wagentim.utils.Utils;
 
-public class YachaoTask
+public class YachaoTask extends AbstractTask
 {
 	private Document doc;
-	private String file = Utils.getAbsolutePath("test.html");
-	private StringBuilder sb = new StringBuilder();
 	private final PriceHistoryComparator comparator = new PriceHistoryComparator();
 	private Map<Integer, Product> oldProducts = Collections.emptyMap();
 	private List<Product> updatedProds = new ArrayList<Product>();
 	private final SqliteDBController controller;
+	private Logger logger = LoggerFactory.getLogger(YachaoTask.class);
 
 	public YachaoTask()
 	{
@@ -40,25 +39,15 @@ public class YachaoTask
 
 	public void loadData()
 	{
+		controller.startDBUpdate();
 		oldProducts = controller.getAllProducts(getDBTableName());
-	}
-	
-	public void printDBID()
-	{
-		loadData();
-		
-		Set<Integer> ids = oldProducts.keySet();
-		
-		System.out.println(ids.size());
-		
-		for(int id : ids)
-		{
-			System.out.println(id);
-		}
+		controller.closeDBUpdate();	
 	}
 
 	public void run()
 	{
+		logger.info("Start to grabbing site: " + getDBTableName());
+		
 		loadData();
 		int count = 0;
 
@@ -67,13 +56,7 @@ public class YachaoTask
 		try
 		{
 			doc = Jsoup.connect(getStartLink()).get();
-
-//			FileWriter fw = new FileWriter(new File(file));
-//			fw.write(doc.html());
-//			fw.flush();
-
-//			doc = Jsoup.parse(new File(file), "utf-8");
-			Elements elements = doc.select(".subitem dd a");
+			Elements elements = doc.select(".subitem dd a");	
 
 			Iterator<Element> it = elements.iterator();
 			List<String> cates = new ArrayList<String>();
@@ -81,8 +64,7 @@ public class YachaoTask
 			while (it.hasNext())
 			{
 				Element e = it.next();
-				String fullLink = getStartLink() + e.attr("href");
-//				System.out.println(fullLink);
+				String fullLink = getStartLink() + e.attr("href");	// get category list
 				cates.add(fullLink);
 			}
 
@@ -91,22 +73,13 @@ public class YachaoTask
 			for (String link : cates)
 			{
 				doc = Jsoup.connect(link).get();
-
-//				FileWriter fw = new FileWriter(new File(file));
-//				fw.write(doc.html());
-//				fw.flush();
-
-//				doc = Jsoup.parse(new File(file), "utf-8");
 				elements = doc.select(".goodsbox");
 
 				it = elements.iterator();
-
 				while (it.hasNext())
 				{
 					Element e = it.next();
-
 					Elements links = e.select("a");
-
 					Iterator<Element> itr = links.iterator();
 
 					while (itr.hasNext())
@@ -115,20 +88,19 @@ public class YachaoTask
 
 						if (ele.hasAttr("title"))
 						{
-
 							link = getStartLink() + ele.attr("href");
 							int id = getProductID(link);
 
-							Product product = oldProducts.get(id);
+							Product product = oldProducts.get(id);	// check if this product is already existed
 
 							if (product == null)
 							{
 								product = new Product();
 								product.setDbName(getDBTableName());
 								product.setId(id);
-								System.out.println("Add Product: " + id);
+								logger.info("Add Product: " + id + " -> " + ele.attr("title"));
 							}
-
+							
 							PriceHistory ph = new PriceHistory();
 							ph.setId(id);
 							ph.setTime(System.currentTimeMillis());
@@ -137,19 +109,14 @@ public class YachaoTask
 							product.setName(ele.attr("title"));
 							ph.setLink(link);
 
-//						System.out.println(product.getName());
-//						System.out.println(product.getLink());
-
 							Element marketPrice = e.select(".market").first();
 							String s = marketPrice.text();
 							product.setMarketPrice(String.valueOf(handlePrice(s)));
-//						System.out.println(product.getMarketPrice());
 
 							Element shopPrice = e.select(".fpink").first();
 							s = shopPrice.text();
 							product.setCurrentPrice(String.valueOf(handlePrice(s)));
 							ph.setPrice(product.getCurrentPrice());
-//						System.out.println(product.getCurrentPrice());
 
 							product.setSiteShort(getDBTableName());
 							ph.setSite(getDBTableName());
@@ -158,7 +125,6 @@ public class YachaoTask
 
 							if (product.isChanged())
 							{
-								System.out.println("Update Product: " + product.getId());
 								product.setChanged(false);
 								updatedProds.add(product);
 							}
@@ -167,7 +133,7 @@ public class YachaoTask
 								System.out.print(".");
 								count++;
 								
-								if(count == 20)
+								if(count == 50)
 								{
 									count = 0;
 									System.out.println();
@@ -176,7 +142,6 @@ public class YachaoTask
 						}
 					}
 				}
-
 			}
 			updateChangedProducts(updatedProds);
 		}
@@ -290,6 +255,8 @@ public class YachaoTask
 
 	public void updateChangedProducts(List<Product> prodList)
 	{
+		controller.startDBUpdate();
+		
 		for(Product p : prodList)
 		{
 			int id = p.getId();
@@ -305,5 +272,7 @@ public class YachaoTask
 				controller.insertNewProduct(p.getDbName(), p.getId(), p);
 			}
 		}
+		
+		controller.closeDBUpdate();
 	}
 }

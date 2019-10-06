@@ -56,7 +56,7 @@ public class SqliteDBController
 		
 //		System.out.println(sb.toString());
 		
-		handler.openDB(ISQLConstants.SQLITE_JDBC, ISQLConstants.SQLITE_CONNECTION);
+//		handler.openDB(ISQLConstants.SQLITE_JDBC, ISQLConstants.SQLITE_CONNECTION);
 		
 		try
 		{
@@ -79,7 +79,7 @@ public class SqliteDBController
 		sb.delete(0, sb.length());
 		sb.append("SELECT * FROM ").append(table);
 		
-		handler.openDB(ISQLConstants.SQLITE_JDBC, ISQLConstants.SQLITE_CONNECTION);
+//		handler.openDB(ISQLConstants.SQLITE_JDBC, ISQLConstants.SQLITE_CONNECTION);
 		
 		try
 		{
@@ -122,7 +122,7 @@ public class SqliteDBController
 		
 //		System.out.println(sb.toString());
 		
-		handler.openDB(ISQLConstants.SQLITE_JDBC, ISQLConstants.SQLITE_CONNECTION);
+//		handler.openDB(ISQLConstants.SQLITE_JDBC, ISQLConstants.SQLITE_CONNECTION);
 		
 		try
 		{
@@ -138,5 +138,15 @@ public class SqliteDBController
 		}
 		
 		return false;
+	}
+	
+	public void startDBUpdate()
+	{
+		handler.openDB(ISQLConstants.SQLITE_JDBC, ISQLConstants.SQLITE_CONNECTION);
+	}
+	
+	public void closeDBUpdate()
+	{
+		handler.destroyed();
 	}
 }

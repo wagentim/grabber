@@ -6,7 +6,6 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -22,13 +21,10 @@ import de.wagentim.grabber.db.PriceHistory;
 import de.wagentim.grabber.db.Product;
 import de.wagentim.grabber.db.SqliteDBController;
 import de.wagentim.utils.PriceHistoryComparator;
-import de.wagentim.utils.Utils;
 
 public class YachaoOnlineTask
 {
 	private Document doc;
-	private String file = Utils.getAbsolutePath("test.html");
-	private StringBuilder sb = new StringBuilder();
 	private final PriceHistoryComparator comparator = new PriceHistoryComparator();
 	private Map<Integer, Product> oldProducts = Collections.emptyMap();
 	private List<Product> updatedProds = new ArrayList<Product>();
@@ -42,21 +38,9 @@ public class YachaoOnlineTask
 
 	public void loadData()
 	{
+		controller.startDBUpdate();
 		oldProducts = controller.getAllProducts(getDBTableName());
-	}
-	
-	public void printDBID()
-	{
-		loadData();
-		
-		Set<Integer> ids = oldProducts.keySet();
-		
-		System.out.println(ids.size());
-		
-		for(int id : ids)
-		{
-			System.out.println(id);
-		}
+		controller.closeDBUpdate();
 	}
 
 	public void run()
@@ -69,12 +53,6 @@ public class YachaoOnlineTask
 		try
 		{
 			doc = Jsoup.connect(getStartLink()).get();
-//
-//			FileWriter fw = new FileWriter(new File(file));
-//			fw.write(doc.html());
-//			fw.flush();
-
-//			doc = Jsoup.parse(new File(file), "utf-8");
 			Elements elements = doc.select(".shadow_border a");
 
 			Iterator<Element> it = elements.iterator();
@@ -84,7 +62,6 @@ public class YachaoOnlineTask
 			{
 				Element e = it.next();
 				String fullLink = getLinkPrefix() + e.attr("href");
-//				System.out.println(fullLink);
 				cates.add(fullLink);
 			}
 			
@@ -93,12 +70,6 @@ public class YachaoOnlineTask
 			for (String link : cates)
 			{
 				doc = Jsoup.connect(link).get();
-//
-//				FileWriter fw = new FileWriter(new File(file));
-//				fw.write(doc.html());
-//				fw.flush();
-
-//				doc = Jsoup.parse(new File(file), "utf-8");
 				elements = doc.select(".goodsItem");
 
 				it = elements.iterator();
@@ -128,7 +99,7 @@ public class YachaoOnlineTask
 								product = new Product();
 								product.setDbName(getDBTableName());
 								product.setId(id);
-								System.out.println("Add Product: " + id);
+								logger.info("Add Product: " + id + " -> " + ele.attr("title"));
 							}
 
 							PriceHistory ph = new PriceHistory();
@@ -139,19 +110,10 @@ public class YachaoOnlineTask
 							product.setName(ele.attr("title"));
 							ph.setLink(link);
 
-//						System.out.println(product.getName());
-//						System.out.println(product.getLink());
-
-//							Element marketPrice = e.select(".market").first();
-//							String s = marketPrice.text();
-//							product.setMarketPrice(String.valueOf(handlePrice(s)));
-//						System.out.println(product.getMarketPrice());
-
 							Element shopPrice = e.select(".shop_s").first();
 							String s = shopPrice.text();
 							product.setCurrentPrice(String.valueOf(handlePrice(s)));
 							ph.setPrice(product.getCurrentPrice());
-//						System.out.println(product.getCurrentPrice());
 
 							product.setSiteShort(getDBTableName());
 							ph.setSite(getDBTableName());
@@ -160,7 +122,6 @@ public class YachaoOnlineTask
 
 							if (product.isChanged())
 							{
-								System.out.println("Update Product: " + product.getId());
 								product.setChanged(false);
 								updatedProds.add(product);
 							}
@@ -169,7 +130,7 @@ public class YachaoOnlineTask
 								System.out.print(".");
 								count++;
 								
-								if(count == 20)
+								if(count == 50)
 								{
 									count = 0;
 									System.out.println();
@@ -297,6 +258,8 @@ public class YachaoOnlineTask
 
 	public void updateChangedProducts(List<Product> prodList)
 	{
+		controller.startDBUpdate();
+		
 		for(Product p : prodList)
 		{
 			int id = p.getId();
@@ -312,5 +275,7 @@ public class YachaoOnlineTask
 				controller.insertNewProduct(p.getDbName(), p.getId(), p);
 			}
 		}
+		
+		controller.closeDBUpdate();
 	}
 }
