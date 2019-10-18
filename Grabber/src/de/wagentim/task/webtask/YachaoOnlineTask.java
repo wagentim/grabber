@@ -2,50 +2,32 @@ package de.wagentim.task.webtask;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import de.wagentim.common.IConstants;
+import de.wagentim.grabber.core.AbstractTask;
+import de.wagentim.grabber.db.IDBController;
 import de.wagentim.grabber.db.PriceHistory;
 import de.wagentim.grabber.db.Product;
-import de.wagentim.grabber.db.SqliteDBController;
-import de.wagentim.utils.PriceHistoryComparator;
 
-public class YachaoOnlineTask
+public class YachaoOnlineTask extends AbstractTask
 {
-	private Document doc;
-	private final PriceHistoryComparator comparator = new PriceHistoryComparator();
-	private Map<Integer, Product> oldProducts = Collections.emptyMap();
-	private List<Product> updatedProds = new ArrayList<Product>();
-	private final SqliteDBController controller;
-	private final static Logger logger = LoggerFactory.getLogger(YachaoOnlineTask.class);
+	private final Logger logger = LoggerFactory.getLogger(YachaoOnlineTask.class);
 
-	public YachaoOnlineTask()
+	public YachaoOnlineTask(final IDBController controller)
 	{
-		controller = new SqliteDBController();
-	}
-
-	public void loadData()
-	{
-		controller.startDBUpdate();
-		oldProducts = controller.getAllProducts(getDBTableName());
-		controller.closeDBUpdate();
+		super(controller);
 	}
 
 	public void run()
 	{
-		loadData();
+		loadExistedData();
 		int count = 0;
 
 		// Step 1. Get the main Homepage and Category links
@@ -93,21 +75,31 @@ public class YachaoOnlineTask
 							int id = getProductID(link);
 
 							Product product = oldProducts.get(id);
+							
+							String name = ele.attr("title");
+							
+							if(name == null || name.isEmpty())
+							{
+								name = ele.text();
+								System.out.println("No Name");
+							}
 
 							if (product == null)
 							{
 								product = new Product();
 								product.setDbName(getDBTableName());
 								product.setId(id);
-								logger.info("Add Product: " + id + " -> " + ele.attr("title"));
+								logger.info("Add Product: " + id + " -> " + name);
 							}
+							
+							product.setChanged(false);
 
 							PriceHistory ph = new PriceHistory();
 							ph.setId(id);
 							ph.setTime(System.currentTimeMillis());
 
 							product.setLink(link);
-							product.setName(ele.attr("title"));
+							product.setName(name);
 							ph.setLink(link);
 
 							Element shopPrice = e.select(".shop_s").first();
@@ -123,7 +115,7 @@ public class YachaoOnlineTask
 							if (product.isChanged())
 							{
 								product.setChanged(false);
-								updatedProds.add(product);
+								addUpdatedProduct(product);
 							}
 							else
 							{
@@ -141,6 +133,7 @@ public class YachaoOnlineTask
 				}
 
 			}
+			printUpdatedProducts();
 			updateChangedProducts(updatedProds);
 		}
 		catch (IOException e)
@@ -149,15 +142,7 @@ public class YachaoOnlineTask
 		}
 	}
 
-	public static void main(String[] args)
-	{
-		YachaoOnlineTask task = new YachaoOnlineTask();
-		task.run();
-		
-//		task.printDBID();
-	}
-
-	protected String getDBTableName()
+	public String getDBTableName()
 	{
 		return "yachaoonline";
 	}
@@ -172,110 +157,4 @@ public class YachaoOnlineTask
 		return "https://www.yachaoonline.de/";
 	}
 
-	public String getSiteShort()
-	{
-		return getDBTableName();
-	}
-
-	private String handlePrice(String input)
-	{
-		Pattern p = Pattern.compile("(.*)(\\d\\d.\\d+)");
-		Matcher matcher = p.matcher(input);
-
-		while (matcher.find())
-		{
-			return matcher.group(2);
-		}
-
-		p = Pattern.compile("(.*)(\\d.\\d+)");
-		matcher = p.matcher(input);
-
-		while (matcher.find())
-		{
-			return matcher.group(2);
-		}
-		
-		return IConstants.EMPTY_STRING;
-	}
-
-	private void addPriceHistroy(Product product, PriceHistory newPrice)
-	{
-		List<PriceHistory> priceHistory = product.getHistory();
-
-		if (null == priceHistory)
-		{
-			priceHistory = new ArrayList<PriceHistory>();
-			product.setHistory(priceHistory);
-		}
-
-		if (priceHistory.isEmpty())
-		{
-			priceHistory.add(newPrice);
-			product.setChanged(true);
-			return;
-		}
-
-		if (newPrice == null)
-		{
-			return;
-		}
-
-		Collections.sort(priceHistory, comparator);
-
-		PriceHistory latest = priceHistory.get(0);
-
-		long latestTime = latest.getTime();
-		long currTime = newPrice.getTime();
-
-		double latestPrice = Double.valueOf(latest.getPrice());
-		double currtPrice = Double.valueOf(newPrice.getPrice());
-
-		if (currTime > latestTime && latestPrice != currtPrice)
-		{
-			priceHistory.add(newPrice);
-			product.setChanged(true);
-		}
-
-	}
-
-	private int getProductID(String input)
-	{
-		if (null == input || input.isEmpty())
-		{
-			return -1;
-		}
-
-		Pattern p = Pattern.compile("(.*)(id=)(\\d*)");
-		Matcher matcher = p.matcher(input);
-
-		while (matcher.find())
-		{
-			return Integer.valueOf(matcher.group(3));
-		}
-
-		return -1;
-	}
-
-	public void updateChangedProducts(List<Product> prodList)
-	{
-		controller.startDBUpdate();
-		
-		for(Product p : prodList)
-		{
-			int id = p.getId();
-			
-			Product oldP = oldProducts.get(id);
-			
-			if(oldP != null)
-			{
-				controller.updateProduct(p.getDbName(), id, p);
-			}
-			else
-			{
-				controller.insertNewProduct(p.getDbName(), p.getId(), p);
-			}
-		}
-		
-		controller.closeDBUpdate();
-	}
 }

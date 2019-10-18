@@ -42,7 +42,7 @@ public class Product
 	{
 		if(!name.equals(getName()))
 		{
-			System.out.println("Name changed: " + getName() + " | " + name);
+			System.out.println("\n" + "Name changed: " + getName() + " | " + name);
 			changed = true;
 		}
 		
@@ -56,7 +56,7 @@ public class Product
 	{
 		if(amount != getAmount())
 		{
-			System.out.println("amount changed: " + getAmount() + " | " + amount);
+			System.out.println("\n" + "amount changed: " + getAmount() + " | " + amount);
 			changed = true;
 		}
 		
@@ -71,7 +71,7 @@ public class Product
 	{
 		if(!link.equals(getLink()))
 		{
-			System.out.println("link changed: " + getLink() + " | " + link);
+			System.out.println("\n" + "link changed: " + getLink() + " | " + link);
 			changed = true;
 		}
 		
@@ -86,7 +86,7 @@ public class Product
 	{
 		if(!siteShort.equals(getSiteShort()))
 		{
-			System.out.println("siteShort changed: " + getSiteShort() + " | " + siteShort);
+			System.out.println("\n" + "siteShort changed: " + getSiteShort() + " | " + siteShort);
 			changed = true;
 		}
 		
@@ -102,7 +102,7 @@ public class Product
 	{
 		if(!currentPrice.equals(getCurrentPrice()))
 		{
-			System.out.println("currentPrice changed: " + getCurrentPrice() + " | " + currentPrice);
+			System.out.println("\n" + getName() + " -> " + "currentPrice changed: " + getCurrentPrice() + " | " + currentPrice);
 			changed = true;
 		}
 		
@@ -118,7 +118,7 @@ public class Product
 	{
 		if(!marketPrice.equals(getMarketPrice()))
 		{
-			System.out.println("marketPrice changed: " + getMarketPrice() + " | " + marketPrice);
+			System.out.println("\n" + "marketPrice changed: " + getMarketPrice() + " | " + marketPrice);
 			changed = true;
 		}
 		
@@ -144,7 +144,7 @@ public class Product
 	{
 		if(!imageLink.equals(imageLink()))
 		{
-			System.out.println("imageLink changed: " + imageLink() + " | " + imageLink);
+			System.out.println("\n" + "imageLink changed: " + imageLink() + " | " + imageLink);
 			changed = true;
 		}
 		

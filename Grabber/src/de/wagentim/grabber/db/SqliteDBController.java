@@ -10,7 +10,7 @@ import java.util.Map;
 import de.wagentim.common.db.SqliteDBHandler;
 import de.wagentim.utils.Converter;
 
-public class SqliteDBController
+public class SqliteDBController implements IDBController
 {
 	private final SqliteDBHandler handler;
 	private final StringBuffer sb;
@@ -149,4 +149,5 @@ public class SqliteDBController
 	{
 		handler.destroyed();
 	}
+
 }
